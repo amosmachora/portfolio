@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Public+Sans:wght@400;500;600&family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -49,4 +49,25 @@ body {
 }
 .show {
   outline: 1px solid red;
+}
+.designed-with-love {
+  font-family: "Dancing Script", cursive;
+  background-color: var(--white);
+  width: max-content;
+  color: #000;
+  font-weight: 900;
+  padding: 5px 10px 8px 10px;
+  border-radius: 4px;
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+}
+.designed-with-love img {
+  margin-left: 5px;
+}
+.center-absolutely {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

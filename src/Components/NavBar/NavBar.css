@@ -1,5 +1,5 @@
 nav {
-  padding: 1% 2%;
+  padding: 1% 2% 3% 2%;
 }
 .the-name-of-the-god {
   font-family: var(--roboto);
@@ -43,11 +43,16 @@ nav li:hover {
   background-color: var(--bgMain);
 }
 .close {
-  width: max-content;
   padding: 10px;
   background-color: var(--white);
   position: absolute;
   right: 10px;
+  width: max-content;
+  height: max-content;
+}
+.close > img {
+  width: 30px;
+  height: 30px;
 }
 .socials.small {
   display: unset;
