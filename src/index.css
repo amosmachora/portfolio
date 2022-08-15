@@ -1,13 +1,52 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&family=Roboto&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Public Sans", sans-serif;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --bgMain: rgb(5, 20, 34);
+  --bluish: #b1b9c1;
+  --orange: #ff5c00;
+  --roboto: "Roboto", sans-serif;
+  --white: #ffffff;
+  --delay: 100ms;
+}
+body {
+  background-color: var(--bgMain);
+  color: var(--white);
+}
+.flex {
+  display: flex;
+}
+.flex-v {
+  display: flex;
+  flex-direction: column;
+}
+.space-between {
+  justify-content: space-between;
+}
+.space-around {
+  justify-content: space-around;
+}
+.cursor {
+  cursor: pointer;
+}
+.bluish {
+  color: #b1b9c1;
+}
+.orange {
+  color: #ff5c00;
+}
+.capitalize {
+  text-transform: uppercase;
+}
+.align-center {
+  align-items: center;
+}
+.show {
+  outline: 1px solid red;
 }
