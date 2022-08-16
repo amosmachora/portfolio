@@ -39,8 +39,9 @@ nav li:hover {
 .small-screen {
   position: absolute;
   width: 97vw;
-  height: 96vh;
+  height: 99vh;
   background-color: var(--bgMain);
+  z-index: 100;
 }
 .close {
   padding: 10px;

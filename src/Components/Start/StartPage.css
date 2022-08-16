@@ -54,11 +54,10 @@
   font-size: 4rem;
 }
 .link {
-  width: 20%;
-  position: absolute;
-  bottom: 30px;
+  width: 70%;
   padding-bottom: 20px;
   border-bottom: 2px solid var(--orange);
+  margin-top: 30px;
 }
 .link:hover {
   border-color: var(--white);
@@ -78,11 +77,146 @@
 .read-more {
   font-weight: 600;
 }
+.white-banner {
+  margin: 0 2%;
+  background-color: var(--white);
+  color: var(--black);
+  padding: 6% 2%;
+  position: relative;
+  height: 60vh;
+}
+.banner-center {
+  position: absolute;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cooperation {
+  width: 30%;
+  font-size: 13px;
+  position: absolute;
+  top: 50%;
+  right: -40%;
+}
+.satisfied {
+  position: absolute;
+  width: 7%;
+  top: 12%;
+  font-size: 13px;
+}
+.my-projects {
+  position: absolute;
+  top: 60%;
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+  font-weight: 500;
+}
+.number {
+  font-size: 120px;
+}
+.describe {
+  font-size: 1.5rem;
+  width: 70%;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 1.2;
+}
+.my-portfolio-services {
+  margin: 0 2%;
+  padding: 7% 0;
+  position: relative;
+}
+.projects-icon {
+  padding: 10px;
+  width: max-content;
+  border-radius: 50%;
+  background-color: #233140;
+  position: relative;
+  height: 60px;
+  width: 60px;
+}
+.projects-icon > img {
+  width: 20px;
+  height: 20px;
+}
+.my-portfolio {
+  font-size: 4rem;
+  margin: 40px 0;
+}
+.people-looking-at-computer {
+  position: absolute;
+  width: 50%;
+  height: 330px;
+  object-fit: cover;
+  right: 0;
+  top: -30px;
+}
+.my-portfolio-services .flex-v {
+  width: 30%;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #213242;
+}
+.service-number {
+  font-size: 28px;
+  font-weight: 400;
+}
+.service-title {
+  font-weight: 500;
+  font-size: 28px;
+  margin: 40px 0 30px 0;
+}
+.my-portfolio-services .bluish {
+  font-size: 15px;
+  line-height: 1.4;
+  width: 80%;
+}
+.my-portfolio-services .flex-v:nth-child(2) {
+  border-bottom: 2px solid var(--orange);
+}
+
 @media screen and (max-width: 840px) {
   .content {
     width: 100%;
+    padding: 15% 17%;
   }
   .slides {
     height: 50vh;
+  }
+  .banner-center {
+    width: 80%;
+    padding-left: 20%;
+  }
+  .describe {
+    width: unset;
+  }
+  .cooperation {
+    position: static;
+    width: unset;
+    margin-top: 20px;
+  }
+  .white-banner {
+    height: 40vh;
+  }
+  .number {
+    font-size: 72px;
+    margin-bottom: 30px;
+  }
+  .my-portfolio {
+    font-size: 48px;
+  }
+  .people-looking-at-computer {
+    position: static;
+    width: 100%;
+    height: 245px;
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .my-portfolio-services .flex {
+    flex-direction: column;
+  }
+  .my-portfolio-services .flex-v {
+    width: 97%;
+    margin: 30px 0;
   }
 }
