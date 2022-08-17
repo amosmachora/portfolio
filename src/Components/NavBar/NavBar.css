@@ -82,7 +82,7 @@ nav li:hover {
 
 @media screen and (max-width: 840px) {
   nav {
-    padding: 3% 2%;
+    padding: 3% 2% 4% 2%;
   }
   .hamburger {
     display: unset;

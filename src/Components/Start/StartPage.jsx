@@ -3,6 +3,8 @@ import "./StartPage.css";
 import Arrow from "../../Assets/Arrow.svg";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Projects from "../../Assets/Projects.png";
+import PharmaOne from "../../Assets/Pharmaone.png";
+import Arrow2 from "../../Assets/Arrow.png";
 
 const StartPage = () => {
   const slide1 = {
@@ -44,10 +46,7 @@ const StartPage = () => {
           <p className="slide-sub">{slide.h1}</p>
           <h1 className="slide-title">{slide.sub}</h1>
           <p className="slide-description bluish">{slide.desc}</p>
-          <div className="flex link space-between cursor">
-            <p className="read-more">Read more</p>
-            <img src={ArrowWhite} alt="Arrow" />
-          </div>
+          <ReadMore ArrowWhite={ArrowWhite} />
         </section>
         <div
           className="cube cursor cube-two"
@@ -116,8 +115,38 @@ const StartPage = () => {
           </div>
         </div>
       </div>
+      <div className="i-create-gold flex">
+        <img src={PharmaOne} alt="Pharmacy application" />
+        <div>
+          <h2>I create Api consuming web apps</h2>
+          <h3>
+            Data flows from multiple sources. Work with me see how you can
+            represent the data in clean UI
+          </h3>
+          <div className="flex align-center">
+            <div className="img-container relative">
+              <img src={Arrow2} alt="Arrow" className="center-absolutely" />
+            </div>
+            <p>Portfolio</p>
+          </div>
+          <p className="greyish">
+            Visit my portfolio to preview sites, view original design files and
+            inspect the source code.
+          </p>
+          <ReadMore ArrowWhite={Arrow} border={"black"} />
+        </div>
+      </div>
     </>
   );
 };
 
 export default StartPage;
+
+function ReadMore({ ArrowWhite, border }) {
+  return (
+    <div className={`flex link ${border} space-between cursor`}>
+      <p className="read-more">Read more</p>
+      <img src={ArrowWhite} alt="Arrow" />
+    </div>
+  );
+}
