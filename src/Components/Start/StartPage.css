@@ -297,4 +297,7 @@
     font-size: 28px;
     margin-top: 20px;
   }
+  .white-banner {
+    height: 60vh;
+  }
 }

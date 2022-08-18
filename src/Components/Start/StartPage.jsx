@@ -46,7 +46,7 @@ const StartPage = () => {
           <p className="slide-sub">{slide.h1}</p>
           <h1 className="slide-title">{slide.sub}</h1>
           <p className="slide-description bluish">{slide.desc}</p>
-          <ReadMore ArrowWhite={ArrowWhite} />
+          <ReadMore Arrow={ArrowWhite} text={"Read More"} link={slide.linkTo} />
         </section>
         <div
           className="cube cursor cube-two"
@@ -133,7 +133,12 @@ const StartPage = () => {
             Visit my portfolio to preview sites, view original design files and
             inspect the source code.
           </p>
-          <ReadMore ArrowWhite={Arrow} border={"black"} />
+          <ReadMore
+            text={"Read More"}
+            border={"black"}
+            link={"portfolio"}
+            Arrow={Arrow}
+          />
         </div>
       </div>
     </>
@@ -142,11 +147,11 @@ const StartPage = () => {
 
 export default StartPage;
 
-function ReadMore({ ArrowWhite, border }) {
+export function ReadMore({ border, text, link, Arrow }) {
   return (
     <div className={`flex link ${border} space-between cursor`}>
-      <p className="read-more">Read more</p>
-      <img src={ArrowWhite} alt="Arrow" />
+      <p className="read-more">{text}</p>
+      <img src={Arrow} alt="Arrow" />
     </div>
   );
 }
