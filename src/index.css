@@ -15,6 +15,7 @@
   --white: #ffffff;
   --black: #081019;
   --delay: 100ms;
+  --dotted: #213242;
 }
 body {
   background-color: var(--bgMain);
