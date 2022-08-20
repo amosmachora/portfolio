@@ -5,6 +5,11 @@ footer {
   background-color: var(--black);
   flex-wrap: wrap;
 }
+.companies:not(:hover) path,
+.companies:not(:hover) g {
+  fill: var(--white);
+  transition: fill 500ms ease-out;
+}
 .companies:hover path,
 .companies:hover g {
   fill: var(--orange);

@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./StartPage.css";
 import Arrow from "../../Assets/Arrow.svg";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Projects from "../../Assets/Projects.png";
 import PharmaOne from "../../Assets/Pharmaone.png";
 import Arrow2 from "../../Assets/Arrow.png";
+import { Context } from "../../App";
 
 const StartPage = () => {
   const slide1 = {
@@ -24,6 +25,11 @@ const StartPage = () => {
 
   const [slide, setSlide] = useState(slide1);
   const [toggler, setToggler] = useState(true);
+  const { setSmallScreen } = useContext(Context);
+
+  useEffect(() => {
+    setSmallScreen(false);
+  }, []);
 
   useEffect(() => {
     if (toggler === true) {
@@ -74,9 +80,7 @@ const StartPage = () => {
       </div>
       <div className="my-portfolio-services">
         <div>
-          <div className="projects-icon">
-            <img src={Projects} alt="Projects" className="center-absolutely" />
-          </div>
+          <IconRound />
           <p className="my-portfolio">
             My Portfolio <br /> services
           </p>
@@ -152,6 +156,14 @@ export function ReadMore({ border, text, link, Arrow }) {
     <div className={`flex link ${border} space-between cursor`}>
       <p className="read-more">{text}</p>
       <img src={Arrow} alt="Arrow" />
+    </div>
+  );
+}
+
+export function IconRound() {
+  return (
+    <div className="projects-icon">
+      <img src={Projects} alt="Projects" className="center-absolutely" />
     </div>
   );
 }

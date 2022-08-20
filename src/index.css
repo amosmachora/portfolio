@@ -16,6 +16,7 @@
   --black: #081019;
   --delay: 100ms;
   --dotted: #213242;
+  --duration: 8s;
 }
 body {
   background-color: var(--bgMain);
@@ -79,4 +80,8 @@ body {
 }
 .greyish {
   color: #536375;
+}
+a {
+  text-decoration: none;
+  color: var(--white);
 }

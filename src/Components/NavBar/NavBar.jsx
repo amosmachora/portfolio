@@ -1,19 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import "./NavBar.css";
 import Hamburger from "../../Assets/hamburger.svg";
 import Close from "../../Assets/close.svg";
+import { Link } from "react-router-dom";
 
-const NavBar = () => {
-  const [smallScreen, setSmallScreen] = useState(false);
+const NavBar = ({ smallScreen, setSmallScreen }) => {
   return (
     <nav className="flex space-between ">
       <p className="capitalize the-name-of-the-god cursor">
-        Amos Machora <sup>&#8482;</sup>
+        Amos<sup>&#8482;</sup>
       </p>
       <div className="nav-middle flex space-between">
         <ul className="nav-links-1">
-          <li>Start Page</li>
-          <li>About Me</li>
+          <Link to={"start-page"}>
+            <li>Start Page</li>
+          </Link>
+          <Link to={"about-me"}>
+            <li>About Me</li>
+          </Link>
           <li>Portfolio</li>
           <li>Contact</li>
         </ul>
@@ -35,8 +39,12 @@ const NavBar = () => {
             <img src={Close} alt="Close" />
           </div>
           <div className="small-screen-links">
-            <li>Start Page</li>
-            <li>About Me</li>
+            <Link to={"start-page"}>
+              <li>Start Page</li>
+            </Link>
+            <Link to={"about-me"}>
+              <li>About Me</li>
+            </Link>
             <li>Portfolio</li>
             <li>Contact</li>
             <li>Services</li>

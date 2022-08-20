@@ -1,18 +1,28 @@
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
 import Heart from "./Assets/heart.png";
-import StartPage from "./Components/Start/StartPage";
 import Footer from "./Components/Footer/Footer";
+import { Outlet } from "react-router-dom";
+import { useState, createContext } from "react";
+
+export const Context = createContext();
 
 function App() {
+  const [smallScreen, setSmallScreen] = useState(false);
+
+  /**
+   * TODO -> Custom Cursor, Custom scroll bar, Animation on Scroll.
+   */
   return (
     <div className="App">
-      <NavBar />
-      <StartPage />
-      <Footer />
-      <div className="designed-with-love flex align-center">
-        Designed with <img src={Heart} alt="Heart" className="heart" />
-      </div>
+      <Context.Provider value={{ setSmallScreen: setSmallScreen }}>
+        <NavBar smallScreen={smallScreen} setSmallScreen={setSmallScreen} />
+        <Outlet />
+        <Footer />
+        <div className="designed-with-love flex align-center">
+          Designed with <img src={Heart} alt="Heart" className="heart" />
+        </div>
+      </Context.Provider>
     </div>
   );
 }
