@@ -177,6 +177,7 @@
   }
   .language-icons {
     flex-direction: row;
+    margin: 40px 0;
   }
   .tech-stack-left {
     width: unset;
@@ -187,6 +188,7 @@
   }
   .languages-tools {
     width: unset;
+    margin: 40px 0;
   }
 }
 
