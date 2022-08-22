@@ -119,4 +119,7 @@ footer {
   .footer-bottom > .flex {
     margin-top: 25px;
   }
+  .footer-content-right .link {
+    width: 90%;
+  }
 }

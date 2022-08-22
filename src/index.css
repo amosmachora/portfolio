@@ -85,3 +85,6 @@ a {
   text-decoration: none;
   color: var(--white);
 }
+.large-heading {
+  font-size: 5rem;
+}

@@ -6,6 +6,8 @@ import Projects from "../../Assets/Projects.png";
 import PharmaOne from "../../Assets/Pharmaone.png";
 import Arrow2 from "../../Assets/Arrow.png";
 import { Context } from "../../App";
+import DesktopSetup from "../../Assets/DesktopSetUp.jpg";
+import ManLookingAtComputer from "../../Assets/ManLookingAtComputer.jpg";
 
 const StartPage = () => {
   const slide1 = {
@@ -13,14 +15,14 @@ const StartPage = () => {
     h1: "I am a",
     desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
     linkTo: "Web Developer",
-    img: "https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: DesktopSetup,
   };
   const slide2 = {
     sub: "Web Application Developer",
     h1: "Im also a",
     desc: "Web Applications should be fast, scalable and maintainable. Want to know how ?...",
     linkTo: "Web Applications",
-    img: "https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    img: ManLookingAtComputer,
   };
 
   const [slide, setSlide] = useState(slide1);

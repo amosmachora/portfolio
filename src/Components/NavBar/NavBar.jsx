@@ -18,7 +18,9 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
           <Link to={"about-me"}>
             <li>About Me</li>
           </Link>
-          <li>Portfolio</li>
+          <Link to={"portfolio"}>
+            <li>Portfolio</li>
+          </Link>
           <li>Contact</li>
         </ul>
         <ul className="nav-links-2">

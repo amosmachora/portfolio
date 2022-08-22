@@ -300,4 +300,7 @@
   .white-banner {
     height: 60vh;
   }
+  .content > .link {
+    width: 90%;
+  }
 }
