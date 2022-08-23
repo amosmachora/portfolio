@@ -5,19 +5,19 @@ import Api from "../../Assets/API.png";
 const Project = ({ project }) => {
   const [imageIndex, setImageIndex] = useState(0);
 
-  useEffect(() => {
-    changeShownImage();
-  }, []);
+  // useEffect(() => {
+  //   changeShownImage();
+  // }, []);
 
-  const changeShownImage = () => {
-    setTimeout(() => {
-      if (imageIndex === project.images.length) {
-        setImageIndex((prev) => prev - 1);
-      }
-      setImageIndex((prev) => prev + 1);
-      changeShownImage();
-    }, 5000);
-  };
+  // const changeShownImage = () => {
+  //   setTimeout(() => {
+  //     if (imageIndex === project.images.length) {
+  //       setImageIndex((prev) => prev - 1);
+  //     }
+  //     setImageIndex((prev) => prev + 1);
+  //     changeShownImage();
+  //   }, 5000);
+  // };
 
   return (
     <div className="project">
