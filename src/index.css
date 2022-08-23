@@ -17,6 +17,7 @@
   --delay: 100ms;
   --dotted: #213242;
   --duration: 8s;
+  --spinSlowly: spin 20s linear infinite;
 }
 body {
   background-color: var(--bgMain);
@@ -49,6 +50,9 @@ body {
 }
 .align-center {
   align-items: center;
+}
+.align-flex-end {
+  align-items: flex-end;
 }
 .show {
   outline: 1px solid red;
@@ -87,4 +91,15 @@ a {
 }
 .large-heading {
   font-size: 5rem;
+}
+.capitalize-first {
+  text-transform: capitalize;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

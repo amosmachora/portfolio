@@ -156,7 +156,7 @@ export default StartPage;
 export function ReadMore({ border, text, link, Arrow }) {
   return (
     <div className={`flex link ${border} space-between cursor`}>
-      <p className="read-more">{text}</p>
+      <p className="read-more capitalize-first">{text}</p>
       <img src={Arrow} alt="Arrow" />
     </div>
   );
