@@ -1,0 +1,225 @@
+.contact {
+  margin: 0 2%;
+}
+.contact-heading {
+  font-size: 4.5rem;
+}
+.contact-options > div {
+  width: 30%;
+  border-bottom: 2px solid var(--contact-option-border);
+  padding-bottom: 60px;
+}
+.contact-options > div:hover {
+  border-color: var(--white);
+  transition: border-color var(--delay) ease-in;
+}
+.contact-options > div:nth-child(2) {
+  border-color: var(--orange);
+}
+.contact-options > div:nth-child(2):hover {
+  transition: border-color var(--delay) ease-in;
+  border-color: var(--white);
+}
+.contact-options h3,
+.option-number {
+  font-size: 28px;
+}
+.contact-options h3 {
+  margin: 40px 0 20px 0;
+}
+.contact-options .greyish-2 {
+  margin-bottom: 20px;
+}
+.contact-options {
+  margin: 50px 0;
+}
+.contact-top {
+  padding: 10px 20px 30px 20px;
+  background: rgb(0, 0, 0, 0);
+  position: relative;
+}
+.contact-top::before {
+  content: " ";
+  background-image: url(https://storage.googleapis.com/studio-design-asset-files/projects/JgqelPwLOk/s-1920x1080_v-frms_webp_a86c50f0-e66e-4871-855e-ea0bd155430b.webp);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
+  background-position: 50%;
+  background-size: cover;
+  filter: brightness(0.8);
+}
+.contact-bottom {
+  background-color: var(--white);
+  color: var(--black);
+  padding: 70px 20px;
+}
+.contact-bottom-right {
+  width: 70%;
+}
+.questions-advice-constructive {
+  width: 60%;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.05em;
+}
+.contact-bottom > h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.05em;
+}
+.contact-bottom h1 {
+  font-size: 4.5rem;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+.contact-bottom-right > .greyish {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.contact-form {
+  justify-content: flex-end;
+  margin-top: 50px;
+}
+.contact-form > div {
+  width: 70%;
+}
+input[type="text"],
+input[type="email"] {
+  width: 49%;
+  height: 50px;
+  border-bottom: 2px solid #eeeeee;
+  color: var(--black);
+}
+textarea {
+  width: 100%;
+  margin-top: 20px;
+  height: 130px;
+}
+input:not(input[type="submit"]),
+textarea {
+  padding: 10px 20px;
+  outline: none;
+  border: 2px solid transparent;
+  background: #e6ecf1;
+}
+.checkbox {
+  margin-top: 20px;
+  font-size: 15px;
+}
+input[type="checkbox"] {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.contact-form .link {
+  width: 30%;
+  margin-top: 40px;
+}
+.contact-form .link:hover {
+  border-color: var(--black);
+  transition: border-color 300ms ease-in-out;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border: 2px solid var(--orange);
+  transition: border 300ms ease;
+}
+.privacy-policy {
+  text-decoration: underline;
+  display: inline;
+}
+.tool-tip {
+  background-color: var(--orange);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  transform: translate(-100%, -100%);
+  opacity: 0;
+}
+.privacy-policy:hover ~ .tool-tip {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+.checkbox > p {
+  position: relative;
+}
+input[type="submit"] {
+  border: none;
+  outline: none;
+  background-color: var(--white);
+  font-weight: 500;
+  font-size: 1rem;
+  width: 100%;
+  text-align: left;
+}
+.send-message {
+  border-bottom: 2px solid var(--orange);
+  padding: 10px 0px;
+  width: 30%;
+  margin-top: 30px;
+  position: relative;
+}
+.send-message:hover {
+  border-color: var(--black);
+}
+.send-message:hover > img {
+  transform: translateX(10px) rotate(-90deg);
+  transition: transform 300ms linear;
+}
+.send-message > img {
+  transform: rotate(-90deg);
+  height: 8px;
+  position: absolute;
+  right: 10px;
+}
+@media screen and (max-width: 840px) {
+  .contact-form > div {
+    width: 100%;
+  }
+  .questions-advice-constructive {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .contact-bottom > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact-bottom-right {
+    width: 100%;
+    flex-direction: column;
+  }
+  .contact-bottom-right > .greyish {
+    margin-top: 30px;
+    width: 100%;
+  }
+  .questions-advice-constructive {
+    width: 100%;
+  }
+  .contact-bottom h1 {
+    margin: 20px 0;
+    font-size: 60px;
+  }
+  .send-message {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 540px) {
+  .contact-options {
+    flex-direction: column;
+  }
+  .contact-options > div {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .send-message {
+    width: 90%;
+  }
+}

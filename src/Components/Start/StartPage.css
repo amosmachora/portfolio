@@ -61,9 +61,11 @@
 }
 .link:hover {
   border-color: var(--white);
+  transition: border-color 300ms ease-in-out;
 }
 .link:hover > img {
   transform: translateX(10px) rotate(-90deg);
+  transition: transform 300ms ease-in-out;
 }
 .slide-description {
   margin-top: 25px;

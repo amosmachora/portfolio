@@ -21,7 +21,9 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
           <Link to={"portfolio"}>
             <li>Portfolio</li>
           </Link>
-          <li>Contact</li>
+          <Link to={"contact"}>
+            <li>Contact</li>
+          </Link>
         </ul>
         <ul className="nav-links-2">
           <li>Services</li>
@@ -47,8 +49,12 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
             <Link to={"about-me"}>
               <li>About Me</li>
             </Link>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <Link to={"portfolio"}>
+              <li>Portfolio</li>
+            </Link>
+            <Link to={"contact"}>
+              <li>Contact</li>
+            </Link>
             <li>Services</li>
             <li>Stories</li>
             <Socials context={"small"} />

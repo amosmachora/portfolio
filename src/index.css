@@ -18,6 +18,7 @@
   --dotted: #213242;
   --duration: 8s;
   --spinSlowly: spin 20s linear infinite;
+  --contact-option-border: #3e4e5d;
 }
 body {
   background-color: var(--bgMain);
@@ -84,6 +85,10 @@ body {
 }
 .greyish {
   color: #536375;
+}
+.greyish-2 {
+  color: #b1b9c1;
+  font-size: 15px;
 }
 a {
   text-decoration: none;

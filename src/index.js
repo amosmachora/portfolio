@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AboutMe from "./Components/About/AboutMe";
 import StartPage from "./Components/Start/StartPage";
 import PortFolio from "./Components/Portfolio/PortFolio";
+import Contact from "./Components/Contact/Contact";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
           <Route path="about-me" element={<AboutMe />} />
           <Route path="start-page" element={<StartPage />} />
           <Route path="portfolio" element={<PortFolio />} />
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>
