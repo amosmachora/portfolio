@@ -63,11 +63,12 @@ const Contact = () => {
         <form
           className="contact-form flex"
           // onSubmit={handleSubmit(onSubmit)}
-          action="https://formsubmit.co/amohprincethedoctor@email.com"
+          action="https://formsubmit.co/amohprincethedoctor@gmail.com"
           method="POST"
         >
           <div>
             <div className="flex space-between">
+              <input type="hidden" name="_captcha" value="false" />
               <input
                 type="text"
                 placeholder="Your Name *"
