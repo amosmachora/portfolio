@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./Contact.css";
 import Arrow from "../../Assets/Arrow.svg";
 import { useForm } from "@formspree/react";
@@ -6,9 +6,15 @@ import GreenTick from "../../Assets/tick-green.svg";
 import { ReadMore } from "../Start/StartPage";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Spinner from "../Spinner/Spinner";
+import { Context } from "../../App";
 
 const Contact = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");
+  const { setSmallScreen } = useContext(Context);
+
+  useEffect(() => {
+    setSmallScreen(false);
+  }, []);
 
   // const testState = {
   //   submitting: true,
@@ -29,7 +35,9 @@ const Contact = () => {
               I will reply as soon as possible. Guarantee a response within
               hours!
             </p>
-            <a href="mailto:amosmachora13@gmail.com">amosmachora13@gmail.com</a>
+            <a href="mailto:amosmachora13@gmail.com" className="gmail">
+              amosmachora13@gmail.com
+            </a>
           </div>
           <div>
             <p className="option-number">02</p>

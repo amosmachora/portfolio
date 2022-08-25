@@ -8,20 +8,21 @@ import Arrow2 from "../../Assets/Arrow.png";
 import { Context } from "../../App";
 import DesktopSetup from "../../Assets/DesktopSetUp.jpg";
 import ManLookingAtComputer from "../../Assets/ManLookingAtComputer.jpg";
+import { Link } from "react-router-dom";
 
 const StartPage = () => {
   const slide1 = {
     sub: "Frontend Web Developer",
     h1: "I am a",
     desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
-    linkTo: "Web Developer",
+    linkTo: "about-me",
     img: DesktopSetup,
   };
   const slide2 = {
     sub: "Web Application Developer",
     h1: "Im also a",
     desc: "Web Applications should be fast, scalable and maintainable. Want to know how ?...",
-    linkTo: "Web Applications",
+    linkTo: "portfolio",
     img: ManLookingAtComputer,
   };
 
@@ -155,10 +156,12 @@ export default StartPage;
 
 export function ReadMore({ border, text, link, Arrow }) {
   return (
-    <div className={`flex link ${border} space-between cursor`}>
-      <p className="read-more capitalize-first">{text}</p>
-      <img src={Arrow} alt="Arrow" />
-    </div>
+    <Link to={link}>
+      <div className={`flex link ${border} space-between cursor`}>
+        <p className="read-more capitalize-first">{text}</p>
+        <img src={Arrow} alt="Arrow" />
+      </div>
+    </Link>
   );
 }
 

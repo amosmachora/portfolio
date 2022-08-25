@@ -218,6 +218,9 @@ input[type="submit"] {
 .link-wrapper {
   width: 20%;
 }
+.gmail {
+  color: var(--white);
+}
 @media screen and (max-width: 840px) {
   .contact-form > div {
     width: 100%;

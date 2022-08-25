@@ -224,6 +224,12 @@
 .link.black:hover {
   border-color: #000;
 }
+.content a {
+  color: var(--white);
+}
+.i-create-gold > div > a {
+  color: var(--black);
+}
 @media screen and (max-width: 840px) {
   .content {
     width: 100%;
