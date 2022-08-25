@@ -21,7 +21,7 @@
 .portfolio .link {
   width: 100%;
 }
-.portfolio a {
+.portfolio > .flex > a {
   width: 20%;
   color: var(--white);
 }
@@ -30,7 +30,7 @@
   .projects > .project:nth-child(2) {
     margin: 50px 0;
   }
-  .portfolio a {
+  .portfolio > .flex > a {
     width: 40%;
   }
 }
