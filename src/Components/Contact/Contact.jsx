@@ -1,13 +1,20 @@
 import React from "react";
-import { ReadMore } from "../Start/StartPage";
 import "./Contact.css";
 import Arrow from "../../Assets/Arrow.svg";
-import { useForm } from "react-hook-form";
+import { useForm } from "@formspree/react";
+import GreenTick from "../../Assets/tick-green.svg";
+import { ReadMore } from "../Start/StartPage";
+import ArrowWhite from "../../Assets/ArrowWhite.svg";
+import Spinner from "../Spinner/Spinner";
 
 const Contact = () => {
-  const { register, handleSubmit } = useForm();
-  const onSubmit = (data) => console.log(data);
-  // amohprince-gmail-portfolio@tactical-sonar-360418.iam.gserviceaccount.com
+  const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");
+
+  // const testState = {
+  //   submitting: true,
+  //   succeeded: true,
+  // };
+
   return (
     <div className="contact">
       <div className="contact-top">
@@ -29,7 +36,8 @@ const Contact = () => {
             <h3>Linked In</h3>
             <p className="greyish-2">
               You can get in touch with me on my LinkedIN profile. I will reply
-              to you as soon as possible.
+              to you as soon as possible. The link to my profile is in the top
+              right corner of this page.
             </p>
           </div>
           <div>
@@ -60,39 +68,31 @@ const Contact = () => {
             </p>
           </div>
         </div>
-        <form
-          className="contact-form flex"
-          // onSubmit={handleSubmit(onSubmit)}
-          action="https://formsubmit.co/amohprincethedoctor@gmail.com"
-          method="POST"
-        >
+        <form className="contact-form flex" onSubmit={handleSubmit}>
           <div>
             <div className="flex space-between">
               <input type="hidden" name="_captcha" value="false" />
+
               <input
                 type="text"
                 placeholder="Your Name *"
                 required
-                {...register("Name")}
+                name="Name"
               />
               <input
                 type="email"
                 placeholder="Email Address *"
                 required
-                {...register("Email")}
+                name="Email"
               />
             </div>
             <textarea
               placeholder="Your message here *"
               required
-              {...register("Message")}
+              name="Message"
             />
             <div className="flex checkbox greyish">
-              <input
-                type="checkbox"
-                required
-                {...register("Privacy policy accepted")}
-              />
+              <input type="checkbox" required name="privacy policy" />
               <p>
                 I accept our{" "}
                 <span className="privacy-policy cursor">Privacy Policy</span>
@@ -100,11 +100,43 @@ const Contact = () => {
               </p>
             </div>
             <div className="flex align-center send-message space-between cursor">
-              <input type="submit" value="Send Message" className="cursor" />
+              {state.submitting ? (
+                <Spinner />
+              ) : (
+                <input
+                  type="submit"
+                  value="Send Message"
+                  className="cursor"
+                  disabled={state.submitting}
+                />
+              )}
               <img src={Arrow} alt="Arrow" />
             </div>
           </div>
         </form>
+        {state.succeeded && (
+          <>
+            <div className="background-transparent" />
+            <div className="success-state">
+              <div className="flex align-center">
+                <img src={GreenTick} alt="Green Tick" className="green-tick" />
+                <p className="success-message">
+                  Message was sent successfully!
+                </p>
+              </div>
+              <p className="greyish-2">
+                Thanks for contacting me . I will reply as soon as possible.
+                Guarantee a response in less than 12 hours!
+              </p>
+              <div
+                onClick={() => ResetFunction()}
+                className="link-wrapper cursor"
+              >
+                <ReadMore Arrow={ArrowWhite} text="Thank you" />
+              </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

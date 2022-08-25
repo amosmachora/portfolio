@@ -179,6 +179,45 @@ input[type="submit"] {
   position: absolute;
   right: 10px;
 }
+.success-state {
+  background-color: #081019;
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  color: var(--white);
+  left: 0;
+  transform: translateY(-50%);
+  padding: 4% 3%;
+  z-index: 10;
+}
+.success-state .link {
+  width: 100%;
+}
+.success-state > .greyish-2 {
+  margin: 40px 0;
+}
+.green-tick {
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  margin-right: 20px;
+}
+.success-message {
+  font-size: 1.75rem;
+}
+.background-transparent {
+  position: fixed;
+  background-color: rgba(8, 16, 25, 0.8);
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+.link-wrapper {
+  width: 20%;
+}
 @media screen and (max-width: 840px) {
   .contact-form > div {
     width: 100%;
@@ -208,6 +247,9 @@ input[type="submit"] {
     font-size: 60px;
   }
   .send-message {
+    width: 50%;
+  }
+  .link-wrapper {
     width: 50%;
   }
 }
