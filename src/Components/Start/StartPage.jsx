@@ -32,6 +32,7 @@ const StartPage = () => {
 
   useEffect(() => {
     setSmallScreen(false);
+    document.title = `Amos™ Freelancer`;
   }, []);
 
   useEffect(() => {

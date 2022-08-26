@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 import { useState, createContext } from "react";
 import { FormspreeProvider } from "@formspree/react";
+import Tracker from "./Components/Tracker/Tracker";
 
 export const Context = createContext();
 
@@ -25,6 +26,7 @@ function App() {
         <div className="designed-with-love flex align-center">
           Designed with <img src={Heart} alt="Heart" className="heart" />
         </div>
+        {/* <Tracker /> */}
       </Context.Provider>
     </div>
   );

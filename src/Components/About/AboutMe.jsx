@@ -23,6 +23,7 @@ const AboutMe = () => {
   useEffect(() => {
     setSmallScreen(false);
     handleResize();
+    document.title = `About`;
   }, []);
 
   return (

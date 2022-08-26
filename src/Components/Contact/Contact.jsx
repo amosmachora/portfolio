@@ -14,6 +14,7 @@ const Contact = () => {
 
   useEffect(() => {
     setSmallScreen(false);
+    document.title = `Contact`;
   }, []);
 
   // const testState = {

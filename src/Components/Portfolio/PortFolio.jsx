@@ -12,6 +12,7 @@ const PortFolio = () => {
 
   useEffect(() => {
     setSmallScreen(false);
+    document.title = `Portfolio`;
   }, []);
   return (
     <div className="portfolio">
