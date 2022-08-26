@@ -24,7 +24,7 @@ const PortFolio = () => {
           Latest <br />
           Portfolio
         </h1>
-        <ReadMore link={"/services"} text={"services"} Arrow={ArrowWhite} />
+        <ReadMore link={"contact"} text={"Contact"} Arrow={ArrowWhite} />
       </div>
       <div className="projects flex space-between">
         {portFolioItems.map((project) => (

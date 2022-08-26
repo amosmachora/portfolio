@@ -108,7 +108,7 @@ a {
   }
 }
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 body::-webkit-scrollbar-thumb {
   border: 2px solid #ff5c00;
