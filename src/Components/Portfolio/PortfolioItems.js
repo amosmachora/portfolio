@@ -15,6 +15,9 @@ import travelEarthTwo from "../../Assets/travel-earth-brown.png";
 import travelEarthThree from "../../Assets/travel-earth-yellow.png";
 import spaceTourism from "../../Assets/space-tourism.jpg";
 import cafeInspire from "../../Assets/CafeInspire.png";
+import JavaScript from "../../Assets/Javascript.svg";
+import React from "../../Assets/react.svg";
+import Figma from "../../Assets/Figma.svg";
 
 export const portFolioItems = [
   {
@@ -24,6 +27,7 @@ export const portFolioItems = [
     title: "Interior Design Shop",
     live: "https://amohprince.github.io/room-homepage/",
     github: "https://github.com/AmohPrince/room-homepage",
+    languages: [JavaScript, Figma],
   },
   {
     api: true,
@@ -36,6 +40,7 @@ export const portFolioItems = [
     github: "https://github.com/AmohPrince/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
+    languages: [JavaScript, Figma, React],
   },
   {
     image: [productPageOne, productPageTwo, productPageThree],
@@ -45,6 +50,7 @@ export const portFolioItems = [
     title: "Product Page",
     live: "https://amohprince.github.io/ecommerce-product-page/",
     github: "https://github.com/AmohPrince/ecommerce-product-page",
+    languages: [React],
   },
   {
     image: [tipCalculatorOne, tipCalculatorTwo],
@@ -53,6 +59,7 @@ export const portFolioItems = [
     title: "Tip Calculator",
     live: "https://amohprince.github.io/tipcalculatorapp/",
     github: "https://github.com/AmohPrince/tipcalculatorapp",
+    languages: [JavaScript],
   },
   {
     image: [sunnySide],
@@ -61,6 +68,7 @@ export const portFolioItems = [
     title: "SunnySide landing page",
     github: "https://github.com/AmohPrince/sunnyside-agency-landing-page",
     live: "https://amohprince.github.io/sunnyside-agency-landing-page/",
+    languages: [JavaScript],
   },
   {
     image: [travelEarthOne, travelEarthTwo, travelEarthThree],
@@ -72,6 +80,7 @@ export const portFolioItems = [
     live: "https://amohprince.github.io/travelearth/",
     figma:
       "https://www.figma.com/file/RAG76w0n9MtMOhbDU8RXWT/Travel-Agency-Landing-Page-(Community)?node-id=0%3A1",
+    languages: [React, Figma],
   },
   {
     image: [spaceTourism],
@@ -82,6 +91,7 @@ export const portFolioItems = [
     live: "https://amohprince.github.io/space-tourism/",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
+    languages: [React, Figma],
   },
   {
     image: [cafeInspire],
@@ -92,5 +102,6 @@ export const portFolioItems = [
     live: "https://amohprince.github.io/Cafeinspire/",
     figma:
       "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
+    languages: [React, Figma],
   },
 ];

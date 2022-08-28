@@ -22,11 +22,18 @@ const Project = ({ project }) => {
   return (
     <div className="project">
       <div className="project-image-container">
-        <img
-          src={project.image[imageIndex]}
-          alt="Project Image"
-          className="project-image cursor"
-        />
+        <a href={project.live} target="_blank" rel="noopener noreferrer">
+          <img
+            src={project.image[imageIndex]}
+            alt="Project Image"
+            className="project-image cursor"
+          />
+        </a>
+        <div className="project-languages center-absolutely">
+          {project.languages.map((language) => (
+            <img src={language} alt="Language" />
+          ))}
+        </div>
       </div>
       <div className="project-stuff">
         <div className="flex align-center space-between">

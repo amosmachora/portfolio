@@ -9,15 +9,35 @@
   width: 100%;
   height: 320px;
   overflow: hidden;
+  position: relative;
 }
 .project-image {
   width: 100%;
   object-fit: cover;
   height: 100%;
-  transition: transform 0.4s ease;
+}
+.project-languages {
+  pointer-events: none;
+}
+.project-languages > img {
+  height: 32px;
+  height: 32px;
+  opacity: 0;
+  margin: 0px 7px;
 }
 .project-image:hover {
   transform: scale(1.1);
+  filter: brightness(35%);
+  transition: brightness, transform, 0.4s ease;
+}
+.project-image:not(:hover) {
+  transform: scale(1);
+  filter: brightness(100%);
+  transition: brightness, transform, 0.4s ease;
+}
+.project-image-container:hover > .project-languages > img {
+  opacity: 1;
+  transition: opacity 0.8s ease;
 }
 .category {
   background-color: var(--orange);
