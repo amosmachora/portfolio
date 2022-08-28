@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./Project.css";
 import Api from "../../Assets/API.png";
 

@@ -28,7 +28,8 @@
 .project-image:hover {
   transform: scale(1.1);
   filter: brightness(35%);
-  transition: brightness, transform, 0.4s ease;
+  transition: transform 0.4s ease;
+  transition: brightness, 0.4s ease;
 }
 .project-image:not(:hover) {
   transform: scale(1);
