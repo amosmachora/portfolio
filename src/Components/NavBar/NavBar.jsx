@@ -3,14 +3,120 @@ import "./NavBar.css";
 import Hamburger from "../../Assets/hamburger.svg";
 import Close from "../../Assets/close.svg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import {
+  svgVariants,
+  pathVariants,
+  navMiddleVariants,
+  socialsVariants,
+} from "../../Framer";
 
 const NavBar = ({ smallScreen, setSmallScreen }) => {
   return (
-    <nav className="flex space-between ">
-      <p className="capitalize the-name-of-the-god cursor">
-        Amos<sup>&#8482;</sup>
-      </p>
-      <div className="nav-middle flex space-between">
+    <motion.nav className="flex space-between ">
+      <motion.svg
+        version="1.0"
+        xmlns="http://www.w3.org/2000/svg"
+        width="420.000000pt"
+        height="206.000000pt"
+        viewBox="0 0 420.000000 206.000000"
+        preserveAspectRatio="xMidYMid meet"
+        className="logo"
+        variants={svgVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.g
+          transform="translate(0.000000,206.000000) scale(0.100000,-0.100000)"
+          fill="#fff"
+          stroke="none"
+        >
+          <motion.path
+            d="M1041 1273 c-116 -267 -140 -309 -182 -327 -26 -11 -16 -12 82 -13
+            103 0 109 1 74 13 -21 7 -42 19 -47 26 -15 22 -2 79 35 161 l36 77 84 0 84 0
+            52 -112 c29 -61 51 -120 49 -132 -2 -12 -13 -23 -28 -26 -14 -3 26 -6 88 -7
+            l113 0 -31 19 c-26 15 -55 66 -160 280 -71 143 -133 265 -137 269 -5 5 -54
+            -93 -112 -228z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M2509 1497 c-54 -15 -126 -56 -156 -89 -48 -52 -68 -108 -68 -193 0
+            -127 49 -210 159 -268 64 -33 183 -31 258 6 153 75 217 252 145 400 -46 92
+            -125 145 -230 152 -35 3 -82 -1 -108 -8z m106 -18 c62 -17 129 -90 150 -163
+            26 -90 18 -217 -19 -280 -89 -152 -277 -114 -345 69 -33 87 -31 209 4 280 43
+            88 115 120 210 94z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M3105 1497 c-77 -30 -105 -66 -105 -134 0 -56 26 -90 120 -157 101
+            -73 130 -112 130 -173 0 -34 -6 -50 -26 -70 -22 -22 -32 -25 -71 -20 -55 6
+            -93 40 -133 117 l-29 55 -1 -72 c0 -86 8 -97 86 -114 66 -15 147 -2 193 30 30
+            22 61 85 61 125 0 52 -43 106 -130 164 -46 31 -95 72 -107 91 -49 72 -14 151
+            66 151 50 0 92 -34 118 -95 10 -25 20 -45 23 -45 3 0 4 31 2 69 l-4 69 -43 11
+            c-55 14 -111 13 -150 -2z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M1520 1493 c8 -3 28 -17 43 -32 l29 -26 -7 -210 c-3 -115 -11 -223
+            -17 -239 -7 -16 -25 -34 -42 -42 -29 -12 -24 -13 64 -13 87 0 93 1 65 13 -52
+            23 -58 49 -49 256 l7 184 111 -222 c61 -122 115 -221 120 -219 6 2 51 101 101
+            219 69 167 91 211 96 193 4 -12 8 -107 10 -211 l4 -189 -35 -12 c-31 -10 -22
+            -12 80 -11 63 0 105 3 93 5 -12 2 -27 11 -34 19 -16 19 -41 468 -28 501 5 13
+            22 26 41 32 29 8 25 9 -34 10 -43 1 -70 -3 -75 -11 -4 -7 -46 -101 -93 -208
+            -47 -108 -89 -197 -95 -198 -5 0 -57 92 -115 206 l-105 207 -75 2 c-41 1 -68
+            -1 -60 -4z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M1483 694 c-71 -35 -83 -143 -22 -198 29 -25 37 -28 81 -23 63 8 68
+            12 68 51 0 17 5 37 12 44 9 9 2 12 -35 12 -26 0 -47 -4 -47 -10 0 -5 9 -10 20
+            -10 14 0 20 -7 20 -23 0 -30 -18 -47 -50 -47 -44 0 -65 33 -65 102 0 51 4 63
+            24 79 28 23 79 25 87 4 9 -21 34 -19 34 4 0 33 -73 41 -127 15z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M1713 700 c-32 -13 -63 -68 -63 -113 0 -104 97 -152 166 -83 29 29
+            34 41 34 80 0 99 -58 148 -137 116z m81 -32 c10 -14 16 -44 16 -78 0 -93 -53
+            -133 -99 -74 -33 42 -26 141 13 166 21 15 55 8 70 -14z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M1880 701 c0 -5 7 -11 15 -15 23 -8 22 -181 -1 -194 -21 -12 66 -25
+            104 -16 58 14 98 79 87 143 -8 45 -24 67 -59 81 -33 12 -146 13 -146 1z m139
+            -28 c23 -19 37 -77 28 -115 -10 -37 -45 -68 -77 -68 l-30 0 0 100 0 100 29 0
+            c16 0 38 -8 50 -17z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M2186 701 c-3 -5 1 -11 9 -15 23 -8 22 -181 -1 -194 -20 -11 67 -23
+            108 -15 98 19 117 190 26 222 -38 13 -135 14 -142 2z m134 -29 c49 -40 31
+            -164 -25 -178 -50 -12 -55 -2 -55 101 l0 95 29 0 c16 0 39 -8 51 -18z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M2536 701 c-3 -5 1 -11 9 -15 23 -8 22 -181 -1 -194 -20 -11 67 -23
+            108 -15 95 18 120 182 33 219 -38 15 -141 19 -149 5z m143 -37 c40 -51 18
+            -157 -34 -170 -50 -12 -55 -2 -55 101 l0 95 34 0 c25 0 40 -7 55 -26z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M460 595 c0 -13 52 -15 405 -15 353 0 405 2 405 15 0 13 -52 15 -405
+            15 -353 0 -405 -2 -405 -15z"
+            variants={pathVariants}
+          />
+          <motion.path
+            d="M2890 595 c0 -13 52 -15 405 -15 353 0 405 2 405 15 0 13 -52 15
+            -405 15 -353 0 -405 -2 -405 -15z"
+            variants={pathVariants}
+          />
+        </motion.g>
+      </motion.svg>
+      <motion.div
+        className="nav-middle flex space-between"
+        variants={navMiddleVariants}
+        initial="initial"
+        animate="animate"
+      >
         <ul className="nav-links-1">
           <Link to={"start-page"}>
             <li>Start Page</li>
@@ -27,7 +133,7 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
             <li>Contact</li>
           </Link>
         </ul>
-      </div>
+      </motion.div>
       <Socials />
       <img
         src={Hamburger}
@@ -57,13 +163,18 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
           </div>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 
 function Socials({ context }) {
   return (
-    <div className={`socials flex space-between ${context}`}>
+    <motion.div
+      className={`socials flex space-between ${context}`}
+      variants={socialsVariants}
+      initial="initial"
+      animate="animate"
+    >
       <a href="https://www.frontendmentor.io/profile/AmohPrince">
         <svg
           height="2500"
@@ -127,7 +238,7 @@ function Socials({ context }) {
           />
         </svg>
       </a>
-    </div>
+    </motion.div>
   );
 }
 

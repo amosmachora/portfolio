@@ -9,6 +9,8 @@ import { Context } from "../../App";
 import DesktopSetup from "../../Assets/DesktopSetUp.jpg";
 import ManLookingAtComputer from "../../Assets/ManLookingAtComputer.jpg";
 import { Link } from "react-router-dom";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const StartPage = () => {
   const slide1 = {
@@ -43,30 +45,100 @@ const StartPage = () => {
     }
   }, [toggler]);
 
+  const textVariants = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        // type: "spring",
+      },
+    },
+  };
+
+  const { ref, inView } = useInView();
+  const whiteBannerAnimation = useAnimation();
+  useEffect(() => {
+    console.log(inView);
+    if (inView) {
+      whiteBannerAnimation.start({
+        x: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+        },
+      });
+    }
+    if (!inView) {
+      whiteBannerAnimation.start({
+        x: "-50vw",
+      });
+    }
+  }, [inView]);
+
   return (
-    <>
-      <div className="slides">
-        <div
-          className="cube cursor cube-one"
-          onClick={() => setToggler((prev) => !prev)}
-        >
-          <img src={Arrow} alt="Arrow" className="arrow-one" />
-        </div>
-        <section className="content">
-          <p className="slide-sub">{slide.h1}</p>
-          <h1 className="slide-title">{slide.sub}</h1>
-          <p className="slide-description bluish">{slide.desc}</p>
-          <ReadMore Arrow={ArrowWhite} text={"Read More"} link={slide.linkTo} />
-        </section>
-        <div
-          className="cube cursor cube-two"
-          onClick={() => setToggler((prev) => !prev)}
-        >
-          <img src={Arrow} alt="Arrow" className="arrow-two" />
-        </div>
-        <img src={slide.img} alt="image-slide" className="img-slide" />
-      </div>
-      <div className="white-banner flex">
+    <div>
+      <AnimatePresence>
+        <motion.div className="slides" initial="initial" animate="animate">
+          <div
+            className="cube cursor cube-one"
+            onClick={() => setToggler((prev) => !prev)}
+          >
+            <img src={Arrow} alt="Arrow" className="arrow-one" />
+          </div>
+          <section className="content">
+            <motion.p
+              key={slide.h1}
+              className="slide-sub"
+              variants={textVariants}
+            >
+              {slide.h1}
+            </motion.p>
+            <motion.h1
+              className="slide-title"
+              key={slide.sub}
+              variants={textVariants}
+            >
+              {slide.sub}
+            </motion.h1>
+            <motion.p
+              className="slide-description bluish"
+              key={slide.desc}
+              variants={textVariants}
+            >
+              {slide.desc}
+            </motion.p>
+            <ReadMore
+              Arrow={ArrowWhite}
+              text={"Read More"}
+              link={slide.linkTo}
+            />
+          </section>
+          <div
+            className="cube cursor cube-two"
+            onClick={() => setToggler((prev) => !prev)}
+          >
+            <img src={Arrow} alt="Arrow" className="arrow-two" />
+          </div>
+          <motion.img
+            alt="image-slide"
+            className="img-slide"
+            key={slide.img}
+            src={slide.img}
+            initial={{ opacity: 0, x: "-100vw" }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0 }}
+            transition={{ type: "tween", duration: 1 }}
+          />
+        </motion.div>
+      </AnimatePresence>
+      <motion.div
+        className="white-banner flex"
+        animate={whiteBannerAnimation}
+        ref={ref}
+      >
         <p className="capitalize satisfied">Number of satisfied clients</p>
         <p className="my-projects">My projects</p>
         <div className="banner-center">
@@ -81,7 +153,7 @@ const StartPage = () => {
             around the globe
           </p>
         </div>
-      </div>
+      </motion.div>
       <div className="my-portfolio-services">
         <div>
           <IconRound />
@@ -149,7 +221,7 @@ const StartPage = () => {
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
