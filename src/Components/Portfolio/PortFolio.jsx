@@ -6,6 +6,8 @@ import Project from "../Project/Project";
 import { ReadMore } from "../Start/StartPage";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import { Context } from "../../App";
+import { pageVariantsIn } from "../../Framer";
+import { motion } from "framer-motion";
 
 const PortFolio = () => {
   const { setSmallScreen } = useContext(Context);
@@ -15,7 +17,12 @@ const PortFolio = () => {
     document.title = "Projects";
   }, []);
   return (
-    <div className="portfolio">
+    <motion.div
+      className="portfolio"
+      variants={pageVariantsIn}
+      initial="initial"
+      animate="animate"
+    >
       <div className="dice">
         <img src={dice} alt="Dice" />
       </div>
@@ -31,7 +38,7 @@ const PortFolio = () => {
           <Project project={project} />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

@@ -7,6 +7,8 @@ import { ReadMore } from "../Start/StartPage";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Spinner from "../Spinner/Spinner";
 import { Context } from "../../App";
+import { pageVariantsIn } from "../../Framer";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");
@@ -17,13 +19,13 @@ const Contact = () => {
     document.title = `Contact`;
   }, []);
 
-  // const testState = {
-  //   submitting: true,
-  //   succeeded: true,
-  // };
-
   return (
-    <div className="contact">
+    <motion.div
+      className="contact"
+      variants={pageVariantsIn}
+      initial="initial"
+      animate="animate"
+    >
       <div className="contact-top">
         <h1 className="contact-heading">
           Quick <br /> Contact
@@ -147,7 +149,7 @@ const Contact = () => {
           </>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

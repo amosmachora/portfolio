@@ -11,6 +11,7 @@ import ManLookingAtComputer from "../../Assets/ManLookingAtComputer.jpg";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { pageVariantsIn } from "../../Framer";
 
 const StartPage = () => {
   const slide1 = {
@@ -58,10 +59,10 @@ const StartPage = () => {
     },
   };
 
+  const imageAnimation = useAnimation();
   const { ref, inView } = useInView();
   const whiteBannerAnimation = useAnimation();
   useEffect(() => {
-    console.log(inView);
     if (inView) {
       whiteBannerAnimation.start({
         x: 0,
@@ -78,8 +79,10 @@ const StartPage = () => {
     }
   }, [inView]);
 
+  const [isInView, setIsInView] = useState(false);
+
   return (
-    <div>
+    <motion.div variants={pageVariantsIn} initial="initial" animate="animate">
       <AnimatePresence>
         <motion.div className="slides" initial="initial" animate="animate">
           <div
@@ -157,17 +160,29 @@ const StartPage = () => {
       <div className="my-portfolio-services">
         <div>
           <IconRound />
-          <p className="my-portfolio">
+          <motion.p
+            className="my-portfolio"
+            initial={{ y: 100 }}
+            whileInView={{ y: 0 }}
+          >
             My Portfolio <br /> services
-          </p>
-          <img
+          </motion.p>
+          <motion.img
             src="https://images.pexels.com/photos/6340796/pexels-photo-6340796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="People Looking at computer"
             className="people-looking-at-computer"
+            initial={{ x: "100vw" }}
+            animate={{ x: 0 }}
+            whileInView={{ x: 0 }}
           />
         </div>
-        <div className="flex space-between">
-          <div className="flex-v">
+        <motion.div className="flex space-between">
+          <motion.div
+            className="flex-v"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <p className="service-number">01</p>
             <h2 className="service-title">Experience</h2>
             <p className="bluish">
@@ -175,8 +190,13 @@ const StartPage = () => {
               development industry for over 4 years and i have worked with a lot
               of clients. You want the best ? you`ve got the best.
             </p>
-          </div>
-          <div className="flex-v">
+          </motion.div>
+          <motion.div
+            className="flex-v"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <p className="service-number">02</p>
             <h2 className="service-title">Quality Assurance</h2>
             <p className="bluish">
@@ -184,19 +204,41 @@ const StartPage = () => {
               browser support , Fast Loading Speeds, Data caching, you name it.
               I've got it all
             </p>
-          </div>
-          <div className="flex-v">
+          </motion.div>
+          <motion.div
+            className="flex-v"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <p className="service-number">03</p>
             <h2 className="service-title">Freelance Work</h2>
             <p className="bluish">
               I also work online, all you need is send me an email and i will
               respond as soon as possible.
             </p>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
-      <div className="i-create-gold flex">
-        <img src={PharmaOne} alt="Pharmacy application" />
+      <motion.div
+        className="i-create-gold flex"
+        whileInView={() => setIsInView(true)}
+      >
+        <motion.img
+          src={PharmaOne}
+          alt="Pharmacy application"
+          initial={{ opacity: 0 }}
+          whileInView={{
+            opacity: 1,
+            transition: {
+              duration: 1,
+              type: "spring",
+            },
+          }}
+          whileHover={{
+            borderRadius: "5%",
+          }}
+        />
         <div>
           <h2>I create Api consuming web apps</h2>
           <h3>
@@ -220,8 +262,8 @@ const StartPage = () => {
             Arrow={Arrow}
           />
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

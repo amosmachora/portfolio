@@ -49,3 +49,13 @@ export const pathVariants = {
     },
   },
 };
+
+export const pageVariantsIn = {
+  initial: {
+    x: "100vw",
+  },
+  animate: {
+    x: 0,
+  },
+  when: "beforeChildren",
+};

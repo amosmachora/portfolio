@@ -2,6 +2,7 @@ import React from "react";
 import { ReadMore } from "../Start/StartPage";
 import "./Footer.css";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -436,7 +437,17 @@ c49 -25 54 -68 15 -114 -43 -52 -104 -39 -104 22 0 31 37 107 52 107 5 0 22
             Number of <br /> satisfied <br /> customers
           </p>
         </div>
-        <div className="flex footer-content-right">
+        <motion.div
+          className="flex footer-content-right"
+          initial={{ y: 1000 }}
+          whileInView={{
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 1,
+            },
+          }}
+        >
           <div>
             <h2>
               Available <br /> for projects
@@ -456,7 +467,7 @@ c49 -25 54 -68 15 -114 -43 -52 -104 -39 -104 22 0 31 37 107 52 107 5 0 22
             alt="Desktop set up"
             className="desktop-setup"
           />
-        </div>
+        </motion.div>
       </div>
       <div className="footer-bottom flex space-between">
         <p className="bluish"> © 2022 Amos. All rights reversed</p>

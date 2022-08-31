@@ -6,6 +6,8 @@ import Me from "../../Assets/TheMan.jpg";
 import MeSmall from "../../Assets/MeSmall.jpg";
 import Plus from "../../Assets/plus.svg";
 import { Context } from "../../App";
+import { pageVariantsIn } from "../../Framer";
+import { motion } from "framer-motion";
 
 const AboutMe = () => {
   const [myImage, setMyImage] = useState(Me);
@@ -27,7 +29,12 @@ const AboutMe = () => {
   }, []);
 
   return (
-    <div className="about-me">
+    <motion.div
+      className="about-me"
+      variants={pageVariantsIn}
+      initial="initial"
+      animate="animate"
+    >
       <IconRound />
       <div className="about-me-top flex space-between">
         <h1>
@@ -324,7 +331,7 @@ const AboutMe = () => {
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
