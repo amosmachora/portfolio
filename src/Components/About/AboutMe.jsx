@@ -322,6 +322,10 @@ const AboutMe = () => {
                 <p>GIT & GitHub</p>
                 <p>Version Control</p>
               </div>
+              <div className="flex">
+                <p>TypeScript</p>
+                <p>JavaScript with handcuffs</p>
+              </div>
             </div>
           </div>
           <p className="greyish">
