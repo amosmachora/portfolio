@@ -143,7 +143,11 @@ const Contact = () => {
                 onClick={() => ResetFunction()}
                 className="link-wrapper cursor"
               >
-                <ReadMore Arrow={ArrowWhite} text="Thank you" />
+                <ReadMore
+                  Arrow={ArrowWhite}
+                  text="Thank you"
+                  link="portfolio"
+                />
               </div>
             </div>
           </>
