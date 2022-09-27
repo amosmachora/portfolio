@@ -36,7 +36,7 @@ export const portFolioItems = [
     description:
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
     title: "Pharmacy management application",
-    live: "https://pharmaone.vercel.app/",
+    live: "http://pharmaone-env-1.eba-kpvrrp6a.us-east-1.elasticbeanstalk.com/",
     github: "https://github.com/AmohPrince/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
