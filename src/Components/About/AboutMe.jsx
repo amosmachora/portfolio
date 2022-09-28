@@ -307,6 +307,10 @@ const AboutMe = () => {
                 <p>Figma</p>
                 <p>UI/UX Design software</p>
               </div>
+              <div className="flex">
+                <p>Tailwind CSS</p>
+                <p>CSS Library</p>
+              </div>
             </div>
             <img src={Plus} alt="Plus" className="plus" />
             <div>
