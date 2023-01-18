@@ -220,7 +220,7 @@ function Socials({ context }) {
       </a>
       <a
         target="_blank"
-        href="https://www.linkedin.com/in/amos-machora-ab4755207/"
+        href="https://www.linkedin.com/in/amos-machora"
         rel="noopener noreferrer"
       >
         <svg

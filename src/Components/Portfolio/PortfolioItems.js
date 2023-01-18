@@ -18,8 +18,22 @@ import cafeInspire from "../../Assets/CafeInspire.png";
 import JavaScript from "../../Assets/Javascript.svg";
 import React from "../../Assets/react.svg";
 import Figma from "../../Assets/Figma.svg";
+import MagloDashboard from "../../Assets/MagloDashboardBlack.png";
+import MagloMyWallets from "../../Assets/MagloMyWallets.png";
+import MagloSettings from "../../Assets/MagloSettings.png";
+import Tailwind from "../../Assets/Tailwind.svg";
 
 export const portFolioItems = [
+  {
+    image: [MagloDashboard, MagloMyWallets, MagloSettings],
+    category: "Dynamic Web Application",
+    description:
+      "A payment method called maglo. Currently in development, Supports dark mode",
+    title: "Maglo",
+    live: "https://maglo.vercel.app",
+    github: "https://github.com/AmohPrince/maglo",
+    languages: [React, Figma, Tailwind],
+  },
   {
     image: [interiorDesignOne, interiorDesignTwo, interiorDesignThree],
     category: "Static Landing Page",

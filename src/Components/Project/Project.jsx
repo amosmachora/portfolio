@@ -4,6 +4,7 @@ import Api from "../../Assets/API.png";
 
 const Project = ({ project }) => {
   const [imageIndex, setImageIndex] = useState(0);
+  console.log(project.image.length);
 
   // useEffect(() => {
   //   changeShownImage();
@@ -25,7 +26,7 @@ const Project = ({ project }) => {
         <a href={project.live} target="_blank" rel="noopener noreferrer">
           <img
             src={project.image[imageIndex]}
-            alt="Project Image"
+            alt="Project"
             className="project-image cursor"
           />
         </a>
