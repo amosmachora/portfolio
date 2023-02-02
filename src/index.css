@@ -8,7 +8,7 @@
   font-family: "Public Sans", sans-serif;
 }
 :root {
-  --bgMain: rgb(5, 20, 34);
+  --bgMain: #051422;
   --bluish: #b1b9c1;
   --orange: #ff5c00;
   --roboto: "Roboto", sans-serif;
@@ -101,6 +101,7 @@ a {
 .capitalize-first {
   text-transform: capitalize;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -115,4 +116,9 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
   border: 2px solid #ff5c00;
   border-radius: 20px;
+}
+@media screen and (max-width: 840px) {
+  .latest-portfolio {
+    display: block;
+  }
 }

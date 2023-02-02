@@ -232,6 +232,13 @@
   color: var(--black);
 }
 @media screen and (max-width: 840px) {
+  .my-projects {
+    position: static;
+  }
+  .satisfied {
+    position: static;
+    width: auto;
+  }
   .content {
     width: 100%;
     padding: 15% 17%;
@@ -240,11 +247,14 @@
     height: 50vh;
   }
   .banner-center {
-    width: 80%;
-    padding-left: 30%;
+    width: 100%;
+    padding-left: 0;
+    position: static;
+    transform: unset;
   }
   .describe {
     width: unset;
+    font-size: 14px;
   }
   .cooperation {
     position: static;
@@ -252,7 +262,8 @@
     margin-top: 20px;
   }
   .white-banner {
-    height: 40vh;
+    height: auto;
+    padding: 40px 20px;
   }
   .number {
     font-size: 72px;
@@ -307,9 +318,13 @@
     margin-top: 20px;
   }
   .white-banner {
-    height: 60vh;
+    height: auto;
+    display: block;
   }
   .content > .link {
     width: 90%;
+  }
+  .number {
+    margin: 10px 0;
   }
 }

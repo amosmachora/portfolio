@@ -26,7 +26,7 @@ const PortFolio = () => {
       <div className="dice">
         <img src={dice} alt="Dice" />
       </div>
-      <div className="flex space-between align-flex-end">
+      <div className="latest-portfolio flex space-between align-flex-end">
         <h1 className="large-heading">
           Latest <br />
           Portfolio
