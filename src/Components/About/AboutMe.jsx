@@ -27,7 +27,8 @@ const AboutMe = () => {
     setSmallScreen(false);
     handleResize();
     document.title = `About`;
-  }, []);
+    window.scrollTo(0, 0);
+  }, [setSmallScreen]);
 
   return (
     <motion.div
@@ -39,7 +40,7 @@ const AboutMe = () => {
       <IconRound />
       <div className="about-me-top flex space-between">
         <h1>
-          Work <br /> Frontend Web Development
+          Learn <br /> more about me
         </h1>
         <ReadMore
           Arrow={ArrowWhite}

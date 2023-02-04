@@ -2,7 +2,7 @@ import React from "react";
 import "./NavBar.css";
 import Hamburger from "../../Assets/hamburger.svg";
 import Close from "../../Assets/close.svg";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   svgVariants,
@@ -12,6 +12,7 @@ import {
 } from "../../Framer";
 
 const NavBar = ({ smallScreen, setSmallScreen }) => {
+  const { pathname } = useLocation();
   return (
     <motion.nav className="flex space-between ">
       <motion.svg
@@ -58,19 +59,19 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
         animate="animate"
       >
         <ul className="nav-links-1">
-          <Link to={"start-page"}>
-            <li>Start Page</li>
+          <Link to={"/"}>
+            <li className={pathname === "/" && "active"}>Start Page</li>
           </Link>
           <Link to={"about-me"}>
-            <li>About Me</li>
+            <li className={pathname === "/about-me" && "active"}>About Me</li>
           </Link>
           <Link to={"portfolio"}>
-            <li>Portfolio</li>
+            <li className={pathname === "/portfolio" && "active"}>Portfolio</li>
           </Link>
         </ul>
         <ul className="nav-links-2">
           <Link to={"contact"}>
-            <li>Contact</li>
+            <li className={pathname === "/contact" && "active"}>Contact</li>
           </Link>
         </ul>
       </motion.div>
@@ -115,6 +116,14 @@ function Socials({ context }) {
       initial="initial"
       animate="animate"
     >
+      <a
+        href="https://www.codewars.com/users/AmohPrince"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="codewars"
+      >
+        C
+      </a>
       <a
         href="https://www.frontendmentor.io/profile/AmohPrince"
         target="_blank"

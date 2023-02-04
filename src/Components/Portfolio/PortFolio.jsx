@@ -15,7 +15,8 @@ const PortFolio = () => {
   useEffect(() => {
     setSmallScreen(false);
     document.title = "Projects";
-  }, []);
+    window.scrollTo(0, 0);
+  }, [setSmallScreen]);
   return (
     <motion.div
       className="portfolio"

@@ -17,6 +17,9 @@ nav {
 .nav-middle li {
   color: var(--white);
 }
+.nav-middle li.active {
+  color: var(--orange);
+}
 .nav-middle > * {
   list-style: none;
 }
@@ -25,9 +28,17 @@ nav li:hover {
   cursor: pointer;
   transition: color var(--delay) ease-in;
 }
-.socials svg {
+.codewars {
+  color: white;
+}
+.codewars:hover {
+  color: var(--orange);
+}
+.socials svg,
+.codewars {
   cursor: pointer;
   margin-right: 15px;
+  display: block;
 }
 .socials svg:hover path,
 .socials svg:hover {

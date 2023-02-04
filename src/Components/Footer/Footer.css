@@ -83,9 +83,7 @@ footer {
 .git:hover {
   color: var(--orange);
 }
-.footer-content-right > div > a {
-  color: var(--white);
-}
+
 @media screen and (max-width: 840px) {
   .footer-content-right {
     flex-direction: column;
@@ -95,6 +93,7 @@ footer {
     width: 100%;
   }
 }
+
 @media screen and (max-width: 650px) {
   .footer-content {
     flex-direction: column;

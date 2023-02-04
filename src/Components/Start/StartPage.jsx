@@ -23,6 +23,9 @@ const StartPage = () => {
   });
 
   const { setSmallScreen } = useContext(Context);
+  const imageAnimation = useAnimation();
+  const { ref, inView } = useInView();
+  const whiteBannerAnimation = useAnimation();
 
   const slide1 = {
     sub: "Frontend Web Developer",
@@ -43,6 +46,7 @@ const StartPage = () => {
   useEffect(() => {
     setSmallScreen(false);
     document.title = `Amos™ Freelancer`;
+    window.scrollTo(0, 0);
   }, [setSmallScreen]);
 
   const textVariants = {
@@ -57,10 +61,6 @@ const StartPage = () => {
       },
     },
   };
-
-  // const imageAnimation = useAnimation();
-  const { ref, inView } = useInView();
-  const whiteBannerAnimation = useAnimation();
 
   useEffect(() => {
     if (inView) {

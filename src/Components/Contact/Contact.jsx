@@ -17,7 +17,8 @@ const Contact = () => {
   useEffect(() => {
     setSmallScreen(false);
     document.title = `Contact`;
-  }, []);
+    window.scrollTo(0, 0);
+  }, [setSmallScreen]);
 
   return (
     <motion.div

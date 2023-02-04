@@ -109,9 +109,6 @@
   width: 25%;
   color: var(--white);
 }
-.about-me-top > a > .link {
-  width: 100%;
-}
 
 @keyframes spin {
   0% {

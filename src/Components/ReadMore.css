@@ -21,6 +21,10 @@
 .link.black:hover {
   border-color: #000;
 }
+.read-more {
+  font-weight: 600;
+  color: white;
+}
 
 @media screen and (max-width: 650px) {
   .link {
