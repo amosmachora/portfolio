@@ -89,7 +89,7 @@ const StartPage = () => {
         setSlide((prev) =>
           prev.sub === "Frontend Web Developer" ? slide2 : slide1
         );
-      }, 5000);
+      }, 10000);
     }
     return () => clearInterval(interval);
   }, []);
