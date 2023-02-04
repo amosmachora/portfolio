@@ -88,19 +88,19 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
             <img src={Close} alt="Close" />
           </div>
           <div className="small-screen-links">
-            <Link to={"start-page"}>
+            <Link to="/">
               <li>Start Page</li>
             </Link>
-            <Link to={"about-me"}>
+            <Link to="about-me">
               <li>About Me</li>
             </Link>
-            <Link to={"portfolio"}>
+            <Link to="portfolio">
               <li>Portfolio</li>
             </Link>
-            <Link to={"contact"}>
+            <Link to="contact">
               <li>Contact</li>
             </Link>
-            <Socials context={"small"} />
+            <Socials context="small" />
           </div>
         </div>
       )}
