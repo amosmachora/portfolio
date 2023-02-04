@@ -3,7 +3,7 @@ import "./Portfolio.css";
 import dice from "../../Assets/dice.png";
 import { portFolioItems } from "./PortfolioItems";
 import Project from "../Project/Project";
-import { ReadMore } from "../Start/StartPage";
+import { ReadMore } from "../ReadMore";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import { Context } from "../../App";
 import { pageVariantsIn } from "../../Framer";

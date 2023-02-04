@@ -1,5 +1,5 @@
 import React from "react";
-import { ReadMore } from "../Start/StartPage";
+import { ReadMore } from "../ReadMore";
 import "./Footer.css";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import { motion } from "framer-motion";

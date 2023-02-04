@@ -8,12 +8,22 @@ import Arrow2 from "../../Assets/Arrow.png";
 import { Context } from "../../App";
 import DesktopSetup from "../../Assets/DesktopSetUp.jpg";
 import ManLookingAtComputer from "../../Assets/ManLookingAtComputer.jpg";
-import { Link } from "react-router-dom";
+import { ReadMore } from "../ReadMore";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { pageVariantsIn } from "../../Framer";
 
 const StartPage = () => {
+  const [slide, setSlide] = useState({
+    sub: "Frontend Web Developer",
+    h1: "I am a",
+    desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
+    linkTo: "about-me",
+    img: DesktopSetup,
+  });
+
+  const { setSmallScreen } = useContext(Context);
+
   const slide1 = {
     sub: "Frontend Web Developer",
     h1: "I am a",
@@ -21,6 +31,7 @@ const StartPage = () => {
     linkTo: "about-me",
     img: DesktopSetup,
   };
+
   const slide2 = {
     sub: "Web Application Developer",
     h1: "Im also a",
@@ -29,22 +40,10 @@ const StartPage = () => {
     img: ManLookingAtComputer,
   };
 
-  const [slide, setSlide] = useState(slide1);
-  const [toggler, setToggler] = useState(true);
-  const { setSmallScreen } = useContext(Context);
-
   useEffect(() => {
     setSmallScreen(false);
     document.title = `Amos™ Freelancer`;
-  }, []);
-
-  useEffect(() => {
-    if (toggler === true) {
-      setSlide(slide1);
-    } else {
-      setSlide(slide2);
-    }
-  }, [toggler]);
+  }, [setSmallScreen]);
 
   const textVariants = {
     initial: {
@@ -59,9 +58,10 @@ const StartPage = () => {
     },
   };
 
-  const imageAnimation = useAnimation();
+  // const imageAnimation = useAnimation();
   const { ref, inView } = useInView();
   const whiteBannerAnimation = useAnimation();
+
   useEffect(() => {
     if (inView) {
       whiteBannerAnimation.start({
@@ -80,14 +80,37 @@ const StartPage = () => {
   }, [inView]);
 
   const [isInView, setIsInView] = useState(false);
+  const [isCarouselHovered, setIsCarouselHovered] = useState(false);
+
+  useEffect(() => {
+    let interval;
+    if (window.innerWidth < 650) {
+      interval = setInterval(() => {
+        setSlide((prev) =>
+          prev.sub === "Frontend Web Developer" ? slide2 : slide1
+        );
+      }, 5000);
+    }
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <motion.div variants={pageVariantsIn} initial="initial" animate="animate">
       <AnimatePresence>
-        <motion.div className="slides" initial="initial" animate="animate">
+        <motion.div
+          className="slides"
+          initial="initial"
+          animate="animate"
+          onMouseEnter={() => setIsCarouselHovered(true)}
+          onMouseLeave={() => setIsCarouselHovered(false)}
+        >
           <div
             className="cube cursor cube-one"
-            onClick={() => setToggler((prev) => !prev)}
+            onClick={() =>
+              setSlide((prev) =>
+                prev.sub === "Frontend Web Developer" ? slide2 : slide1
+              )
+            }
           >
             <img src={Arrow} alt="Arrow" className="arrow-one" />
           </div>
@@ -121,7 +144,11 @@ const StartPage = () => {
           </section>
           <div
             className="cube cursor cube-two"
-            onClick={() => setToggler((prev) => !prev)}
+            onClick={() =>
+              setSlide((prev) =>
+                prev.sub === "Frontend Web Developer" ? slide2 : slide1
+              )
+            }
           >
             <img src={Arrow} alt="Arrow" className="arrow-two" />
           </div>
@@ -268,17 +295,6 @@ const StartPage = () => {
 };
 
 export default StartPage;
-
-export function ReadMore({ border, text, link, Arrow }) {
-  return (
-    <Link to={`/${link}`}>
-      <div className={`flex link ${border} space-between cursor`}>
-        <p className="read-more capitalize-first">{text}</p>
-        <img src={Arrow} alt="Arrow" />
-      </div>
-    </Link>
-  );
-}
 
 export function IconRound() {
   return (

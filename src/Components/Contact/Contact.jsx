@@ -3,7 +3,7 @@ import "./Contact.css";
 import Arrow from "../../Assets/Arrow.svg";
 import { useForm } from "@formspree/react";
 import GreenTick from "../../Assets/tick-green.svg";
-import { ReadMore } from "../Start/StartPage";
+import { ReadMore } from "../ReadMore";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Spinner from "../Spinner/Spinner";
 import { Context } from "../../App";

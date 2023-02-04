@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
-import { IconRound, ReadMore } from "../Start/StartPage";
+import { IconRound } from "../Start/StartPage";
+import { ReadMore } from "../ReadMore";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import "./AboutMe.css";
 import Me from "../../Assets/TheMan.jpg";

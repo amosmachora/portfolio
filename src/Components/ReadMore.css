@@ -1,0 +1,29 @@
+.link {
+  width: 70%;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--orange);
+  margin-top: 30px;
+}
+.link:hover {
+  border-color: var(--white);
+  transition: border-color 300ms ease-in-out;
+}
+.link:hover > img {
+  transform: translateX(10px) rotate(-90deg);
+  transition: transform 300ms ease-in-out;
+}
+.link img {
+  transform: rotate(-90deg);
+  height: 9px;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+.link.black:hover {
+  border-color: #000;
+}
+
+@media screen and (max-width: 650px) {
+  .link {
+    width: 90%;
+  }
+}
