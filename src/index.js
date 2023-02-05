@@ -14,9 +14,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<StartPage />} />
+          <Route element={<StartPage />} index />
           <Route path="about-me" element={<AboutMe />} />
-          {/* <Route path="start-page" element={<StartPage />} /> */}
           <Route path="portfolio" element={<PortFolio />} />
           <Route path="contact" element={<Contact />} />
         </Route>
