@@ -31,7 +31,7 @@ export const portFolioItems = [
       "A payment method called maglo. Currently in development, Supports dark mode",
     title: "Maglo",
     live: "https://maglo.vercel.app",
-    github: "https://github.com/AmohPrince/maglo",
+    github: "https://github.com/amosmachora/maglo",
     languages: [React, Figma, Tailwind],
   },
   {
@@ -39,8 +39,8 @@ export const portFolioItems = [
     category: "Static Landing Page",
     description: "An interior design shop one page landing page",
     title: "Interior Design Shop",
-    live: "https://amohprince.github.io/room-homepage/",
-    github: "https://github.com/AmohPrince/room-homepage",
+    live: "https://amosmachora.github.io/room-homepage/",
+    github: "https://github.com/amosmachora/room-homepage",
     languages: [JavaScript, Figma],
   },
   {
@@ -51,7 +51,7 @@ export const portFolioItems = [
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
     title: "Pharmacy management application",
     live: "http://pharmaone-env-1.eba-kpvrrp6a.us-east-1.elasticbeanstalk.com/",
-    github: "https://github.com/AmohPrince/pharmaone-frontend",
+    github: "https://github.com/amosmachora/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
     languages: [JavaScript, Figma, React],
@@ -62,8 +62,8 @@ export const portFolioItems = [
     description:
       "A small product page that mimics adding item to cart and lightbox image viewing capabilities",
     title: "Product Page",
-    live: "https://amohprince.github.io/ecommerce-product-page/",
-    github: "https://github.com/AmohPrince/ecommerce-product-page",
+    live: "https://amosmachora.github.io/ecommerce-product-page/",
+    github: "https://github.com/amosmachora/ecommerce-product-page",
     languages: [React],
   },
   {
@@ -71,8 +71,8 @@ export const portFolioItems = [
     category: "Mini Project",
     description: "A tip calculator application. Obviously very useful",
     title: "Tip Calculator",
-    live: "https://amohprince.github.io/tipcalculatorapp/",
-    github: "https://github.com/AmohPrince/tipcalculatorapp",
+    live: "https://amosmachora.github.io/tipcalculatorapp/",
+    github: "https://github.com/amosmachora/tipcalculatorapp",
     languages: [JavaScript],
   },
   {
@@ -80,8 +80,8 @@ export const portFolioItems = [
     category: "Landing Page",
     description: "A responsive , brightly coloured landing page",
     title: "SunnySide landing page",
-    github: "https://github.com/AmohPrince/sunnyside-agency-landing-page",
-    live: "https://amohprince.github.io/sunnyside-agency-landing-page/",
+    github: "https://github.com/amosmachora/sunnyside-agency-landing-page",
+    live: "https://amosmachora.github.io/sunnyside-agency-landing-page/",
     languages: [JavaScript],
   },
   {
@@ -90,8 +90,8 @@ export const portFolioItems = [
     description:
       "A triple themed travel agency landing page. Themes switch automatically after 5 minutes, Text mostly in Lorem. ",
     title: "Travel The Earth",
-    github: "https://github.com/AmohPrince/travelearth",
-    live: "https://amohprince.github.io/travelearth/",
+    github: "https://github.com/amosmachora/travelearth",
+    live: "https://amosmachora.github.io/travelearth/",
     figma:
       "https://www.figma.com/file/RAG76w0n9MtMOhbDU8RXWT/Travel-Agency-Landing-Page-(Community)?node-id=0%3A1",
     languages: [React, Figma],
@@ -101,8 +101,8 @@ export const portFolioItems = [
     category: "Landing Page",
     description: "A multi-page NASA themed landing page",
     title: "Space tourism website",
-    github: "https://github.com/AmohPrince/space-tourism",
-    live: "https://amohprince.github.io/space-tourism/",
+    github: "https://github.com/amosmachora/space-tourism",
+    live: "https://amosmachora.github.io/space-tourism/",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
     languages: [React, Figma],
@@ -112,8 +112,8 @@ export const portFolioItems = [
     category: "Landing Page",
     description: "A cafe landing page",
     title: "Modern UI/UX landing page",
-    github: "https://github.com/AmohPrince/Cafeinspire",
-    live: "https://amohprince.github.io/Cafeinspire/",
+    github: "https://github.com/amosmachora/Cafeinspire",
+    live: "https://amosmachora.github.io/Cafeinspire/",
     figma:
       "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
     languages: [React, Figma],

@@ -147,7 +147,7 @@ function Socials({ context }) {
         </svg>
       </a>
       <a
-        href="https://github.com/AmohPrince"
+        href="https://github.com/amosmachora"
         target="_blank"
         rel="noopener noreferrer"
       >
