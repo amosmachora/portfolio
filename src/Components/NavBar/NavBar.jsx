@@ -117,7 +117,7 @@ function Socials({ context }) {
       animate="animate"
     >
       <a
-        href="https://www.codewars.com/users/AmohPrince"
+        href="https://www.codewars.com/users/amosmachora"
         target="_blank"
         rel="noopener noreferrer"
         className="codewars"
@@ -184,7 +184,7 @@ function Socials({ context }) {
       </a>
       <a
         target="_blank"
-        href="https://stackoverflow.com/users/16018684/amohprince"
+        href="https://stackoverflow.com/users/16018684/amos-machora"
         rel="noopener noreferrer"
       >
         <svg
