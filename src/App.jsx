@@ -13,11 +13,23 @@ export const Context = createContext();
 function App() {
   const [smallScreen, setSmallScreen] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [, setLoadedImageCount] = useState(0);
+
   useEffect(() => {
-    setIsLoading(true);
-    setTimeout(() => {
+    const images = document.querySelectorAll("img");
+
+    images.forEach((image) => {
+      image.addEventListener("load", () => {
+        console.log("Loaded", image.src);
+        setLoadedImageCount((prev) => prev + 1);
+      });
+    });
+
+    const timeoutId = setTimeout(() => {
       setIsLoading(false);
-    }, 4000);
+    }, 2000);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -26,7 +38,12 @@ function App() {
         <LoadingAnimation />
       ) : (
         <div className="App">
-          <Context.Provider value={{ setSmallScreen: setSmallScreen }}>
+          <Context.Provider
+            value={{
+              setSmallScreen: setSmallScreen,
+              setIsLoading: setIsLoading,
+            }}
+          >
             <NavBar smallScreen={smallScreen} setSmallScreen={setSmallScreen} />
             <FormspreeProvider project="2017027895586717162">
               <Outlet />

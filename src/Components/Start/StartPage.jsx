@@ -95,7 +95,12 @@ const StartPage = () => {
   }, []);
 
   return (
-    <motion.div variants={pageVariantsIn} initial="initial" animate="animate">
+    <motion.div
+      variants={pageVariantsIn}
+      initial="initial"
+      animate="animate"
+      className="start-page-div"
+    >
       <AnimatePresence>
         <motion.div
           className="slides"
@@ -262,9 +267,6 @@ const StartPage = () => {
               type: "spring",
             },
           }}
-          whileHover={{
-            borderRadius: "5%",
-          }}
         />
         <div>
           <h2>I create Api consuming web apps</h2>
@@ -276,7 +278,7 @@ const StartPage = () => {
             <div className="img-container relative">
               <img src={Arrow2} alt="Arrow" className="center-absolutely" />
             </div>
-            <p>Portfolio</p>
+            <p>Projects</p>
           </div>
           <p className="greyish">
             Visit my portfolio to preview sites, view original design files and
@@ -284,8 +286,8 @@ const StartPage = () => {
           </p>
           <ReadMore
             text={"Read More"}
-            border={"black"}
-            link={"portfolio"}
+            link={"projects"}
+            className="text-black hover:text-orange hover:border-black"
             Arrow={Arrow}
           />
         </div>

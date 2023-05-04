@@ -51,31 +51,12 @@ nav li:hover {
   width: 30px;
 }
 .small-screen {
-  position: absolute;
-  width: 97vw;
-  height: 99vh;
   background-color: var(--bgMain);
-  z-index: 100;
-}
-.close {
-  padding: 10px;
-  background-color: var(--white);
-  position: absolute;
-  right: 10px;
-  width: max-content;
-  height: max-content;
-}
-.close > img {
-  width: 30px;
-  height: 30px;
-}
-.socials.small {
-  display: unset;
 }
 .small-screen-links {
   list-style: none;
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -86,15 +67,6 @@ nav li:hover {
 }
 .small-screen-links li {
   margin: 15px 0;
-}
-.small-screen-links > .socials {
-  margin-top: 10px;
-}
-.small-screen-links > .socials svg {
-  margin: 20px;
-  --size: 30px;
-  height: var(--size);
-  width: var(--size);
 }
 .logo {
   height: 4rem;
@@ -108,7 +80,6 @@ nav li:hover {
   .hamburger {
     display: unset;
   }
-  .socials,
   .nav-middle {
     display: none;
   }

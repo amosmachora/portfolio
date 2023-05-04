@@ -30,7 +30,7 @@ const PortFolio = () => {
       <div className="latest-portfolio flex space-between align-flex-end">
         <h1 className="large-heading">
           Latest <br />
-          Portfolio
+          Projects
         </h1>
         <ReadMore link={"contact"} text={"Contact"} Arrow={ArrowWhite} />
       </div>
