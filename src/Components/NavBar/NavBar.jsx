@@ -58,13 +58,13 @@ const NavBar = ({ smallScreen, setSmallScreen }) => {
             <Link to="about-me">
               <li>About Me</li>
             </Link>
-            <Link to="portfolio">
-              <li>Portfolio</li>
+            <Link to="projects">
+              <li>projects</li>
             </Link>
             <Link to="contact">
               <li>Contact</li>
             </Link>
-            <Socials className="mt-20 gap-x-4" />
+            <Socials className="mt-20 gap-x-4 gap-y-2" />
           </div>
         </div>
       )}

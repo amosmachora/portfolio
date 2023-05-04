@@ -281,8 +281,8 @@ const StartPage = () => {
             <p>Projects</p>
           </div>
           <p className="greyish">
-            Visit my portfolio to preview sites, view original design files and
-            inspect the source code.
+            Visit my projects section to preview sites, view original design
+            files and inspect the source code.
           </p>
           <ReadMore
             text={"Read More"}

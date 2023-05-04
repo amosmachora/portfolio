@@ -45,7 +45,7 @@ const AboutMe = () => {
         <ReadMore
           Arrow={ArrowWhite}
           text={"Latest portfolio"}
-          link={"portfolio"}
+          link={"projects"}
         />
       </div>
       <div className="my-picture flex space-between">
