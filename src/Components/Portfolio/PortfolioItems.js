@@ -22,14 +22,30 @@ import MagloDashboard from "../../Assets/MagloDashboardBlack.png";
 import MagloMyWallets from "../../Assets/MagloMyWallets.png";
 import MagloSettings from "../../Assets/MagloSettings.png";
 import Tailwind from "../../Assets/Tailwind.svg";
+import BooklerOne from "../../Assets/Bookler (1).png";
+import BooklerTwo from "../../Assets/Bookler (2).png";
+import BooklerThree from "../../Assets/Bookler (3).png";
+import BooklerFour from "../../Assets/Bookler (4).png";
+import BooklerFive from "../../Assets/Bookler (5).png";
 
 export const portFolioItems = [
+  {
+    image: [BooklerOne, BooklerTwo, BooklerThree, BooklerFour, BooklerFive],
+    category: "Web Application",
+    description:
+      "Bookler is a simulated booking platform that provides a visually appealing user interface for viewing real-time flight, car rental, and hotel information. Although only accessible on desktop, it is highly recommended to give it a try. Authentication is managed through Firebase, and Google Maps React Library is used to provide interactive maps. Additionally, Bookler makes use of multiple APIs to handle real-time data flows for flights, car rentals, and hotels. This allows for seamless integration of information from various sources to provide up-to-date and accurate information for users.",
+    title: "Bookler",
+    live: "https://bookler-six.vercel.app/",
+    github: "https://github.com/amosmachora/bookler",
+    languages: [React, Figma, Tailwind],
+  },
   {
     image: [MagloDashboard, MagloMyWallets, MagloSettings],
     category: "Dynamic Web Application",
     description:
       "A payment method called maglo. Currently in development, Supports dark mode",
     title: "Maglo",
+
     live: "https://maglo.vercel.app",
     github: "https://github.com/amosmachora/maglo",
     languages: [React, Figma, Tailwind],
