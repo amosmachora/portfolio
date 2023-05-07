@@ -3,47 +3,63 @@ import "./Project.css";
 import Api from "../../Assets/API.png";
 import { Cube } from "../Cube";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { Project as ProjectType } from "../Portfolio/PortfolioItems";
+import { AnimatePresence, motion } from "framer-motion";
 
-const Project = ({ project }) => {
+const Project = ({ project }: { project: ProjectType }) => {
   const [imageIndex, setImageIndex] = useState(0);
-  console.log(project.image.length);
 
-  // useEffect(() => {
-  //   changeShownImage();
-  // }, []);
+  const changeShownImage = (direction: "positive" | "negative") => {
+    const isPositiveDirection = direction === "positive";
+    const lastIndex = project.images.length - 1;
 
-  // const changeShownImage = () => {
-  //   setTimeout(() => {
-  //     if (imageIndex === project.images.length) {
-  //       setImageIndex((prev) => prev - 1);
-  //     }
-  //     setImageIndex((prev) => prev + 1);
-  //     changeShownImage();
-  //   }, 5000);
-  // };
+    setImageIndex((prev) =>
+      isPositiveDirection
+        ? prev === lastIndex
+          ? 0
+          : prev + 1
+        : prev === 0
+        ? lastIndex
+        : prev - 1
+    );
+  };
 
   return (
     <div className="project">
       <div className="project-image-container">
         <Cube
           icon={faCaretLeft}
-          onClick={() => setImageIndex((prev) => prev - 1)}
-          className="z-50 absolute"
+          onClick={() => changeShownImage("negative")}
+          className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 left-0 text-white bg-orange cursor-pointer"
         />
         <Cube
           icon={faCaretRight}
-          onClick={() => setImageIndex((prev) => prev + 1)}
-          className="z-50 absolute"
+          onClick={() => changeShownImage("positive")}
+          className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 right-4 text-white bg-orange cursor-pointer"
         />
         <a href={project.live} target="_blank" rel="noopener noreferrer">
-          <img
-            src={project.image[imageIndex]}
-            alt="Project"
-            className="project-image cursor"
-          />
+          <AnimatePresence>
+            <motion.img
+              src={project.images[imageIndex]}
+              // key={imageIndex}
+              alt="Project"
+              className="project-image cursor"
+              // initial={{
+              //   opacity: 0,
+              // }}
+              // animate={{
+              //   x: 1,
+              // }}
+              // transition={{
+              //   type: "tween",
+              //   duration: 0.5,
+              // }}
+              // onLoad={() => setImageIndex(0)}
+            />
+          </AnimatePresence>
         </a>
         <div className="project-languages center-absolutely">
-          {project.languages.map((language) => (
+          {project.languages.map((language: string) => (
             <img src={language} alt="Language" />
           ))}
         </div>

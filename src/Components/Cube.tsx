@@ -13,7 +13,7 @@ export const Cube = ({
 }) => {
   return (
     <div className={className} onClick={onClick}>
-      <FontAwesomeIcon icon={icon} className="text-black center-absolutely" />
+      <FontAwesomeIcon icon={icon} className="text-white center-absolutely" />
     </div>
   );
 };

@@ -28,9 +28,19 @@ import BooklerThree from "../../Assets/Bookler (3).png";
 import BooklerFour from "../../Assets/Bookler (4).png";
 import BooklerFive from "../../Assets/Bookler (5).png";
 
+export type Project = {
+  images: string[];
+  category: string;
+  description: string;
+  title: string;
+  live: string;
+  github: string;
+  languages: string[];
+};
+
 export const portFolioItems = [
   {
-    image: [BooklerOne, BooklerTwo, BooklerThree, BooklerFour, BooklerFive],
+    images: [BooklerOne, BooklerTwo, BooklerThree, BooklerFour, BooklerFive],
     category: "Web Application",
     description:
       "Bookler is a simulated booking platform that provides a visually appealing user interface for viewing real-time flight, car rental, and hotel information. Although only accessible on desktop, it is highly recommended to give it a try. Authentication is managed through Firebase, and Google Maps React Library is used to provide interactive maps. Additionally, Bookler makes use of multiple APIs to handle real-time data flows for flights, car rentals, and hotels. This allows for seamless integration of information from various sources to provide up-to-date and accurate information for users.",
@@ -40,7 +50,7 @@ export const portFolioItems = [
     languages: [React, Figma, Tailwind],
   },
   {
-    image: [MagloDashboard, MagloMyWallets, MagloSettings],
+    images: [MagloDashboard, MagloMyWallets, MagloSettings],
     category: "Dynamic Web Application",
     description:
       "A payment method called maglo. Currently in development, Supports dark mode",
@@ -51,7 +61,7 @@ export const portFolioItems = [
     languages: [React, Figma, Tailwind],
   },
   {
-    image: [interiorDesignOne, interiorDesignTwo, interiorDesignThree],
+    images: [interiorDesignOne, interiorDesignTwo, interiorDesignThree],
     category: "Static Landing Page",
     description: "An interior design shop one page landing page",
     title: "Interior Design Shop",
@@ -61,7 +71,7 @@ export const portFolioItems = [
   },
   {
     api: true,
-    image: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
+    images: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
     category: "Application",
     description:
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
@@ -73,17 +83,17 @@ export const portFolioItems = [
     languages: [JavaScript, Figma, React],
   },
   {
-    image: [productPageOne, productPageTwo, productPageThree],
+    images: [productPageOne, productPageTwo, productPageThree],
     category: "Dynamic Landing Page",
     description:
-      "A small product page that mimics adding item to cart and lightbox image viewing capabilities",
+      "A small product page that mimics adding item to cart and lightbox images viewing capabilities",
     title: "Product Page",
     live: "https://amosmachora.github.io/ecommerce-product-page/",
     github: "https://github.com/amosmachora/ecommerce-product-page",
     languages: [React],
   },
   {
-    image: [tipCalculatorOne, tipCalculatorTwo],
+    images: [tipCalculatorOne, tipCalculatorTwo],
     category: "Mini Project",
     description: "A tip calculator application. Obviously very useful",
     title: "Tip Calculator",
@@ -92,7 +102,7 @@ export const portFolioItems = [
     languages: [JavaScript],
   },
   {
-    image: [sunnySide],
+    images: [sunnySide],
     category: "Landing Page",
     description: "A responsive , brightly coloured landing page",
     title: "SunnySide landing page",
@@ -101,7 +111,7 @@ export const portFolioItems = [
     languages: [JavaScript],
   },
   {
-    image: [travelEarthOne, travelEarthTwo, travelEarthThree],
+    images: [travelEarthOne, travelEarthTwo, travelEarthThree],
     category: "Landing Page",
     description:
       "A triple themed travel agency landing page. Themes switch automatically after 5 minutes, Text mostly in Lorem. ",
@@ -113,7 +123,7 @@ export const portFolioItems = [
     languages: [React, Figma],
   },
   {
-    image: [spaceTourism],
+    images: [spaceTourism],
     category: "Landing Page",
     description: "A multi-page NASA themed landing page",
     title: "Space tourism website",
@@ -124,7 +134,7 @@ export const portFolioItems = [
     languages: [React, Figma],
   },
   {
-    image: [cafeInspire],
+    images: [cafeInspire],
     category: "Landing Page",
     description: "A cafe landing page",
     title: "Modern UI/UX landing page",
