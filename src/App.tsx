@@ -1,14 +1,19 @@
 import "./App.css";
 import NavBar from "./Components/NavBar/NavBar";
-import Heart from "./Assets/heart.png";
 import Footer from "./Components/Footer/Footer";
 import { Outlet } from "react-router-dom";
 import { useState, createContext, useEffect } from "react";
 import { FormspreeProvider } from "@formspree/react";
 // import Tracker from "./Components/Tracker/Tracker";
+import { heart } from "./Assets/assets";
 import LoadingAnimation from "./Components/LoadingAnimation";
 
-export const Context = createContext();
+export const Context = createContext<{
+  setSmallScreen: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}>(null as any);
+
+export const pages = ["start-page", "about-me", "projects", "contact"];
 
 function App() {
   const [smallScreen, setSmallScreen] = useState(false);
@@ -17,10 +22,8 @@ function App() {
 
   useEffect(() => {
     const images = document.querySelectorAll("img");
-
     images.forEach((image) => {
       image.addEventListener("load", () => {
-        console.log("Loaded", image.src);
         setLoadedImageCount((prev) => prev + 1);
       });
     });
@@ -50,7 +53,8 @@ function App() {
             </FormspreeProvider>
             <Footer />
             <div className="designed-with-love flex align-center">
-              Designed with <img src={Heart} alt="Heart" className="heart" />
+              Designed with
+              <img src={heart} alt="heart" className="heart" />
             </div>
             {/* <Tracker /> */}
           </Context.Provider>

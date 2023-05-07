@@ -17,6 +17,8 @@ const PortFolio = () => {
     document.title = "Projects";
     window.scrollTo(0, 0);
   }, [setSmallScreen]);
+
+  //TODO make the images switchable, add backend development with firebase and spring. fix link errors
   return (
     <motion.div
       className="portfolio"

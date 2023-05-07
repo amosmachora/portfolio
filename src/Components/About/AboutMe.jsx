@@ -64,8 +64,8 @@ const AboutMe = () => {
               developer.
             </p>
             <p>
-              I have over 4 years learning + working experience in developing
-              clean, maintainable, responsive and fast UI .
+              I have 2 years learning + working experience in developing clean,
+              maintainable, responsive and fast UI .
             </p>
             <p>
               I`m a positive minded and eager to learn individual who works

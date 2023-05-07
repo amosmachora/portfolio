@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Project.css";
 import Api from "../../Assets/API.png";
+import { Cube } from "../Cube";
+import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const Project = ({ project }) => {
   const [imageIndex, setImageIndex] = useState(0);
@@ -23,6 +25,16 @@ const Project = ({ project }) => {
   return (
     <div className="project">
       <div className="project-image-container">
+        <Cube
+          icon={faCaretLeft}
+          onClick={() => setImageIndex((prev) => prev - 1)}
+          className="z-50 absolute"
+        />
+        <Cube
+          icon={faCaretRight}
+          onClick={() => setImageIndex((prev) => prev + 1)}
+          className="z-50 absolute"
+        />
         <a href={project.live} target="_blank" rel="noopener noreferrer">
           <img
             src={project.image[imageIndex]}

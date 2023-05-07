@@ -16,7 +16,7 @@ const Contact = () => {
 
   useEffect(() => {
     setSmallScreen(false);
-    document.title = `Contact amos 📩`;
+    document.title = `Contact Me 📩`;
     window.scrollTo(0, 0);
   }, [setSmallScreen]);
 
@@ -85,7 +85,6 @@ const Contact = () => {
             <div>
               <div className="flex space-between">
                 <input type="hidden" name="_captcha" value="false" />
-
                 <input
                   type="text"
                   placeholder="Your Name *"

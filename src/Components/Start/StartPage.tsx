@@ -12,6 +12,9 @@ import { ReadMore } from "../ReadMore";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { pageVariantsIn } from "../../Framer";
+import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const StartPage = () => {
   const [slide, setSlide] = useState({
@@ -23,8 +26,7 @@ const StartPage = () => {
   });
 
   const { setSmallScreen } = useContext(Context);
-  const imageAnimation = useAnimation();
-  const { ref, inView } = useInView();
+  const { ref } = useInView();
   const whiteBannerAnimation = useAnimation();
 
   const slide1 = {
@@ -63,27 +65,7 @@ const StartPage = () => {
   };
 
   useEffect(() => {
-    if (inView) {
-      whiteBannerAnimation.start({
-        x: 0,
-        transition: {
-          type: "spring",
-          duration: 1,
-        },
-      });
-    }
-    if (!inView) {
-      whiteBannerAnimation.start({
-        x: "-50vw",
-      });
-    }
-  }, [inView]);
-
-  const [isInView, setIsInView] = useState(false);
-  const [isCarouselHovered, setIsCarouselHovered] = useState(false);
-
-  useEffect(() => {
-    let interval;
+    let interval: string | number | NodeJS.Timeout | undefined;
     if (window.innerWidth < 650) {
       interval = setInterval(() => {
         setSlide((prev) =>
@@ -102,22 +84,19 @@ const StartPage = () => {
       className="start-page-div"
     >
       <AnimatePresence>
-        <motion.div
-          className="slides"
-          initial="initial"
-          animate="animate"
-          onMouseEnter={() => setIsCarouselHovered(true)}
-          onMouseLeave={() => setIsCarouselHovered(false)}
-        >
+        <motion.div className="slides" initial="initial" animate="animate">
           <div
-            className="cube cursor cube-one"
+            className="cube cursor cube-one absolute"
             onClick={() =>
               setSlide((prev) =>
                 prev.sub === "Frontend Web Developer" ? slide2 : slide1
               )
             }
           >
-            <img src={Arrow} alt="Arrow" className="arrow-one" />
+            <FontAwesomeIcon
+              icon={faCaretLeft}
+              className="text-black center-absolutely"
+            />
           </div>
           <section className="content">
             <motion.p
@@ -141,21 +120,20 @@ const StartPage = () => {
             >
               {slide.desc}
             </motion.p>
-            <ReadMore
-              Arrow={ArrowWhite}
-              text={"Read More"}
-              link={slide.linkTo}
-            />
+            <ReadMore text={"Read More"} link={slide.linkTo} />
           </section>
           <div
-            className="cube cursor cube-two"
+            className="cube cursor-pointer cube-two absolute"
             onClick={() =>
               setSlide((prev) =>
                 prev.sub === "Frontend Web Developer" ? slide2 : slide1
               )
             }
           >
-            <img src={Arrow} alt="Arrow" className="arrow-two" />
+            <FontAwesomeIcon
+              icon={faCaretRight}
+              className="text-black center-absolutely"
+            />
           </div>
           <motion.img
             alt="image-slide"
@@ -252,10 +230,7 @@ const StartPage = () => {
           </motion.div>
         </motion.div>
       </div>
-      <motion.div
-        className="i-create-gold flex"
-        whileInView={() => setIsInView(true)}
-      >
+      <motion.div className="i-create-gold flex">
         <motion.img
           src={PharmaOne}
           alt="Pharmacy application"
@@ -287,8 +262,7 @@ const StartPage = () => {
           <ReadMore
             text={"Read More"}
             link={"projects"}
-            className="text-black hover:text-orange hover:border-black"
-            Arrow={Arrow}
+            className="text-black hover:border-orange"
           />
         </div>
       </motion.div>
