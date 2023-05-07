@@ -27,16 +27,20 @@ const Project = ({ project }: { project: ProjectType }) => {
   return (
     <div className="project">
       <div className="project-image-container">
-        <Cube
-          icon={faCaretLeft}
-          onClick={() => changeShownImage("negative")}
-          className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 left-0 text-white bg-orange cursor-pointer"
-        />
-        <Cube
-          icon={faCaretRight}
-          onClick={() => changeShownImage("positive")}
-          className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 right-4 text-white bg-orange cursor-pointer"
-        />
+        {project.images.length > 1 && (
+          <>
+            <Cube
+              icon={faCaretLeft}
+              onClick={() => changeShownImage("negative")}
+              className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 left-0 text-white bg-orange cursor-pointer"
+            />
+            <Cube
+              icon={faCaretRight}
+              onClick={() => changeShownImage("positive")}
+              className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 right-4 text-white bg-orange cursor-pointer"
+            />
+          </>
+        )}
         <a href={project.live} target="_blank" rel="noopener noreferrer">
           <AnimatePresence>
             <motion.img
