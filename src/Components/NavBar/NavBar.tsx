@@ -82,7 +82,17 @@ const NavBar = ({
           </div>
           <div className="text-center list-none absolute top-1/4 right-1/2 translate-x-1/2">
             {pages.map((page) => (
-              <Link to={page === "start-page" ? "/" : page}>
+              <Link
+                to={page === "start-page" ? "/" : page}
+                onClick={() => {
+                  setSmallScreen(false);
+                  window.scroll({
+                    behavior: "smooth",
+                    left: 0,
+                    top: 0,
+                  });
+                }}
+              >
                 <li>{page}</li>
               </Link>
             ))}

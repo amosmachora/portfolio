@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import { IconRound } from "../Start/StartPage";
 import { ReadMore } from "../ReadMore";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
@@ -6,13 +6,11 @@ import "./AboutMe.css";
 import Me from "../../Assets/TheMan.jpg";
 import MeSmall from "../../Assets/MeSmall.jpg";
 import Plus from "../../Assets/plus.svg";
-import { Context } from "../../App";
 import { pageVariantsIn } from "../../Framer";
 import { motion } from "framer-motion";
 
 const AboutMe = () => {
   const [myImage, setMyImage] = useState(Me);
-  const { setSmallScreen } = useContext(Context);
 
   const handleResize = () => {
     if (window.innerWidth < 840) {
@@ -24,11 +22,14 @@ const AboutMe = () => {
   window.addEventListener("resize", handleResize);
 
   useEffect(() => {
-    setSmallScreen(false);
     handleResize();
     document.title = `About`;
-    window.scrollTo(0, 0);
-  }, [setSmallScreen]);
+    window.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: 0,
+    });
+  }, []);
 
   return (
     <motion.div

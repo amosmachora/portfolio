@@ -25,7 +25,6 @@ const StartPage = () => {
     img: DesktopSetup,
   });
 
-  const { setSmallScreen } = useContext(Context);
   const { ref } = useInView();
   const whiteBannerAnimation = useAnimation();
 
@@ -46,10 +45,13 @@ const StartPage = () => {
   };
 
   useEffect(() => {
-    setSmallScreen(false);
+    window.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: 0,
+    });
     document.title = `Amos™ Freelancer`;
-    window.scrollTo(0, 0);
-  }, [setSmallScreen]);
+  }, []);
 
   const textVariants = {
     initial: {

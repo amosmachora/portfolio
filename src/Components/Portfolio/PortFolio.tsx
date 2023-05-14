@@ -1,28 +1,25 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Portfolio.css";
 import dice from "../../Assets/dice.png";
 import { portFolioItems } from "./PortfolioItems";
 import Project from "../Project/Project";
 import { ReadMore } from "../ReadMore";
-import ArrowWhite from "../../Assets/ArrowWhite.svg";
-import { Context } from "../../App";
-import { pageVariantsIn } from "../../Framer";
 import { motion } from "framer-motion";
 
 const PortFolio = () => {
-  const { setSmallScreen } = useContext(Context);
-
   useEffect(() => {
-    setSmallScreen(false);
     document.title = "Projects";
-    window.scrollTo(0, 0);
-  }, [setSmallScreen]);
+    window.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: 0,
+    });
+  }, []);
 
-  //TODO make the images switchable, add backend development with firebase and spring. fix link errors
   return (
     <motion.div
       className="portfolio"
-      variants={pageVariantsIn}
+      // variants={pageVariantsIn}
       initial="initial"
       animate="animate"
     >
@@ -34,9 +31,9 @@ const PortFolio = () => {
           Latest <br />
           Projects
         </h1>
-        <ReadMore link={"contact"} text={"Contact"} Arrow={ArrowWhite} />
+        <ReadMore link={"contact"} text={"Contact"} />
       </div>
-      <div className="projects flex space-between">
+      <div className="projects flex justify-between bg-white w-full flex-wrap px-[2%] mt-[100px]">
         {portFolioItems.map((project) => (
           <Project project={project} />
         ))}

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Contact.css";
 import Arrow from "../../Assets/Arrow.svg";
 import { useForm } from "@formspree/react";
@@ -6,19 +6,20 @@ import GreenTick from "../../Assets/tick-green.svg";
 import { ReadMore } from "../ReadMore";
 import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Spinner from "../Spinner/Spinner";
-import { Context } from "../../App";
 import { pageVariantsIn } from "../../Framer";
 import { motion } from "framer-motion";
 
 const Contact = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");
-  const { setSmallScreen } = useContext(Context);
 
   useEffect(() => {
-    setSmallScreen(false);
     document.title = `Contact Me 📩`;
-    window.scrollTo(0, 0);
-  }, [setSmallScreen]);
+    window.scroll({
+      behavior: "smooth",
+      left: 0,
+      top: 0,
+    });
+  }, []);
 
   return (
     <>

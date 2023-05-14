@@ -2,9 +2,8 @@ import pharmaOneMain from "../../Assets/Pharmaone-main.png";
 import pharmaOneTwo from "../../Assets/Pharmaone-second.png";
 import pharmaOneThree from "../../Assets/Pharmaone-third.png";
 import JavaScript from "../../Assets/Javascript.svg";
-import React from "../../Assets/react.svg";
-import Figma from "../../Assets/Figma.svg";
-import Tailwind from "../../Assets/Tailwind.svg";
+import { faFigma, faJava, faReact } from "@fortawesome/free-brands-svg-icons";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
 export type Project = {
   images: string[];
@@ -13,7 +12,8 @@ export type Project = {
   title: string;
   live: string;
   github: string;
-  languages: string[];
+  languages: IconProp[];
+  figma?: string;
 };
 
 const booklerScreenshotsLinks = [
@@ -85,7 +85,7 @@ export const portFolioItems = [
     title: "Bookler",
     live: "https://bookler-six.vercel.app/",
     github: "https://github.com/amosmachora/bookler",
-    languages: [React, Figma, Tailwind],
+    languages: [faReact, faFigma],
   },
   {
     images: magloScreenshotsLinks,
@@ -96,7 +96,7 @@ export const portFolioItems = [
 
     live: "https://maglo.vercel.app",
     github: "https://github.com/amosmachora/maglo",
-    languages: [React, Figma, Tailwind],
+    languages: [faReact, faFigma],
   },
   {
     images: interiorDesignShopLinks,
@@ -105,12 +105,11 @@ export const portFolioItems = [
     title: "Interior Design Shop",
     live: "https://amosmachora.github.io/room-homepage/",
     github: "https://github.com/amosmachora/room-homepage",
-    languages: [JavaScript, Figma],
+    languages: [faReact, faFigma],
   },
   {
-    api: true,
     images: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
-    category: "Application",
+    category: "Fullstack application",
     description:
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
     title: "Pharmacy management application",
@@ -118,7 +117,7 @@ export const portFolioItems = [
     github: "https://github.com/amosmachora/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
-    languages: [JavaScript, Figma, React],
+    languages: [faJava, faReact, faFigma],
   },
   {
     images: productPageLinks,
@@ -128,7 +127,7 @@ export const portFolioItems = [
     title: "Product Page",
     live: "https://amosmachora.github.io/ecommerce-product-page/",
     github: "https://github.com/amosmachora/ecommerce-product-page",
-    languages: [React],
+    languages: [faReact],
   },
   {
     images: tipCalculatorLinks,
@@ -157,7 +156,7 @@ export const portFolioItems = [
     live: "https://amosmachora.github.io/space-tourism/",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
-    languages: [React, Figma],
+    languages: [faReact, faFigma],
   },
   {
     images: cafeInspireLinks,
@@ -168,6 +167,6 @@ export const portFolioItems = [
     live: "https://amosmachora.github.io/Cafeinspire/",
     figma:
       "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
-    languages: [React, Figma],
+    languages: [faReact, faFigma],
   },
 ];
