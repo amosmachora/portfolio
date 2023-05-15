@@ -85,9 +85,10 @@
   line-height: 1.4;
   margin-top: 40px;
 }
+.language-icons > img,
 .language-icons > svg {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   margin: 10px;
 }
 .tech-stack-left {

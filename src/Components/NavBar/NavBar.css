@@ -68,10 +68,6 @@ nav li:hover {
 .small-screen-links li {
   margin: 15px 0;
 }
-.logo {
-  height: 4rem;
-  width: 10%;
-}
 
 @media screen and (max-width: 840px) {
   nav {

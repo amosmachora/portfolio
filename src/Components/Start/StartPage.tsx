@@ -1,13 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./StartPage.css";
-import Arrow from "../../Assets/Arrow.svg";
-import ArrowWhite from "../../Assets/ArrowWhite.svg";
-import Projects from "../../Assets/Projects.png";
-import PharmaOne from "../../Assets/Pharmaone.png";
-import Arrow2 from "../../Assets/Arrow.png";
-import { Context } from "../../App";
-import DesktopSetup from "../../Assets/DesktopSetUp.jpg";
-import ManLookingAtComputer from "../../Assets/ManLookingAtComputer.jpg";
 import { ReadMore } from "../ReadMore";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -15,41 +7,35 @@ import { pageVariantsIn } from "../../Framer";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  arrow,
+  desktopSetup,
+  manLookingAtComputer,
+  projects,
+} from "../../Assets/assets";
+
+const slide1 = {
+  sub: "Full Stack Web Developer",
+  h1: "I am a",
+  desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
+  linkTo: "about-me",
+  img: desktopSetup,
+};
+
+const slide2 = {
+  h1: "Im also an",
+  sub: "aspiring android developer",
+  desc: "I am actively learning kotlin and flutter to sharpen my android development skills. Stay tuned...",
+  linkTo: "portfolio",
+  img: manLookingAtComputer,
+};
 
 const StartPage = () => {
-  const [slide, setSlide] = useState({
-    sub: "Frontend Web Developer",
-    h1: "I am a",
-    desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
-    linkTo: "about-me",
-    img: DesktopSetup,
-  });
-
+  const [slide, setSlide] = useState(slide1);
   const { ref } = useInView();
   const whiteBannerAnimation = useAnimation();
 
-  const slide1 = {
-    sub: "Frontend Web Developer",
-    h1: "I am a",
-    desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
-    linkTo: "about-me",
-    img: DesktopSetup,
-  };
-
-  const slide2 = {
-    sub: "Web Application Developer",
-    h1: "Im also a",
-    desc: "Web Applications should be fast, scalable and maintainable. Want to know how ?...",
-    linkTo: "portfolio",
-    img: ManLookingAtComputer,
-  };
-
   useEffect(() => {
-    window.scroll({
-      behavior: "smooth",
-      left: 0,
-      top: 0,
-    });
     document.title = `Amos™ Freelancer`;
   }, []);
 
@@ -61,7 +47,7 @@ const StartPage = () => {
       opacity: 1,
       transition: {
         duration: 1,
-        // type: "spring",
+        type: "spring",
       },
     },
   };
@@ -71,7 +57,7 @@ const StartPage = () => {
     if (window.innerWidth < 650) {
       interval = setInterval(() => {
         setSlide((prev) =>
-          prev.sub === "Frontend Web Developer" ? slide2 : slide1
+          prev.sub === "Full Stack Web Developer" ? slide2 : slide1
         );
       }, 10000);
     }
@@ -91,7 +77,7 @@ const StartPage = () => {
             className="cube cursor cube-one absolute"
             onClick={() =>
               setSlide((prev) =>
-                prev.sub === "Frontend Web Developer" ? slide2 : slide1
+                prev.sub === "Full Stack Web Developer" ? slide2 : slide1
               )
             }
           >
@@ -122,13 +108,17 @@ const StartPage = () => {
             >
               {slide.desc}
             </motion.p>
-            <ReadMore text={"Read More"} link={slide.linkTo} />
+            <ReadMore
+              text={"Read More"}
+              link={slide.linkTo}
+              className="hover:border-white"
+            />
           </section>
           <div
             className="cube cursor-pointer cube-two absolute"
             onClick={() =>
               setSlide((prev) =>
-                prev.sub === "Frontend Web Developer" ? slide2 : slide1
+                prev.sub === "Full Stack Web Developer" ? slide2 : slide1
               )
             }
           >
@@ -157,7 +147,7 @@ const StartPage = () => {
         <p className="capitalize satisfied">Number of satisfied clients</p>
         <p className="my-projects">My projects</p>
         <div className="banner-center">
-          <p className="number">67+</p>
+          <p className="number">12+</p>
           <p className="describe">
             I already have a number of satisfied clients with which i have had
             multiple successful projects. This —number is continuously growing,
@@ -234,7 +224,7 @@ const StartPage = () => {
       </div>
       <motion.div className="i-create-gold flex">
         <motion.img
-          src={PharmaOne}
+          src="https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Pharmacy application"
           initial={{ opacity: 0 }}
           whileInView={{
@@ -253,7 +243,7 @@ const StartPage = () => {
           </h3>
           <div className="flex align-center">
             <div className="img-container relative">
-              <img src={Arrow2} alt="Arrow" className="center-absolutely" />
+              <img src={arrow} alt="Arrow" className="center-absolutely" />
             </div>
             <p>Projects</p>
           </div>
@@ -262,8 +252,8 @@ const StartPage = () => {
             files and inspect the source code.
           </p>
           <ReadMore
-            text={"Read More"}
-            link={"projects"}
+            text="Check out my projects"
+            link="projects"
             className="text-black hover:border-orange"
           />
         </div>
@@ -277,7 +267,7 @@ export default StartPage;
 export function IconRound() {
   return (
     <div className="projects-icon">
-      <img src={Projects} alt="Projects" className="center-absolutely" />
+      <img src={projects} alt="Projects" className="center-absolutely" />
     </div>
   );
 }

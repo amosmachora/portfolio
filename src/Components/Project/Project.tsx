@@ -17,7 +17,6 @@ const Project = ({ project }: { project: ProjectType }) => {
   const changeShownImage = (direction: "positive" | "negative") => {
     const isPositiveDirection = direction === "positive";
     const lastIndex = project.images.length - 1;
-
     setImageIndex((prev) =>
       isPositiveDirection
         ? prev === lastIndex
@@ -31,7 +30,7 @@ const Project = ({ project }: { project: ProjectType }) => {
 
   return (
     <div className="project w-[49%] text-black border-b-2 border-orange pb-10 mb-10">
-      <div className="relative overflow-hidden h-[320px] w-full">
+      <div className="relative w-full">
         {project.images.length > 1 && (
           <>
             <Cube
@@ -42,7 +41,7 @@ const Project = ({ project }: { project: ProjectType }) => {
             <Cube
               icon={faCaretRight}
               onClick={() => changeShownImage("positive")}
-              className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 right-4 text-white bg-orange cursor-pointer"
+              className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 right-6 text-white bg-orange cursor-pointer"
             />
           </>
         )}
@@ -50,12 +49,12 @@ const Project = ({ project }: { project: ProjectType }) => {
           href={project.live}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full"
+          className=""
         >
           <motion.img
             src={project.images[imageIndex]}
             alt="Project"
-            className="w-full cursor-pointer h-full object-cover"
+            className="w-full cursor-pointer"
           />
         </a>
       </div>

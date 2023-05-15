@@ -1,9 +1,10 @@
-import pharmaOneMain from "../../Assets/Pharmaone-main.png";
-import pharmaOneTwo from "../../Assets/Pharmaone-second.png";
-import pharmaOneThree from "../../Assets/Pharmaone-third.png";
-import JavaScript from "../../Assets/Javascript.svg";
 import { faFigma, faJava, faReact } from "@fortawesome/free-brands-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import {
+  pharmaOneMain,
+  pharmaOneThree,
+  pharmaOneTwo,
+} from "../../Assets/assets";
 
 export type Project = {
   images: string[];
@@ -76,7 +77,7 @@ const tipCalculatorLinks = [
   "https://bnz05pap001files.storage.live.com/y4mvMJp-_ITJ5L6aaef5Brdw3YNhK1bxEx_BnHkGHij7cLBahXVeA_TO-2z8qXVdrY4CIOrVKAnjcHi-Ir4iMUqA5_xzCCsewQsElo2vy6iBw6M6SMLgFkONa9GjMNaRQljMGnr5dolTHUPlxzcCm_uFdx4BzTR54zffLwArBHml8GNtckhm_zqKR1yi3hqUUVk-oY0jn3UQquKXko-1mxrvJVFy7VORFr3HUF80v0UwdY?encodeFailures=1&width=1278&height=615",
 ];
 
-export const portFolioItems = [
+export const portFolioItems: Project[] = [
   {
     images: booklerScreenshotsLinks,
     category: "Web Application",
@@ -86,6 +87,8 @@ export const portFolioItems = [
     live: "https://bookler-six.vercel.app/",
     github: "https://github.com/amosmachora/bookler",
     languages: [faReact, faFigma],
+    figma:
+      "https://www.figma.com/file/UnC1I2rEMII5sGNZgPHakj/UH3tyvpilexm1LB?node-id=0-1",
   },
   {
     images: magloScreenshotsLinks,
@@ -97,6 +100,8 @@ export const portFolioItems = [
     live: "https://maglo.vercel.app",
     github: "https://github.com/amosmachora/maglo",
     languages: [faReact, faFigma],
+    figma:
+      "https://www.figma.com/file/Dmjkoyr5Mzg3QPJm6u66w6/Financial-Management-Web-App-Design?type=design&node-id=148-5561&t=rTwnI3G9SBsr8FdZ-0",
   },
   {
     images: interiorDesignShopLinks,
@@ -136,7 +141,7 @@ export const portFolioItems = [
     title: "Tip Calculator",
     live: "https://amosmachora.github.io/tipcalculatorapp/",
     github: "https://github.com/amosmachora/tipcalculatorapp",
-    languages: [JavaScript],
+    languages: [faReact],
   },
   {
     images: sunnySideLinks,
@@ -145,7 +150,7 @@ export const portFolioItems = [
     title: "SunnySide landing page",
     github: "https://github.com/amosmachora/sunnyside-agency-landing-page",
     live: "https://amosmachora.github.io/sunnyside-agency-landing-page/",
-    languages: [JavaScript],
+    languages: [faReact],
   },
   {
     images: spaceTourismLinks,

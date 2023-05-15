@@ -1,3 +1,5 @@
+import { Variants } from "framer-motion";
+
 export const svgVariants = {
   hidden: {
     x: "-100vw",
@@ -50,12 +52,11 @@ export const pathVariants = {
   },
 };
 
-export const pageVariantsIn = {
+export const pageVariantsIn: Variants = {
   initial: {
     x: "100vw",
   },
   animate: {
     x: 0,
   },
-  when: "beforeChildren",
 };

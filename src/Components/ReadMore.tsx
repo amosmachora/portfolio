@@ -14,9 +14,18 @@ export function ReadMore({
   link: (typeof pages)[number];
 }) {
   return (
-    <Link to={`/${link}`}>
+    <Link
+      to={`/${link}`}
+      onClick={() => {
+        window.scroll({
+          behavior: "smooth",
+          left: 0,
+          top: 0,
+        });
+      }}
+    >
       <div
-        className={`flex w-[90%] sm:w-[70%] link pb-5 border-b border-orange hover:border-white mt-7 justify-between cursor-pointer duration-300 ease-in-out transition-all font-semibold ${
+        className={`flex w-[90%] sm:w-[70%] pb-5 border-b border-orange link mt-7 justify-between cursor-pointer duration-300 ease-in-out transition-all font-semibold ${
           className ? className : "text-white"
         }`}
       >

@@ -7,8 +7,8 @@ import { Socials } from "./Socials";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Logo } from "./Logo";
-import close from "../../Assets/close.svg";
 import { pages } from "../../App";
+import { close } from "../../Assets/assets";
 
 const NavBar = ({
   smallScreen,
@@ -19,7 +19,7 @@ const NavBar = ({
 }) => {
   const { pathname } = useLocation();
   return (
-    <motion.nav className="flex space-between ">
+    <motion.nav className="flex space-between items-start">
       <Logo />
       <motion.div
         className="nav-middle flex space-between"
@@ -51,7 +51,6 @@ const NavBar = ({
             </Link>
           ))}
         </ul>
-
         <ul className="nav-links-2">
           {pages.slice(3, 4).map((page) => (
             <Link to={page === "start-page" ? "/" : page}>

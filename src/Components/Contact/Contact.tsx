@@ -1,24 +1,20 @@
 import React, { useEffect } from "react";
 import "./Contact.css";
-import Arrow from "../../Assets/Arrow.svg";
+
 import { useForm } from "@formspree/react";
-import GreenTick from "../../Assets/tick-green.svg";
 import { ReadMore } from "../ReadMore";
-import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import Spinner from "../Spinner/Spinner";
 import { pageVariantsIn } from "../../Framer";
 import { motion } from "framer-motion";
+import { greenTick } from "../../Assets/assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");
 
   useEffect(() => {
     document.title = `Contact Me 📩`;
-    window.scroll({
-      behavior: "smooth",
-      left: 0,
-      top: 0,
-    });
   }, []);
 
   return (
@@ -123,7 +119,7 @@ const Contact = () => {
                     disabled={state.submitting}
                   />
                 )}
-                <img src={Arrow} alt="Arrow" />
+                <FontAwesomeIcon icon={faCaretRight} />
               </div>
             </div>
           </form>
@@ -136,7 +132,7 @@ const Contact = () => {
         >
           <div className="success-state">
             <div className="flex align-center">
-              <img src={GreenTick} alt="Green Tick" className="green-tick" />
+              <img src={greenTick} alt="Green Tick" className="green-tick" />
               <p className="success-message">Message was sent successfully!</p>
             </div>
             <p className="greyish-2">
@@ -144,7 +140,7 @@ const Contact = () => {
               Guarantee a response in less than 12 hours!
             </p>
             <div className="link-wrapper cursor">
-              <ReadMore Arrow={ArrowWhite} text="Thank you !" link="projects" />
+              <ReadMore text="Thank you !" link="projects" />
             </div>
           </div>
         </div>

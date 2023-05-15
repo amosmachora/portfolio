@@ -1,7 +1,6 @@
 import React from "react";
 import { ReadMore } from "../ReadMore";
 import "./Footer.css";
-import ArrowWhite from "../../Assets/ArrowWhite.svg";
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
@@ -450,7 +449,6 @@ c49 -25 54 -68 15 -114 -43 -52 -104 -39 -104 22 0 31 37 107 52 107 5 0 22
             <ReadMore
               text={pathname === "/contact" ? "Home" : "Contact Now"}
               link={pathname === "/contact" ? "" : "contact"}
-              Arrow={ArrowWhite}
             />
           </div>
           <img

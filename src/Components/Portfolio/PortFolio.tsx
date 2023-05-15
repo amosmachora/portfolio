@@ -1,25 +1,21 @@
 import React, { useEffect } from "react";
 import "./Portfolio.css";
-import dice from "../../Assets/dice.png";
 import { portFolioItems } from "./PortfolioItems";
 import Project from "../Project/Project";
 import { ReadMore } from "../ReadMore";
 import { motion } from "framer-motion";
+import { dice } from "../../Assets/assets";
+import { pageVariantsIn } from "../../Framer";
 
 const PortFolio = () => {
   useEffect(() => {
     document.title = "Projects";
-    window.scroll({
-      behavior: "smooth",
-      left: 0,
-      top: 0,
-    });
   }, []);
 
   return (
     <motion.div
       className="portfolio"
-      // variants={pageVariantsIn}
+      variants={pageVariantsIn}
       initial="initial"
       animate="animate"
     >
