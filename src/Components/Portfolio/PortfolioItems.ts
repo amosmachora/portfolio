@@ -1,5 +1,3 @@
-import { faFigma, faJava, faReact } from "@fortawesome/free-brands-svg-icons";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { assets } from "../../Assets/assets";
 
 const { pharmaOneMain, pharmaOneThree, pharmaOneTwo } = assets;
@@ -11,7 +9,8 @@ export type Project = {
   title: string;
   live: string;
   github: string;
-  languages: IconProp[];
+  languages: string[];
+  openSourceLibraries?: string[];
   figma?: string;
 };
 
@@ -45,12 +44,6 @@ const interiorDesignShopLinks = [
   "https://bnz05pap001files.storage.live.com/y4mCEZRFiBrJTz1sZxYreMZN-m6qEQv9MapUSxvyvd9-R4u3XkxrwZzNmfcepiZeL5BGjbx-BQCyUCGFDuIiKZ4ctevBEltdBX6aeTYlx96ry4uZCWfSDMJ9UQtdpwXoosOkI4C053KCWogrd_mn6MadK_xOMBFnANQOFK3nJaAipv6qE5APCNePfuz30ajQLxw?width=1360&height=662&cropmode=none",
 ];
 
-const productPageLinks = [
-  "https://bnz05pap001files.storage.live.com/y4mDds4vN9IAbS4MP2TVdzyCZ-7K-fCfseEXEJFLtMkyqYZ0sNk2FvDyo4NNdFyQW_nW-Hfr2_AoLfiqyT8MT8AzSL2Ql7gLJTTEBu_g5JnQOhRFAiJMq3UuNJjHgqyj-OTPYqQ0Q7p_Rtfwk1ogAY00u0MqMAC9a-5a-IgYLrqYo4iVtqLjNXx63vy-F3yde7h?width=1440&height=900&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4m9ZsIuneENBN1eC1-SUnsg3NX_L9HZNLQw-3G3ezj2-p8-uP47uK9JdmkNpApVgRRWhpkX1219HOjdhjatdeyXUNRiIGaQYPTCZEYWDmulh3hgqdVrUt5S_KX0AT9pYGzamgXJ48uWGO2fxiqcfuOjvqqix5ryz-bK190o3easi8erwOWUVDmQQT1f0HMymbN?width=1440&height=1056&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4mIy1oWy7TjIHgqXqQ0SWYahpG12eGVk1Wo008Jlum-E1A9UctqQjb69SXWdCT_mzyBCaQqp52nKTBibx47a6z7Zu_xAYhXd6R1CuI-mg7POSBGp2FJnFu9Yl5NYTCUQAPh6nDDJ5oSZKm0pqrpM_6AYuybOGx9TRhl4oLlhbHPirsp3NEmrCgIifxl-FJ5kgK?width=375&height=900&cropmode=none",
-];
-
 const spaceTourismLinks = [
   "https://bnz05pap001files.storage.live.com/y4m2zw1MBdaHnKUjJOEetg9OQanePC6vSBhkps70PG5eHAV89HXk0YoE-yWvUyRhSqYK9Ajtv_2TwrYb452tQqjma7xxa769-6k1H2aLLxJ9a1zsdPFI71FlMgXT-p-aTecnOcFTaJioPG89zqlGfLkgnbHAC9W8SuTPG-TdjI4Ykn8s44bc25NE_yn7XyV_fuU?width=1365&height=662&cropmode=none",
   "https://bnz05pap001files.storage.live.com/y4m2UmdRRTk8NR6nhDYHtex1TSpKZilyjM2vC_ahmfOjGrfc3DxOHZUebxjUra9Xl0rqkuCMWqZgKrp_j2e3eyC48ViVsoD8tQ3VB51LANkltHz50pBGZPfoc8WGEAwi28SZGjnF5AMR7dNLSmpzAZ3Jb0Uanp_eJGGBmA7juSj7iGVsX_Zk4KAMn1WiCJCDKPa?width=1365&height=655&cropmode=none",
@@ -75,6 +68,18 @@ const tipCalculatorLinks = [
   "https://bnz05pap001files.storage.live.com/y4m4vex939BANBFkFBJlJGVOvCpSvp21hV2MR1k_aqXx6ppD9Q5OkZGtUCy4t3CTKH6OIlE67Ai7iFhioeXEgYPcLbClMEgxRDo5r4nEzLIKI8gha8m1cx5ElO8F_qKz9vQpSzlfsWdlQFvr31PgJn9tmitRcWHr5WvmfPTBVjTCGabQuZSM_UTYr6HW_wOpB70?width=1360&height=654&cropmode=none",
 ];
 
+const {
+  firebase,
+  react,
+  java,
+  springBoot,
+  tailwindcss,
+  firestore,
+  mysql,
+  typescript,
+  javascriptLarge,
+} = assets;
+
 export const portFolioItems: Project[] = [
   {
     images: booklerScreenshotsLinks,
@@ -84,7 +89,7 @@ export const portFolioItems: Project[] = [
     title: "Bookler",
     live: "https://bookler-six.vercel.app/",
     github: "https://github.com/amosmachora/bookler",
-    languages: [faReact, faFigma],
+    languages: [firebase, react, typescript, tailwindcss],
     figma:
       "https://www.figma.com/file/UnC1I2rEMII5sGNZgPHakj/UH3tyvpilexm1LB?node-id=0-1",
   },
@@ -97,7 +102,7 @@ export const portFolioItems: Project[] = [
 
     live: "https://maglo.vercel.app",
     github: "https://github.com/amosmachora/maglo",
-    languages: [faReact, faFigma],
+    languages: [tailwindcss, react, typescript],
     figma:
       "https://www.figma.com/file/Dmjkoyr5Mzg3QPJm6u66w6/Financial-Management-Web-App-Design?type=design&node-id=148-5561&t=rTwnI3G9SBsr8FdZ-0",
   },
@@ -108,7 +113,7 @@ export const portFolioItems: Project[] = [
     title: "Interior Design Shop",
     live: "https://amosmachora.github.io/room-homepage/",
     github: "https://github.com/amosmachora/room-homepage",
-    languages: [faReact, faFigma],
+    languages: [react, javascriptLarge],
   },
   {
     images: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
@@ -120,17 +125,7 @@ export const portFolioItems: Project[] = [
     github: "https://github.com/amosmachora/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
-    languages: [faJava, faReact, faFigma],
-  },
-  {
-    images: productPageLinks,
-    category: "Dynamic Landing Page",
-    description:
-      "A small product page that mimics adding item to cart and lightbox images viewing capabilities",
-    title: "Product Page",
-    live: "https://amosmachora.github.io/ecommerce-product-page/",
-    github: "https://github.com/amosmachora/ecommerce-product-page",
-    languages: [faReact],
+    languages: [react, java, springBoot, javascriptLarge, mysql],
   },
   {
     images: tipCalculatorLinks,
@@ -139,7 +134,7 @@ export const portFolioItems: Project[] = [
     title: "Tip Calculator",
     live: "https://amosmachora.github.io/tipcalculatorapp/",
     github: "https://github.com/amosmachora/tipcalculatorapp",
-    languages: [faReact],
+    languages: [react, javascriptLarge],
   },
   {
     images: sunnySideLinks,
@@ -148,7 +143,7 @@ export const portFolioItems: Project[] = [
     title: "SunnySide landing page",
     github: "https://github.com/amosmachora/sunnyside-agency-landing-page",
     live: "https://amosmachora.github.io/sunnyside-agency-landing-page/",
-    languages: [faReact],
+    languages: [react, javascriptLarge],
   },
   {
     images: spaceTourismLinks,
@@ -159,7 +154,7 @@ export const portFolioItems: Project[] = [
     live: "https://amosmachora.github.io/space-tourism/",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
-    languages: [faReact, faFigma],
+    languages: [react, javascriptLarge],
   },
   {
     images: cafeInspireLinks,
@@ -170,6 +165,6 @@ export const portFolioItems: Project[] = [
     live: "https://amosmachora.github.io/Cafeinspire/",
     figma:
       "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
-    languages: [faReact, faFigma],
+    languages: [react, javascriptLarge],
   },
 ];

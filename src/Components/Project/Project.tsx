@@ -1,69 +1,45 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Project.css";
-import { Cube } from "../Cube";
-import {
-  faCaretLeft,
-  faCaretRight,
-  faUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { Project as ProjectType } from "../Portfolio/PortfolioItems";
-import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFigma, faGithub } from "@fortawesome/free-brands-svg-icons";
+import Carousel from "nuka-carousel";
 
 const Project = ({ project }: { project: ProjectType }) => {
-  const [imageIndex, setImageIndex] = useState(0);
-
-  const changeShownImage = (direction: "positive" | "negative") => {
-    const isPositiveDirection = direction === "positive";
-    const lastIndex = project.images.length - 1;
-    setImageIndex((prev) =>
-      isPositiveDirection
-        ? prev === lastIndex
-          ? 0
-          : prev + 1
-        : prev === 0
-        ? lastIndex
-        : prev - 1
-    );
-  };
-
   return (
     <div className="project w-[49%] text-black border-b-2 border-orange pb-10 mb-10">
-      <div className="relative w-full">
-        {project.images.length > 1 && (
-          <>
-            <Cube
-              icon={faCaretLeft}
-              onClick={() => changeShownImage("negative")}
-              className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 left-0 text-white bg-orange cursor-pointer"
-            />
-            <Cube
-              icon={faCaretRight}
-              onClick={() => changeShownImage("positive")}
-              className="z-50 absolute h-6 w-6 top-1/2 translate-x-1/2 right-6 text-white bg-orange cursor-pointer"
-            />
-          </>
-        )}
-        <a
-          href={project.live}
-          target="_blank"
-          rel="noopener noreferrer"
-          className=""
-        >
-          <motion.img
-            src={project.images[imageIndex]}
-            alt="Project"
-            className="w-full cursor-pointer"
-          />
-        </a>
-      </div>
+      <Carousel
+        className="w-full h-40 cursor-grab"
+        defaultControlsConfig={{
+          nextButtonText: "N",
+          prevButtonText: "P",
+          pagingDotsStyle: {
+            fill: "#ff5c00",
+            marginRight: 4,
+            marginLeft: 4,
+          },
+        }}
+        enableKeyboardControls
+        wrapAround
+        style={{
+          height: 300,
+        }}
+      >
+        {project.images.map((image) => (
+          <img src={image} alt="test" className="w-full h-full object-cover" />
+        ))}
+      </Carousel>
       <div className="px-[6%]">
         <div className="flex align-center space-between">
           <p className="category">{project.category}</p>
           <div className="gap-x-2 align-center flex">
             {project.languages.map((language) => (
-              <FontAwesomeIcon icon={language} />
+              <img
+                src={language}
+                alt="language"
+                className="h-5 w-5 object-cover"
+              />
             ))}
           </div>
           <div className="flex align-center gap-x-2">
@@ -87,6 +63,9 @@ const Project = ({ project }: { project: ProjectType }) => {
           <h2 className="project-title cursor">{project.title}</h2>
         </a>
         <p className="project-description greyish">{project.description}</p>
+        {project.openSourceLibraries && (
+          <h4 className="h4 mt-5">Open Source libraries</h4>
+        )}
       </div>
     </div>
   );

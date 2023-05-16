@@ -23,8 +23,10 @@ import springBoot from "./spring-boot.svg";
 import firebase from "./firebase.svg";
 import java from "./java.svg";
 import typescript from "./typescript.svg";
+import react from "./react.svg";
 
 export const assets = {
+  react,
   typescript,
   java,
   mysql,
