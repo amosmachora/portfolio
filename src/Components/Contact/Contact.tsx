@@ -6,12 +6,13 @@ import { ReadMore } from "../ReadMore";
 import Spinner from "../Spinner/Spinner";
 import { pageVariantsIn } from "../../Framer";
 import { motion } from "framer-motion";
-import { greenTick } from "../../Assets/assets";
+import { assets } from "../../Assets/assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");
+  const { greenTick } = assets;
 
   useEffect(() => {
     document.title = `Contact Me 📩`;

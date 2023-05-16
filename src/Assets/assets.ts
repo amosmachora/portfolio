@@ -7,7 +7,7 @@ import close from "./close.svg";
 import me from "./TheMan.jpg";
 import meSmall from "./MeSmall.jpg";
 import plus from "./plus.svg";
-import figma from "./figma.svg";
+import figma from "./figma-small.svg";
 import javascriptLarge from "./javascript-large.svg";
 import githubLarge from "./github-large.svg";
 import greenTick from "./tick-green.svg";
@@ -24,7 +24,7 @@ import firebase from "./firebase.svg";
 import java from "./java.svg";
 import typescript from "./typescript.svg";
 
-export {
+export const assets = {
   typescript,
   java,
   mysql,

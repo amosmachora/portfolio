@@ -8,7 +8,9 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Logo } from "./Logo";
 import { pages } from "../../App";
-import { close } from "../../Assets/assets";
+import { assets } from "../../Assets/assets";
+
+const { close } = assets;
 
 const NavBar = ({
   smallScreen,

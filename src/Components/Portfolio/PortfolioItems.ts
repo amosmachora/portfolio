@@ -1,10 +1,8 @@
 import { faFigma, faJava, faReact } from "@fortawesome/free-brands-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import {
-  pharmaOneMain,
-  pharmaOneThree,
-  pharmaOneTwo,
-} from "../../Assets/assets";
+import { assets } from "../../Assets/assets";
+
+const { pharmaOneMain, pharmaOneThree, pharmaOneTwo } = assets;
 
 export type Project = {
   images: string[];

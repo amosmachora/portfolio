@@ -4,7 +4,11 @@ import { ReadMore } from "../ReadMore";
 import "./AboutMe.css";
 import { pageVariantsIn } from "../../Framer";
 import { motion } from "framer-motion";
-import {
+import { assets } from "../../Assets/assets";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+
+const {
   figma,
   firebase,
   firestore,
@@ -17,9 +21,7 @@ import {
   springBoot,
   tailwindcss,
   typescript,
-} from "../../Assets/assets";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+} = assets;
 
 const AboutMe = () => {
   const [myImage, setMyImage] = useState(me);

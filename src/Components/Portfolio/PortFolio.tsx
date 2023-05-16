@@ -4,8 +4,10 @@ import { portFolioItems } from "./PortfolioItems";
 import Project from "../Project/Project";
 import { ReadMore } from "../ReadMore";
 import { motion } from "framer-motion";
-import { dice } from "../../Assets/assets";
+import { assets } from "../../Assets/assets";
 import { pageVariantsIn } from "../../Framer";
+
+const { dice } = assets;
 
 const PortFolio = () => {
   useEffect(() => {

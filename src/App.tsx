@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 import { useState, createContext, useEffect } from "react";
 import { FormspreeProvider } from "@formspree/react";
 // import Tracker from "./Components/Tracker/Tracker";
-import { heart } from "./Assets/assets";
+import { assets } from "./Assets/assets";
 import LoadingAnimation from "./Components/LoadingAnimation";
 
 export const Context = createContext<{
@@ -14,6 +14,8 @@ export const Context = createContext<{
 }>(null as any);
 
 export const pages = ["start-page", "about-me", "projects", "contact"];
+
+const { heart } = assets;
 
 function App() {
   const [smallScreen, setSmallScreen] = useState(false);

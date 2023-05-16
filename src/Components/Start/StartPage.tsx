@@ -7,12 +7,9 @@ import { pageVariantsIn } from "../../Framer";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  arrow,
-  desktopSetup,
-  manLookingAtComputer,
-  projects,
-} from "../../Assets/assets";
+import { assets } from "../../Assets/assets";
+
+const { arrow, desktopSetup, manLookingAtComputer, projects } = assets;
 
 const slide1 = {
   sub: "Full Stack Web Developer",
