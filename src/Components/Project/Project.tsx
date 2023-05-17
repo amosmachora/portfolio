@@ -22,12 +22,14 @@ const Project = ({ project }: { project: ProjectType }) => {
         }}
         enableKeyboardControls
         wrapAround
-        style={{
-          height: 300,
-        }}
+        adaptiveHeight
       >
         {project.images.map((image) => (
-          <img src={image} alt="test" className="w-full h-full object-cover" />
+          <img
+            src={image}
+            alt="test"
+            className="w-full min-h-[320px] max-h-[340px] object-cover"
+          />
         ))}
       </Carousel>
       <div className="px-[6%]">
