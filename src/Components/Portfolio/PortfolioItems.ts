@@ -106,15 +106,16 @@ export const portFolioItems: Project[] = [
     figma:
       "https://www.figma.com/file/Dmjkoyr5Mzg3QPJm6u66w6/Financial-Management-Web-App-Design?type=design&node-id=148-5561&t=rTwnI3G9SBsr8FdZ-0",
   },
-  // {
-  //   images: interiorDesignShopLinks,
-  //   category: "Static Landing Page",
-  //   description: "An interior design shop one page landing page",
-  //   title: "Interior Design Shop",
-  //   live: "https://amosmachora.github.io/room-homepage/",
-  //   github: "https://github.com/amosmachora/room-homepage",
-  //   languages: [react, javascriptLarge],
-  // },
+  {
+    images: interiorDesignShopLinks,
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Interior Design Shop",
+    live: "https://room-homepage-nine-peach.vercel.app",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/room-homepage",
+    languages: [react, javascriptLarge],
+  },
   {
     images: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
     category: "Fullstack application",
@@ -127,15 +128,16 @@ export const portFolioItems: Project[] = [
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
     languages: [react, java, springBoot, javascriptLarge, mysql],
   },
-  // {
-  //   images: tipCalculatorLinks,
-  //   category: "Mini Project",
-  //   description: "A tip calculator application. Obviously very useful",
-  //   title: "Tip Calculator",
-  //   live: "https://amosmachora.github.io/tipcalculatorapp/",
-  //   github: "https://github.com/amosmachora/tipcalculatorapp",
-  //   languages: [react, javascriptLarge],
-  // },
+  {
+    images: tipCalculatorLinks,
+    category: "Mini Project",
+    description: "A tip calculator application. Obviously very useful",
+    title: "Tip Calculator",
+    live: "https://tip-calculator-dusky-eight.vercel.app/",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/tipcalculatorapp",
+    languages: [react, javascriptLarge],
+  },
   // {
   //   images: sunnySideLinks,
   //   category: "Landing Page",
@@ -145,17 +147,18 @@ export const portFolioItems: Project[] = [
   //   live: "https://amosmachora.github.io/sunnyside-agency-landing-page/",
   //   languages: [react, javascriptLarge],
   // },
-  // {
-  //   images: spaceTourismLinks,
-  //   category: "Landing Page",
-  //   description: "A multi-page NASA themed landing page",
-  //   title: "Space tourism website",
-  //   github: "https://github.com/amosmachora/space-tourism",
-  //   live: "https://space-tourism-alpha-eight.vercel.app",
-  //   figma:
-  //     "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
-  //   languages: [react, javascriptLarge],
-  // },
+  {
+    images: spaceTourismLinks,
+    category: "Landing Page",
+    description: "A multi-page NASA themed landing page",
+    title: "Space tourism website",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/space-tourism",
+    live: "https://space-tourism-smoky.vercel.app",
+    figma:
+      "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
+    languages: [react, javascriptLarge],
+  },
   {
     images: cafeInspireLinks,
     category: "Landing Page",
