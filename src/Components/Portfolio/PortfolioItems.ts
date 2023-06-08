@@ -151,7 +151,7 @@ export const portFolioItems: Project[] = [
     description: "A multi-page NASA themed landing page",
     title: "Space tourism website",
     github: "https://github.com/amosmachora/space-tourism",
-    live: "https://amosmachora.github.io/space-tourism/",
+    live: "https://space-tourism-alpha-eight.vercel.app",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
     languages: [react, javascriptLarge],
