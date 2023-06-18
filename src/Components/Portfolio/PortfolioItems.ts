@@ -68,6 +68,14 @@ const tipCalculatorLinks = [
   "https://bnz05pap001files.storage.live.com/y4m4vex939BANBFkFBJlJGVOvCpSvp21hV2MR1k_aqXx6ppD9Q5OkZGtUCy4t3CTKH6OIlE67Ai7iFhioeXEgYPcLbClMEgxRDo5r4nEzLIKI8gha8m1cx5ElO8F_qKz9vQpSzlfsWdlQFvr31PgJn9tmitRcWHr5WvmfPTBVjTCGabQuZSM_UTYr6HW_wOpB70?width=1360&height=654&cropmode=none",
 ];
 
+const easyBank = [
+  "https://bnz05pap001files.storage.live.com/y4mI9uRFd90NlcmxU2jH3YatDPLqdw9E2guVSJa6tsbTUsDRZwBE9b2luTe7DbswEnG9QwnIl3xCeiHZLRdjS6g9DPxzaYELNLeryWOgU_Fsrv_EBFL6NP3yc6iGwAEWLb1ZyX8ktFUNMD78mF_YCXO3PrZjBofPhR-XttFEjf5pWk7gA1miiKVfKmeef_Kkn9n?width=1366&height=768&cropmode=none",
+  "https://bnz05pap001files.storage.live.com/y4m8NLh4-krUgaKJlVJhC1L3haGEYsyKOCPJ9oPlbSP-cji4nYvG7YzObCjKFIrjP5WcPSK2VhhTVk7TKwhMVKyhu860Leiqqn5EcAnNeX2adOErBKqK2u87eKqd754HYTr7gjkK6Ha0G1bO1d8W8wgOWCB1XQKtUtQ0sY5rd6DDWXgnCGitmP69rg2682aevYj?width=1366&height=768&cropmode=none",
+];
+const jobListingsImages = [
+  "https://bnz05pap001files.storage.live.com/y4mSzJ74AiSUly-hLILEacfpKjYqitG27IwwIHFR5DBX5gw5SK4jekjM9WlD5mNdxIZpsP7r3rQ_Rsf0AXiLckC0_VVdg1gzlXp8RLc0XwlrAYfR1fJrArkSJZ79qxxDiO67QVFQxrr09XppDdscdMqWSGZWepvpD_JrnaFZnRkIQPXI9OECmqaxK7Tw44RchF0?width=1366&height=768&cropmode=none",
+];
+
 const {
   firebase,
   react,
@@ -80,10 +88,10 @@ const {
   javascriptLarge,
 } = assets;
 
-export const portFolioItems: Project[] = [
+export const webapps: Project[] = [
   {
     images: booklerScreenshotsLinks,
-    category: "Web Application",
+    category: "Frontend",
     description:
       "Bookler is a simulated booking platform that provides a visually appealing user interface for viewing real-time flight, car rental, and hotel information. Although only accessible on desktop, it is highly recommended to give it a try. Authentication is managed through Firebase, and Google Maps React Library is used to provide interactive maps. Additionally, Bookler makes use of multiple APIs to handle real-time data flows for flights, car rentals, and hotels. This allows for seamless integration of information from various sources to provide up-to-date and accurate information for users.",
     title: "Bookler",
@@ -95,7 +103,7 @@ export const portFolioItems: Project[] = [
   },
   {
     images: magloScreenshotsLinks,
-    category: "Dynamic Web Application",
+    category: "Frontend",
     description:
       "A payment method called maglo. Currently in development, Supports dark mode",
     title: "Maglo",
@@ -107,18 +115,8 @@ export const portFolioItems: Project[] = [
       "https://www.figma.com/file/Dmjkoyr5Mzg3QPJm6u66w6/Financial-Management-Web-App-Design?type=design&node-id=148-5561&t=rTwnI3G9SBsr8FdZ-0",
   },
   {
-    images: interiorDesignShopLinks,
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "Interior Design Shop",
-    live: "https://room-homepage-nine-peach.vercel.app",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/room-homepage",
-    languages: [react, javascriptLarge],
-  },
-  {
     images: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
-    category: "Fullstack application",
+    category: "Fullstack",
     description:
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
     title: "Pharmacy management application",
@@ -127,6 +125,19 @@ export const portFolioItems: Project[] = [
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
     languages: [react, java, springBoot, javascriptLarge, mysql],
+  },
+];
+
+export const frontendMentorProjects: Project[] = [
+  {
+    images: interiorDesignShopLinks,
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Interior Design Shop",
+    live: "https://room-homepage-nine-peach.vercel.app",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/room-homepage",
+    languages: [react, javascriptLarge],
   },
   {
     images: tipCalculatorLinks,
@@ -143,7 +154,8 @@ export const portFolioItems: Project[] = [
     category: "Landing Page",
     description: "A responsive , brightly coloured landing page",
     title: "SunnySide landing page",
-    github: "https://github.com/amosmachora/frontend-mentor/tree/master/sunnyside-agency-landing-page",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/sunnyside-agency-landing-page",
     live: "https://master--elegant-caramel-145dc9.netlify.app",
     languages: [react, javascriptLarge],
   },
@@ -159,6 +171,29 @@ export const portFolioItems: Project[] = [
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
     languages: [react, javascriptLarge],
   },
+  {
+    images: easyBank,
+    category: "Landing Page",
+    description: "A simple bank landing page",
+    title: "Easy bank",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/easybank-landing-page",
+    live: "https://master--gorgeous-bubblegum-18bdf5.netlify.app/",
+    languages: [react, javascriptLarge],
+  },
+  {
+    images: jobListingsImages,
+    category: "Landing page",
+    description: "A react application that filters and sorts job",
+    title: "Job Listings",
+    github:
+      "https://github.com/amosmachora/frontend-mentor/tree/master/job-listings",
+    live: "https://648ef183b32a7925264664d0--voluble-torte-700b7d.netlify.app",
+    languages: [react, javascriptLarge],
+  },
+];
+
+export const websites: Project[] = [
   {
     images: cafeInspireLinks,
     category: "Landing Page",
