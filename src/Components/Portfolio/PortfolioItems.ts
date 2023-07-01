@@ -7,11 +7,14 @@ export type Project = {
   category: string;
   description: string;
   title: string;
-  live: string;
+  live?: string;
   github: string;
   languages: string[];
   openSourceLibraries?: string[];
   figma?: string;
+  hasVideo?: boolean;
+  youtubeId?: string;
+  desktopOnly?: boolean;
 };
 
 const booklerScreenshotsLinks = [
@@ -58,6 +61,12 @@ const cafeInspireLinks = [
   "https://bnz05pap001files.storage.live.com/y4m0WVhX9wkvHoWgAFS9-rhxRpDB2eFpJ58b7OhjlZHO-E3r3yPVdo9NSsBWQHDo-W3_rgo4l97R7D4zdgj690HxfaGSWhYIj3Knuy_qFegoGJJzeS7fSVYIE1S-twhgv0pSdtUfUX4Sfj0MSeUCe18XPLIQvUEHiv5A7PihpAtGWQmXiV20lRJr5FNh-CAils8?width=1365&height=655&cropmode=none",
 ];
 
+const reactNativeBeginnerLinks = [
+  "https://bnz05pap001files.storage.live.com/y4mf40whgKy3CaSdU_uLdvemwBpBfmPz2RG-mcaCt1_uOPdbbt9KI-NWAESLLIsSE-Pcv1BVOpTZlRXIrmFZwg6A979Mhz-QP340OUyiKzwJLqmkGh6a9fURmYE8tixG4zQK2ba8fWiTjVBDIDlYQG6EgvBBLfAsnk8g0tfBRnyXiNOvJi19udm6MLc0YyYkS8B?width=720&height=1600&cropmode=none",
+  "https://bnz05pap001files.storage.live.com/y4mRL_a_U9DNZTSP8J-lPYV3cNg5IHIeMJtc5x5EpmBsb8wSoCa696dFtefjPlWuNHmgMk3ssLOr4EfAcgtO9q-dTDFmSoEIOyhcejZ5mnwpA1HOcOpITjSML5ZunAnyLCaI8aGYz-zaNJmR6Nh07tCkgNnGG11RM4UvVS3wbM88C_EsmuJk2sapKx2bD5CZyj0?width=720&height=1600&cropmode=none",
+  "https://bnz05pap001files.storage.live.com/y4my7xglyaDWgq7_GPufD-8imbszWpKesdhP4JYqonnUoKYAWHQPb_spH9wHleq8KlLnqaXdJsnzMdm7h-9S9H4x9Jph3cr9FbU-2Qrzblwnsc5SxjH5R4NKxHQNKF9kVSE5AkaCJcf2t4pFCx5B54IgvZRf6k7ZC979Y09QAnqxY233dvLOFvrBIMZzCznk7jU?width=720&height=1600&cropmode=none",
+];
+
 const sunnySideLinks = [
   "https://bnz05pap001files.storage.live.com/y4mZ8qB1yYgS1FBac5YLGU9jZc4AS3EYRqu_Vjtr8UEl2KdrOTn4xx5WhnASzRWTvEH27fMaDlgDmKgfPZRg-MeFP0fC979vWneUrHtsyLpqQyHyFQIb3Zkw6kZVld44Ijo1I5FJXekRxhWPkJ8AZON3aIpIxdJ9SL2J6t0WW_mWclr6GcJiIxtVZPaKnbGbDin?width=1440&height=1056&cropmode=none",
   "https://bnz05pap001files.storage.live.com/y4mRC4TJa3F3_FnuGr2YAlKylsrOpBuAIylLV7tkwEvpnU-ZAilYzsXYTvAot4NLKb2T5becYWE6PmlnxlGZxVxOGpFE95qkZXdTuwYbMZZUF69XsnmRo0R66CEckIhKqH9FFyB1OqldwScgdjxuyFx2OWEqLIivMKmkdw4jz0-8tNsGnnmlyCPsi-pZN5x5Rno?width=1363&height=663&cropmode=none",
@@ -82,7 +91,6 @@ const {
   java,
   springBoot,
   tailwindcss,
-  firestore,
   mysql,
   typescript,
   javascriptLarge,
@@ -100,6 +108,9 @@ export const webapps: Project[] = [
     languages: [firebase, react, typescript, tailwindcss],
     figma:
       "https://www.figma.com/file/UnC1I2rEMII5sGNZgPHakj/UH3tyvpilexm1LB?node-id=0-1",
+    hasVideo: true,
+    youtubeId: "SPdNNw0E5XU",
+    desktopOnly: true,
   },
   {
     images: magloScreenshotsLinks,
@@ -113,6 +124,7 @@ export const webapps: Project[] = [
     languages: [tailwindcss, react, typescript],
     figma:
       "https://www.figma.com/file/Dmjkoyr5Mzg3QPJm6u66w6/Financial-Management-Web-App-Design?type=design&node-id=148-5561&t=rTwnI3G9SBsr8FdZ-0",
+    desktopOnly: true,
   },
   {
     images: [pharmaOneMain, pharmaOneTwo, pharmaOneThree],
@@ -193,7 +205,7 @@ export const frontendMentorProjects: Project[] = [
   },
 ];
 
-export const websites: Project[] = [
+export const watchalongs: Project[] = [
   {
     images: cafeInspireLinks,
     category: "Landing Page",
@@ -205,4 +217,17 @@ export const websites: Project[] = [
       "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
     languages: [react, javascriptLarge],
   },
+  {
+    images: reactNativeBeginnerLinks,
+    category: "Mobile App",
+    description:
+      "A job search application where users can search for job postings posted on muliple sites. Built using expo and react native",
+    title: "React Native Mobile Application",
+    github: "https://github.com/amosmachora/reactnativebeginner",
+    languages: [react],
+    hasVideo: true,
+    youtubeId: "XDnTzmG0np8",
+  },
 ];
+
+export const websites: Project[] = [];

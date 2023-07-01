@@ -43,7 +43,7 @@ const PortFolio = () => {
             "border-b-2 border-orange"
           }`}
         >
-          Web Applications
+          Web Apps & Websites
         </Link>
         <Link
           to="frontend-mentor"
@@ -53,13 +53,21 @@ const PortFolio = () => {
         >
           Frontend Mentor
         </Link>
-        <Link
+        {/* <Link
           to="websites"
           className={`cursor-pointer pb-2 w-max ${
             currentPage === "websites" && "border-b-2 border-orange"
           }`}
         >
           Landing pages
+        </Link> */}
+        <Link
+          to="youtube-watchalongs"
+          className={`cursor-pointer pb-2 w-max ${
+            currentPage === "youtube-watchalongs" && "border-b-2 border-orange"
+          }`}
+        >
+          Youtube Watchalongs
         </Link>
       </div>
       <div className="projects flex justify-between bg-white w-full flex-wrap px-[2%] mt-[100px]">

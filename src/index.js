@@ -10,6 +10,7 @@ import Contact from "./Components/Contact/Contact";
 import { WebApps } from "./Components/Portfolio/WebApps";
 import { FrontendMentor } from "./Components/Portfolio/FrontendMentor";
 import { Websites } from "./Components/Portfolio/Websites";
+import { YoutubeWatchalongs } from "./Components/Portfolio/YoutubeWatchalongs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -24,6 +25,10 @@ root.render(
             <Route element={<WebApps />} path="web-applications" />
             <Route path="frontend-mentor" element={<FrontendMentor />} />
             <Route path="websites" element={<Websites />} />
+            <Route
+              path="youtube-watchalongs"
+              element={<YoutubeWatchalongs />}
+            />
           </Route>
           <Route path="contact" element={<Contact />} />
         </Route>

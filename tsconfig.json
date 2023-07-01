@@ -17,5 +17,5 @@
     "jsx": "preserve",
     "suppressImplicitAnyIndexErrors": true
   },
-  "include": ["src/**/*.ts", "tests/**/*.ts"]
+  "include": ["src/**/*.ts", "tests/**/*.ts", "src/index.js"]
 }
