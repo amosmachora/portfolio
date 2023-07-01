@@ -16,7 +16,6 @@
 }
 .me {
   height: 550px;
-  margin-right: 10%;
 }
 .my-description {
   margin: 40px 0;
@@ -27,7 +26,6 @@
 .my-description > div {
   width: 75%;
   line-height: 1.2;
-  font-size: 1.2rem;
 }
 .bs-about-me {
   width: 70%;

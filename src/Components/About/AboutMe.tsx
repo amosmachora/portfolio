@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { IconRound } from "../Start/StartPage";
 import { ReadMore } from "../ReadMore";
 import "./AboutMe.css";
@@ -15,32 +15,15 @@ const {
   java,
   javascriptLarge,
   me,
-  meSmall,
   mysql,
   plus,
   springBoot,
   tailwindcss,
   typescript,
+  next,
 } = assets;
 
 const AboutMe = () => {
-  const [myImage, setMyImage] = useState(me);
-
-  const handleResize = () => {
-    if (window.innerWidth < 840) {
-      setMyImage(meSmall);
-    } else {
-      setMyImage(me);
-    }
-  };
-
-  window.addEventListener("resize", handleResize);
-
-  useEffect(() => {
-    handleResize();
-    document.title = "About";
-  }, []);
-
   return (
     <motion.div
       className="about-me"
@@ -59,27 +42,39 @@ const AboutMe = () => {
           className="hover:border-white"
         />
       </div>
-      <div className="my-picture flex space-between">
-        <p className="bluish capitalize">
-          Individual <br /> projects for <br /> multiple global <br />
-          companies
-        </p>
-        <img src={myImage} alt="This is me" className="me" />
+      <div className="my-picture flex justify-between gap-x-2">
+        <div>
+          <p className="bluish capitalize">
+            On this page <br /> you will find <br /> a brief description <br />
+            of my education and professional background
+          </p>
+          <p className="mt-10">
+            As a software engineer, I specialize in building web applications
+            using technologies such as TypeScript, Tailwind CSS, ReactJs, and
+            Git. I consider myself an expert in these technologies and enjoy
+            staying up-to-date with the latest developments. I am also an avid
+            user of VS Code, which I find to be an essential tool for my
+            development workflow. I have a background in Java and SpringBoot and
+            have been able to seamlessly transition to the JavaScript stack, in
+            which I am currently proficient.
+          </p>
+          <p className="mt-10">
+            I have a bachelor`s degree in Computer Science from Chuka University
+            awaiting graduation late this year (2023). I also graduated from
+            highschool in 2018 with an overall score of{" "}
+            <span className="text-orange">B+</span> with an{" "}
+            <span className="text-orange">A </span> in Mathematics an
+            <span className="text-orange"> A</span> in Computer Studies an{" "}
+            <span className="text-orange">A- </span> in Physics. The certificate
+            is available on request.
+          </p>
+        </div>
+        <img src={me} alt="This is me" className="me" />
       </div>
       <div className="my-description flex space-between">
-        <h3>About Me</h3>
+        <h3 className="text-orange">More Info</h3>
         <div className="flex space-between">
           <div className="bs-about-me">
-            <p>
-              As a software engineer, I specialize in building web applications
-              using technologies such as TypeScript, Tailwind CSS, ReactJs, and
-              Git. I consider myself an expert in these technologies and enjoy
-              staying up-to-date with the latest developments. I am also an avid
-              user of VS Code, which I find to be an essential tool for my
-              development workflow. I have a background in Java and SpringBoot
-              and have been able to seamlessly transition to the JavaScript
-              stack, in which I am currently proficient.
-            </p>
             <p>
               I am a self-taught software developer, who has taken several
               online courses on LinkedIn Learning, Coursera, and Udemy to learn
@@ -134,6 +129,7 @@ const AboutMe = () => {
           <img src={typescript} alt="figma" />
           <img src={mysql} alt="figma" />
           <img src={java} alt="figma" />
+          <img src={next} alt="next" />
         </div>
         <div className="tech-stack-right mx-auto">
           <p className="tech-stack-main">
@@ -173,6 +169,10 @@ const AboutMe = () => {
             </div>
             <img src={plus} alt="Plus" className="plus" />
             <div>
+              <div className="flex">
+                <p>NextJS</p>
+                <p>Yet another JS framework</p>
+              </div>
               <div className="flex">
                 <p>JavaScript</p>
                 <p>Dynamism</p>

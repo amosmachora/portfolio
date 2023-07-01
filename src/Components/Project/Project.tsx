@@ -13,12 +13,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFigma, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "nuka-carousel";
 import { Context } from "../../App";
+import useScreenSize from "../../hooks/useScreenSize";
 
 const Project = ({ project }: { project: ProjectType }) => {
-  const { setCurrentYoutubeId } = useContext(Context);
+  const { setCurrentYoutubeId, setSmallScreenErrorModalLink } =
+    useContext(Context);
+  const screenSize = useScreenSize();
+
   const [toolTipMessage, setToolTipMessage] = useState<
     null | "Large screens only" | "Fully responsive!"
   >(null);
+
+  const handleRedirect = () => {
+    if (project.live) {
+      if (project.desktopOnly) {
+        if (screenSize === "sm" || screenSize === "md") {
+          setSmallScreenErrorModalLink(project.live!);
+        }
+      } else {
+        window.open(project.live);
+      }
+    }
+  };
+
   return (
     <>
       <div className="project w-[49%] text-black border-b-2 border-orange pb-10 mb-10">
@@ -80,13 +97,18 @@ const Project = ({ project }: { project: ProjectType }) => {
               </div>
             </div>
             <div className="gap-x-2 align-center flex">
-              {project.languages.map((language) => (
-                <img
-                  src={language}
-                  alt="language"
-                  className="h-5 w-5 object-cover"
-                />
-              ))}
+              {project.languages.map((language) => {
+                const isNext = language.includes("next");
+                return (
+                  <img
+                    src={language}
+                    alt="language"
+                    className={`${
+                      isNext ? "w-auto h-3" : "w-5 h-5"
+                    } object-cover`}
+                  />
+                );
+              })}
             </div>
             <div className="flex items-center gap-x-2">
               {project.hasVideo && (
@@ -97,27 +119,24 @@ const Project = ({ project }: { project: ProjectType }) => {
                 />
               )}
               {project.live && (
+                <FontAwesomeIcon
+                  icon={faUpRightFromSquare}
+                  className="hover:text-orange cursor-pointer"
+                  onClick={handleRedirect}
+                />
+              )}
+              {project.github && (
                 <a
-                  href={project.live}
+                  href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <FontAwesomeIcon
-                    icon={faUpRightFromSquare}
+                    icon={faGithub}
                     className="hover:text-orange"
                   />
                 </a>
               )}
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="hover:text-orange"
-                />
-              </a>
               {project.figma && (
                 <a
                   href={project.figma}
@@ -136,7 +155,7 @@ const Project = ({ project }: { project: ProjectType }) => {
             className={`text-black text-[40px] ${
               project.live && "cursor hover:text-orange"
             }`}
-            onClick={() => (project.live ? window.open(project.live) : null)}
+            onClick={handleRedirect}
           >
             {project.title}
           </h2>

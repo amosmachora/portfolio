@@ -4,8 +4,7 @@ import pharmaOne from "./Pharmaone.png";
 import desktopSetup from "./DesktopSetUp.jpg";
 import manLookingAtComputer from "./ManLookingAtComputer.jpg";
 import close from "./close.svg";
-import me from "./TheMan.jpg";
-import meSmall from "./MeSmall.jpg";
+import me from "./me.jpg";
 import plus from "./plus.svg";
 import figma from "./figma-small.svg";
 import javascriptLarge from "./javascript-large.svg";
@@ -24,8 +23,12 @@ import firebase from "./firebase.svg";
 import java from "./java.svg";
 import typescript from "./typescript.svg";
 import react from "./react.svg";
+import css from "./icons8-css.svg";
+import next from "./next.svg";
 
 export const assets = {
+  next,
+  css,
   react,
   typescript,
   java,
@@ -44,7 +47,6 @@ export const assets = {
   javascriptLarge,
   figma,
   me,
-  meSmall,
   plus,
   close,
   heart,

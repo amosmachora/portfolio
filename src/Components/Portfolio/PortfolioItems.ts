@@ -8,7 +8,7 @@ export type Project = {
   description: string;
   title: string;
   live?: string;
-  github: string;
+  github?: string;
   languages: string[];
   openSourceLibraries?: string[];
   figma?: string;
@@ -81,8 +81,21 @@ const easyBank = [
   "https://bnz05pap001files.storage.live.com/y4mI9uRFd90NlcmxU2jH3YatDPLqdw9E2guVSJa6tsbTUsDRZwBE9b2luTe7DbswEnG9QwnIl3xCeiHZLRdjS6g9DPxzaYELNLeryWOgU_Fsrv_EBFL6NP3yc6iGwAEWLb1ZyX8ktFUNMD78mF_YCXO3PrZjBofPhR-XttFEjf5pWk7gA1miiKVfKmeef_Kkn9n?width=1366&height=768&cropmode=none",
   "https://bnz05pap001files.storage.live.com/y4m8NLh4-krUgaKJlVJhC1L3haGEYsyKOCPJ9oPlbSP-cji4nYvG7YzObCjKFIrjP5WcPSK2VhhTVk7TKwhMVKyhu860Leiqqn5EcAnNeX2adOErBKqK2u87eKqd754HYTr7gjkK6Ha0G1bO1d8W8wgOWCB1XQKtUtQ0sY5rd6DDWXgnCGitmP69rg2682aevYj?width=1366&height=768&cropmode=none",
 ];
+
 const jobListingsImages = [
   "https://bnz05pap001files.storage.live.com/y4mSzJ74AiSUly-hLILEacfpKjYqitG27IwwIHFR5DBX5gw5SK4jekjM9WlD5mNdxIZpsP7r3rQ_Rsf0AXiLckC0_VVdg1gzlXp8RLc0XwlrAYfR1fJrArkSJZ79qxxDiO67QVFQxrr09XppDdscdMqWSGZWepvpD_JrnaFZnRkIQPXI9OECmqaxK7Tw44RchF0?width=1366&height=768&cropmode=none",
+];
+
+const portfolioImages = [
+  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217510&authkey=%21AHRsGOWH-qI1gYk&width=1359&height=661",
+  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217509&authkey=%21AAdSYAhBlIr6tPg&width=1360&height=661",
+];
+
+const webtechafricaImages = [
+  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217511&authkey=%21APiuxEFWFrJYVJo&width=1341&height=659",
+  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217512&authkey=%21AGLvq8iCNT2DIc4&width=1357&height=653",
+  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217513&authkey=%21AEVHpWXdWk4x2y4&width=1332&height=655",
+  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217514&authkey=%21AC9gzp6tV2BCLWo&width=1354&height=646",
 ];
 
 const {
@@ -94,9 +107,30 @@ const {
   mysql,
   typescript,
   javascriptLarge,
+  css,
+  firestore,
+  next,
 } = assets;
 
 export const webapps: Project[] = [
+  {
+    images: webtechafricaImages,
+    category: "Fullstack",
+    description:
+      "WebTech Africa is a startup that i built in conjuction with some of my friends from campus. We were aiming on how we can make ourselves useful to the general community and founding a web development company seemed like a rather reasonable approach as we were not only highly skilled developers but we also needed jobs where we would actively sharpen our skills. I was the one in charge of the technical side. I built the website using NextJS for its SEO capabilities that make it a way better option to create-react-app. The site SEO is highly accurate as it ranks first on google on brand name search. The backend is built using java and spring-boot. I also used firebase for user authentication and firestore to store some of the user information. The source code is however proprietary software and cannot be shared to the general public but i am willing to give an overview on a video or some sort of screenshare on request.",
+    title: "WebTech Africa",
+    live: "https://webtechafrica.com",
+    languages: [
+      next,
+      firebase,
+      react,
+      typescript,
+      tailwindcss,
+      firestore,
+      java,
+      springBoot,
+    ],
+  },
   {
     images: booklerScreenshotsLinks,
     category: "Frontend",
@@ -113,10 +147,18 @@ export const webapps: Project[] = [
     desktopOnly: true,
   },
   {
-    images: magloScreenshotsLinks,
+    images: portfolioImages,
     category: "Frontend",
     description:
-      "A payment method called maglo. Currently in development, Supports dark mode",
+      "My portfolio website on which you are right now. Built with tailwind, vanilla CSS and React its my personal website where clients , recruiters and visitors can view my project and get in touch with me.",
+    title: "Portfolio",
+    github: "https://github.com/amosmachora/portfolio",
+    languages: [react, typescript, tailwindcss, javascriptLarge, css],
+  },
+  {
+    images: magloScreenshotsLinks,
+    category: "Frontend",
+    description: "A payment method website called maglo. Supports dark mode.",
     title: "Maglo",
 
     live: "https://maglo.vercel.app",
@@ -131,12 +173,12 @@ export const webapps: Project[] = [
     category: "Fullstack",
     description:
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
-    title: "Pharmacy management application",
+    title: "Pharmaone",
     live: "http://pharmaone-env-1.eba-kpvrrp6a.us-east-1.elasticbeanstalk.com/",
     github: "https://github.com/amosmachora/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
-    languages: [react, java, springBoot, javascriptLarge, mysql],
+    languages: [react, java, springBoot, javascriptLarge, mysql, css],
   },
 ];
 

@@ -34,7 +34,7 @@ const PortFolio = () => {
         </h1>
         <ReadMore link={"contact"} text={"Contact"} />
       </div>
-      <div className="flex justify-between sm:w-1/2 mx-auto my-5">
+      <div className="flex justify-between md:w-1/2 mx-auto my-5 gap-x-4">
         <Link
           to="web-applications"
           className={`cursor-pointer pb-2 w-max ${

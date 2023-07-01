@@ -8,11 +8,16 @@ import { FormspreeProvider } from "@formspree/react";
 import { Video } from "./Components/Video";
 import { assets } from "./Assets/assets";
 import LoadingAnimation from "./Components/LoadingAnimation";
+import { Overlay } from "./Components/Overlay";
+import { SmallScreenModal } from "./Components/SmallScreenModal";
 
 export const Context = createContext<{
   setSmallScreen: React.Dispatch<React.SetStateAction<boolean>>;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
   setCurrentYoutubeId: React.Dispatch<React.SetStateAction<string | null>>;
+  setSmallScreenErrorModalLink: React.Dispatch<
+    React.SetStateAction<string | null>
+  >;
 }>(null as any);
 
 export const pages = ["start-page", "about-me", "projects", "contact"];
@@ -24,6 +29,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [, setLoadedImageCount] = useState(0);
   const [currentYoutubeId, setCurrentYoutubeId] = useState<null | string>(null);
+  const [smallScreenErrorModalLink, setSmallScreenErrorModalLink] = useState<
+    null | string
+  >(null);
 
   useEffect(() => {
     const images = document.querySelectorAll("img");
@@ -51,6 +59,7 @@ function App() {
               setSmallScreen,
               setIsLoading,
               setCurrentYoutubeId,
+              setSmallScreenErrorModalLink,
             }}
           >
             <NavBar smallScreen={smallScreen} setSmallScreen={setSmallScreen} />
@@ -67,6 +76,13 @@ function App() {
                 id={currentYoutubeId}
                 onClick={() => setCurrentYoutubeId(null)}
               />
+            )}
+            {smallScreenErrorModalLink && (
+              <Overlay onClick={() => setSmallScreenErrorModalLink(null)}>
+                <SmallScreenModal
+                  smallScreenErrorModalLink={smallScreenErrorModalLink}
+                />
+              </Overlay>
             )}
             {/* <Tracker /> */}
           </Context.Provider>
