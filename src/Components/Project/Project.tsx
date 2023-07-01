@@ -5,7 +5,7 @@ import {
   faDisplay,
   faMobileScreen,
   faPlay,
-  faTablet,
+  faTabletScreenButton,
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { Project as ProjectType } from "../Portfolio/PortfolioItems";
@@ -81,7 +81,10 @@ const Project = ({ project }: { project: ProjectType }) => {
                 ) : project.category === "Mobile App" ? null : (
                   <>
                     <FontAwesomeIcon icon={faDisplay} className="mx-2" />
-                    <FontAwesomeIcon icon={faTablet} className="mr-2" />
+                    <FontAwesomeIcon
+                      icon={faTabletScreenButton}
+                      className="mr-2"
+                    />
                     <FontAwesomeIcon icon={faMobileScreen} />
                   </>
                 )}
