@@ -1,6 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import "./Project.css";
 import {
+  faCaretDown,
   faDisplay,
   faMobileScreen,
   faPlay,
@@ -15,6 +16,9 @@ import { Context } from "../../App";
 
 const Project = ({ project }: { project: ProjectType }) => {
   const { setCurrentYoutubeId } = useContext(Context);
+  const [toolTipMessage, setToolTipMessage] = useState<
+    null | "Large screens only" | "Fully responsive!"
+  >(null);
   return (
     <>
       <div className="project w-[49%] text-black border-b-2 border-orange pb-10 mb-10">
@@ -44,15 +48,36 @@ const Project = ({ project }: { project: ProjectType }) => {
           <div className="flex align-center space-between">
             <div className="flex items-center">
               <p className="category">{project.category}</p>
-              {project.desktopOnly ? (
-                <FontAwesomeIcon icon={faDisplay} className="mx-2" />
-              ) : project.category === "Mobile App" ? null : (
-                <>
+              <div
+                className="flex relative"
+                onMouseEnter={() => {
+                  if (project.desktopOnly) {
+                    setToolTipMessage("Large screens only");
+                  } else {
+                    setToolTipMessage("Fully responsive!");
+                  }
+                }}
+                onMouseLeave={() => setToolTipMessage(null)}
+              >
+                {project.desktopOnly ? (
                   <FontAwesomeIcon icon={faDisplay} className="mx-2" />
-                  <FontAwesomeIcon icon={faTablet} className="mr-2" />
-                  <FontAwesomeIcon icon={faMobileScreen} />
-                </>
-              )}
+                ) : project.category === "Mobile App" ? null : (
+                  <>
+                    <FontAwesomeIcon icon={faDisplay} className="mx-2" />
+                    <FontAwesomeIcon icon={faTablet} className="mr-2" />
+                    <FontAwesomeIcon icon={faMobileScreen} />
+                  </>
+                )}
+                {toolTipMessage && (
+                  <p className="absolute -top-5 -translate-y-full text-center text-sm z-50 w-min text-orange font-medium bg-white p-2 rounded border-orange border">
+                    {toolTipMessage}
+                    <FontAwesomeIcon
+                      icon={faCaretDown}
+                      className="absolute bottom-0 translate-y-full left-1/2 -translate-x-1/2"
+                    />
+                  </p>
+                )}
+              </div>
             </div>
             <div className="gap-x-2 align-center flex">
               {project.languages.map((language) => (

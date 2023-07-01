@@ -22,7 +22,7 @@ const slide1 = {
 const slide2 = {
   h1: "Im also an",
   sub: "aspiring android developer",
-  desc: "I am actively learning kotlin and flutter to sharpen my android development skills. Stay tuned...",
+  desc: "I am actively learning react-native to sharpen my android development skills. Stay tuned...",
   linkTo: "projects",
   img: manLookingAtComputer,
 };

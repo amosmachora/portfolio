@@ -196,7 +196,7 @@ export const frontendMentorProjects: Project[] = [
   {
     images: jobListingsImages,
     category: "Landing page",
-    description: "A react application that filters and sorts job",
+    description: "A react application that filters and sorts jobs",
     title: "Job Listings",
     github:
       "https://github.com/amosmachora/frontend-mentor/tree/master/job-listings",
