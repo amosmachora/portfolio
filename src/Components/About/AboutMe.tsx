@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import { assets } from "../../Assets/assets";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
+import { KCSE } from "../KCSE";
 
 const {
   figma,
@@ -43,7 +44,7 @@ const AboutMe = () => {
         />
       </div>
       <div className="my-picture flex justify-between gap-x-2">
-        <div>
+        <div className="w-full sm:w-2/3">
           <p className="bluish capitalize">
             On this page <br /> you will find <br /> a brief description <br />
             of my education and professional background
@@ -62,14 +63,28 @@ const AboutMe = () => {
             I have a bachelor`s degree in Computer Science from Chuka University
             awaiting graduation late this year (2023). I also graduated from
             highschool in 2018 with an overall score of{" "}
-            <span className="text-orange">B+</span> with an{" "}
-            <span className="text-orange">A </span> in Mathematics an
-            <span className="text-orange"> A</span> in Computer Studies an{" "}
-            <span className="text-orange">A- </span> in Physics. The certificate
-            is available on request.
+            <span className="text-orange">B+ (GPA 3.3)</span> here is the
+            breakdown.
+            <KCSE />
+            You can download the result slip{" "}
+            <a
+              className="text-orange cursor-pointer hover:font-semibold transition-all"
+              href={
+                "https://drive.google.com/file/d/1s3g6bnWZNMemvVRclicgOt8a0kSYAXaT/view?usp=sharing"
+              }
+              download
+              target="_BLANK"
+              rel="noreferrer"
+            >
+              here.
+            </a>
           </p>
         </div>
-        <img src={me} alt="This is me" className="me" />
+        <img
+          src={me}
+          alt="This is me"
+          className="object-cover w-full sm:w-1/4 mt-[40px]"
+        />
       </div>
       <div className="my-description flex space-between">
         <h3 className="text-orange">More Info</h3>
