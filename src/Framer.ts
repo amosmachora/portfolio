@@ -53,10 +53,10 @@ export const pathVariants = {
 };
 
 export const pageVariantsIn: Variants = {
-  initial: {
-    x: "100vw",
-  },
-  animate: {
-    x: 0,
-  },
+  // initial: {
+  //   x: "100vw",
+  // },
+  // animate: {
+  //   x: 0,
+  // },
 };

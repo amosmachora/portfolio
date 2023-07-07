@@ -3,7 +3,6 @@ import "./StartPage.css";
 import { ReadMore } from "../ReadMore";
 import { motion, AnimatePresence, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { pageVariantsIn } from "../../Framer";
 import { faCaretLeft } from "@fortawesome/free-solid-svg-icons";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -62,12 +61,7 @@ const StartPage = () => {
   }, []);
 
   return (
-    <motion.div
-      variants={pageVariantsIn}
-      initial="initial"
-      animate="animate"
-      className="start-page-div"
-    >
+    <div className="start-page-div">
       <AnimatePresence>
         <motion.div className="slides" initial="initial" animate="animate">
           <div
@@ -255,7 +249,7 @@ const StartPage = () => {
           />
         </div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 };
 
