@@ -34,7 +34,7 @@ const PortFolio = () => {
         </h1>
         <ReadMore link={"contact"} text={"Contact"} />
       </div>
-      <div className="flex justify-between md:w-1/2 mx-auto my-5 gap-x-4">
+      <div className="flex justify-between md:w-1/2 mx-auto mt-20 sm:mt-5 mb-5 gap-x-4">
         <Link
           to="web-applications"
           className={`cursor-pointer pb-2 w-max ${
@@ -70,7 +70,7 @@ const PortFolio = () => {
           Youtube Watchalongs
         </Link>
       </div>
-      <div className="projects flex justify-between bg-white w-full flex-wrap px-[2%] mt-[100px]">
+      <div className="projects flex justify-between bg-white w-full flex-wrap px-[2%] sm:mt-[100px]">
         <Outlet />
       </div>
     </motion.div>

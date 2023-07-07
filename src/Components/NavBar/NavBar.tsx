@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import { Link, useLocation } from "react-router-dom";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { navMiddleVariants } from "../../Framer";
 import { Socials } from "./Socials";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -73,34 +73,50 @@ const NavBar = ({
         onClick={() => setSmallScreen(true)}
         className="hamburger cursor"
       />
-      {smallScreen && (
-        <div className="small-screen fixed top-0 right-0 h-screen w-screen z-50">
-          <div
-            className="bg-white p-3 absolute right-3 top-3"
-            onClick={() => setSmallScreen(false)}
+      <AnimatePresence>
+        {smallScreen && (
+          <motion.div
+            className="small-screen fixed top-0 right-0 h-screen w-screen z-50"
+            initial={{
+              x: 1000,
+            }}
+            animate={{
+              x: 0,
+            }}
+            exit={{
+              x: 1000,
+            }}
+            transition={{ duration: 0.5, type: "tween" }}
           >
-            <img src={close} alt="Close" className="w-7 h-7" />
-          </div>
-          <div className="text-center list-none absolute top-1/4 right-1/2 translate-x-1/2">
-            {pages.map((page) => (
-              <Link
-                to={page === "start-page" ? "/" : page}
-                onClick={() => {
-                  setSmallScreen(false);
-                  window.scroll({
-                    behavior: "smooth",
-                    left: 0,
-                    top: 0,
-                  });
-                }}
-              >
-                <li>{page}</li>
-              </Link>
-            ))}
-            <Socials className="mt-20 gap-x-4 gap-y-2" />
-          </div>
-        </div>
-      )}
+            <div
+              className="bg-white p-3 absolute right-3 top-3"
+              onClick={() => setSmallScreen(false)}
+            >
+              <img src={close} alt="Close" className="w-7 h-7" />
+            </div>
+            <div className="text-center list-none absolute top-1/4 right-1/2 translate-x-1/2 w-3/4">
+              {pages.map((page) => (
+                <Link
+                  to={page === "start-page" ? "/" : page}
+                  onClick={() => {
+                    setSmallScreen(false);
+                    window.scroll({
+                      behavior: "smooth",
+                      left: 0,
+                      top: 0,
+                    });
+                  }}
+                >
+                  <li className="first-letter:capitalize mb-3">
+                    {page.replace("-", " ")}
+                  </li>
+                </Link>
+              ))}
+              <Socials className="mt-20 gap-x-4 gap-y-2" />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.nav>
   );
 };

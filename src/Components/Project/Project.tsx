@@ -14,6 +14,7 @@ import { faFigma, faGithub } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "nuka-carousel";
 import { Context } from "../../App";
 import useScreenSize from "../../hooks/useScreenSize";
+import { ProjectLanguages } from "./ProjectLanguages";
 
 const Project = ({ project }: { project: ProjectType }) => {
   const { setCurrentYoutubeId, setSmallScreenErrorModalLink } =
@@ -40,7 +41,7 @@ const Project = ({ project }: { project: ProjectType }) => {
     <>
       <div className="project w-[49%] text-black border-b-2 border-orange pb-10 mb-10">
         <Carousel
-          className="cursor-grab"
+          className="cursor-grab w-full"
           defaultControlsConfig={{
             nextButtonText: "N",
             prevButtonText: "P",
@@ -57,12 +58,12 @@ const Project = ({ project }: { project: ProjectType }) => {
             <img
               src={image}
               alt="test"
-              className="w-full min-h-[320px] max-h-[340px] object-cover"
+              className="max-h-[50vh] object-cover mx-auto"
             />
           ))}
         </Carousel>
-        <div className="px-[6%]">
-          <div className="flex align-center space-between">
+        <div className="px-[3%] sm:px-[6%]">
+          <div className="flex items-center justify-between">
             <div className="flex items-center">
               <p className="category">{project.category}</p>
               <div
@@ -99,20 +100,10 @@ const Project = ({ project }: { project: ProjectType }) => {
                 )}
               </div>
             </div>
-            <div className="gap-x-2 align-center flex">
-              {project.languages.map((language) => {
-                const isNext = language.includes("next");
-                return (
-                  <img
-                    src={language}
-                    alt="language"
-                    className={`${
-                      isNext ? "w-auto h-3" : "w-5 h-5"
-                    } object-cover`}
-                  />
-                );
-              })}
-            </div>
+            <ProjectLanguages
+              className="hidden sm:flex"
+              languages={project.languages}
+            />
             <div className="flex items-center gap-x-2">
               {project.hasVideo && (
                 <FontAwesomeIcon
@@ -154,6 +145,11 @@ const Project = ({ project }: { project: ProjectType }) => {
               )}
             </div>
           </div>
+          <ProjectLanguages
+            className="flex sm:hidden w-full 
+            justify-around my-6"
+            languages={project.languages}
+          />
           <h2
             className={`text-black text-[40px] ${
               project.live && "cursor hover:text-orange"

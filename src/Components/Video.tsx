@@ -15,7 +15,7 @@ export const Video = ({
           src={`https://www.youtube.com/embed/${id}`}
           title="YouTube Video Player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          className="w-1/2 h-1/2 center-absolutely"
+          className="aspect-video w-11/12 sm:w-1/2 sm:h-1/2 center-absolutely"
         ></iframe>
       </div>
     </Overlay>
