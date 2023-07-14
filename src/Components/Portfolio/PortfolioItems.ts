@@ -188,9 +188,8 @@ export const frontendMentorProjects: Project[] = [
     category: "Static Landing Page",
     description: "An interior design shop one page landing page",
     title: "Interior Design Shop",
-    live: "https://room-homepage-nine-peach.vercel.app",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/room-homepage",
+    live: "https://amosmachora.github.io/room-homepage/",
+    github: "https://github.com/amosmachora/room-homepage",
     languages: [react, javascriptLarge],
   },
   {
@@ -198,9 +197,8 @@ export const frontendMentorProjects: Project[] = [
     category: "Mini Project",
     description: "A tip calculator application. Obviously very useful",
     title: "Tip Calculator",
-    live: "https://tip-calculator-dusky-eight.vercel.app/",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/tipcalculatorapp",
+    live: "https://amosmachora.github.io/tipcalculatorapp/",
+    github: "https://github.com/amosmachora/tipcalculatorapp",
     languages: [react, javascriptLarge],
   },
   {
@@ -208,9 +206,8 @@ export const frontendMentorProjects: Project[] = [
     category: "Landing Page",
     description: "A responsive , brightly coloured landing page",
     title: "SunnySide landing page",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/sunnyside-agency-landing-page",
-    live: "https://master--elegant-caramel-145dc9.netlify.app",
+    github: "https://github.com/amosmachora/sunnyside-agency-landing-page",
+    live: "https://amosmachora.github.io/sunnyside-agency-landing-page/",
     languages: [react, javascriptLarge],
   },
   {
@@ -218,9 +215,8 @@ export const frontendMentorProjects: Project[] = [
     category: "Landing Page",
     description: "A multi-page NASA themed landing page",
     title: "Space tourism website",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/space-tourism",
-    live: "https://space-tourism-smoky.vercel.app",
+    github: "https://github.com/amosmachora/space-tourism",
+    live: "https://amosmachora.github.io/space-tourism/",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
     languages: [react, javascriptLarge],
@@ -230,9 +226,8 @@ export const frontendMentorProjects: Project[] = [
     category: "Landing Page",
     description: "A simple bank landing page",
     title: "Easy bank",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/easybank-landing-page",
-    live: "https://master--gorgeous-bubblegum-18bdf5.netlify.app/",
+    github: "https://github.com/amosmachora/easybank-landing-page",
+    live: "https://amosmachora.github.io/easybank-landing-page/",
     languages: [react, javascriptLarge],
   },
   {
@@ -240,9 +235,77 @@ export const frontendMentorProjects: Project[] = [
     category: "Landing page",
     description: "A react application that filters and sorts jobs",
     title: "Job Listings",
-    github:
-      "https://github.com/amosmachora/frontend-mentor/tree/master/job-listings",
-    live: "https://648ef183b32a7925264664d0--voluble-torte-700b7d.netlify.app",
+    github: "https://github.com/amosmachora/job-listings",
+    live: "https://amosmachora.github.io/job-listings/",
+    languages: [react, javascriptLarge],
+  },
+];
+
+export const extraFrontendMentorProjects: Project[] = [
+  {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217528&authkey=%21AGyw-5K9c63S2PQ&width=1348&height=649",
+    ],
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "E-commerce product page",
+    live: "https://amosmachora.github.io/ecommerce-product-page/",
+    github: "https://github.com/amosmachora/ecommerce-product-page",
+    languages: [react, javascriptLarge],
+  },
+  {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217529&authkey=%21ANrmfx-bfdiaiHs&width=1342&height=655",
+    ],
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Expenses Chart Component",
+    live: "https://amosmachora.github.io/expenseschartcomponent/",
+    github: "https://github.com/amosmachora/expenseschartcomponent",
+    languages: [react, javascriptLarge],
+  },
+  {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217530&authkey=%21ACkTeZpFcoVvHvk&width=1360&height=659",
+    ],
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Rating component",
+    live: "https://amosmachora.github.io/ratingcomponent/",
+    github: "https://github.com/amosmachora/ratingcomponent",
+    languages: [react, javascriptLarge],
+  },
+  {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217533&authkey=%21AB1FCfGgcodLGVA&width=1338&height=648",
+    ],
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Stats preview card",
+    live: "https://amosmachora.github.io/statspreviewcardcomponent/",
+    github: "https://github.com/amosmachora/statspreviewcardcomponent",
+    languages: [react, javascriptLarge],
+  },
+  {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217532&authkey=%21AH4CZxm0GxMAJ8Q&width=1345&height=648",
+    ],
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Theme switching calculator",
+    live: "https://amosmachora.github.io/calculator/",
+    github: "https://github.com/amosmachora/calculator",
+    languages: [react, javascriptLarge],
+  },
+  {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217534&authkey=%21ACZlScb7aGF2xqY&width=1365&height=650",
+    ],
+    category: "Static Landing Page",
+    description: "An interior design shop one page landing page",
+    title: "Chat app css illustration",
+    live: "https://amosmachora.github.io/chat-app-css-illustration/",
+    github: "https://github.com/amosmachora/chat-app-css-illustration",
     languages: [react, javascriptLarge],
   },
 ];
