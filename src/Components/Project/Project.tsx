@@ -30,6 +30,8 @@ const Project = ({ project }: { project: ProjectType }) => {
       if (project.desktopOnly) {
         if (screenSize === "sm" || screenSize === "md") {
           setSmallScreenErrorModalLink(project.live!);
+        } else {
+          window.open(project.live);
         }
       } else {
         window.open(project.live);
