@@ -132,6 +132,21 @@ export const webapps: Project[] = [
     ],
   },
   {
+    images: [
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217546&authkey=%21AIz9R0wSrvGlfO8&width=1366&height=768",
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217551&authkey=%21AGITUf4-jwJ2R8Q&width=1366&height=768",
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217549&authkey=%21AOzu7OOGbOJlF5o&width=1238&height=693",
+      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217548&authkey=%21AFDaJ9zRvwM40gA&width=1238&height=693",
+    ],
+    category: "Fullstack",
+    description:
+      "Mixine is a failed platform where users were to be able to view their spotify playlists in video. I eembarked on this project however without reading the spotify developer policy and it comes to no surprise that spotify refused to upgrade my app from development mode. However the app still can be used  but it requires me to manually add you to the user list otherwise you will run into a bunch of 403 errors so be sure to message me your email first. The app by now has 11 users which im really proud of.",
+    title: "Mixine",
+    live: "https://mixine.vercel.app/",
+    github: "https://github.com/amosmachora/mixine",
+    languages: [react, javascriptLarge, typescript, css, tailwindcss, next],
+  },
+  {
     images: booklerScreenshotsLinks,
     category: "Frontend",
     description:
