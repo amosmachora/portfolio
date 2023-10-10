@@ -15,8 +15,13 @@
     "productpagemain",
     "tailwindcss",
     "watchalongs",
+    "webapps",
     "Webtech",
     "Xmark"
   ],
-  "todo-tree.tree.scanMode": "workspace"
+  "todo-tree.tree.scanMode": "workspace",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
 }
