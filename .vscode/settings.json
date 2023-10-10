@@ -1,0 +1,27 @@
+{
+  "cSpell.words": [
+    "Bookler",
+    "Carlsberg",
+    "codewars",
+    "Firestore",
+    "fontawesome",
+    "Formspree",
+    "fortawesome",
+    "KCSE",
+    "Kiswahili",
+    "Maglo",
+    "nuka",
+    "Pharmaone",
+    "productpagemain",
+    "tailwindcss",
+    "watchalongs",
+    "webapps",
+    "Webtech",
+    "Xmark"
+  ],
+  "todo-tree.tree.scanMode": "workspace",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
+}
