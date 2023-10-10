@@ -67,7 +67,7 @@ const NavBar = () => {
       <FontAwesomeIcon
         icon={faBars}
         onClick={() => setSmallScreen(true)}
-        className="hamburger cursor"
+        className="hamburger cursor block md:hidden"
       />
       <AnimatePresence>
         {smallScreen && (
