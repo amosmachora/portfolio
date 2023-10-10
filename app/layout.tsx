@@ -1,9 +1,12 @@
 import Footer from "@/components/footer/Footer";
 import NavBar from "@/components/navbar/NavBar";
 import { GlobalDataProvider } from "@/hooks/useGlobalData";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata } from "next";
 import { Dancing_Script, Public_Sans } from "next/font/google";
 import "./globals.css";
+config.autoAddCss = false;
 
 export const metadata: Metadata = {
   title: "Amos Machora",
