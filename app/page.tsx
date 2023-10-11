@@ -8,7 +8,9 @@ export default function Home() {
     <main className="start-page-div">
       <HomePageSlides />
       <div className="white-banner flex">
-        <p className="capitalize satisfied">Number of satisfied clients</p>
+        <p className="capitalize satisfied">
+          Number of completed personal and client projects
+        </p>
         <p className="my-projects">My projects</p>
         <div className="banner-center">
           <p className="number">12+</p>
@@ -27,7 +29,7 @@ export default function Home() {
         <div>
           <IconRound />
           <p className="my-portfolio">
-            My Portfolio <br /> services
+            Why hire <br /> me?
           </p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -42,8 +44,9 @@ export default function Home() {
             <h2 className="service-title">Experience</h2>
             <p className="bluish">
               Experience is the best teacher they say. I have been in the web
-              development industry for over 4 years and i have worked with a lot
-              of clients. You want the best ? you`ve got the best.
+              development industry for over 2 years and i have worked with a lot
+              of clients.You want a site fast? You get a site fast.So the
+              question is; do you want the best?
             </p>
           </div>
           <div className="flex-v">
@@ -52,18 +55,19 @@ export default function Home() {
             <p className="bluish">
               Search Engine Optimization, Multiple device support, legacy
               browser support , Fast Loading Speeds, Data caching, you name it.
-              I&apos;ve got it all
             </p>
           </div>
           <div className="flex-v">
             <p className="service-number">03</p>
-            <h2 className="service-title">Freelance Work</h2>
+            <h2 className="service-title">Integrate payments</h2>
             <p className="bluish">
-              I also work online, all you need is send me an email and i will
-              respond as soon as possible.
+              You want to create a page where people can buy goods from your
+              page using different payment methods like Paypal , Stripe and
+              M-Pesa?
             </p>
           </div>
         </div>
+        <ReadMore link="contact" text="Contact Me" className="sm:w-1/4 mt-20" />
       </div>
       <div className="i-create-gold flex">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -72,10 +76,12 @@ export default function Home() {
           alt="Pharmacy application"
         />
         <div>
-          <h2>I create Api consuming web apps</h2>
+          <h2>I also create full stack applications</h2>
           <h3>
-            Data flows from multiple sources. Work with me see how you can
-            represent the data in clean UI
+            Harnessing the power of NextJS , and Backend as a Service providers
+            like convex and firebase it has never been easier to create full
+            stack apps. Check out some fo my previous full stack apps in my
+            portfolio.
           </h3>
           <div className="flex align-center">
             <div className="img-container relative">
@@ -86,10 +92,10 @@ export default function Home() {
                 className="center-absolutely"
               />
             </div>
-            <p>Projects</p>
+            <p>Portfolio</p>
           </div>
           <p className="greyish">
-            Visit my projects section to preview sites, view original design
+            Visit my portfolio section to preview sites, view original design
             files and inspect the source code.
           </p>
           <ReadMore

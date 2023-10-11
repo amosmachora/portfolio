@@ -1,6 +1,7 @@
 "use client";
 
 import { textVariants } from "@/framer/Framer";
+import { calculateAge } from "@/util/utils";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
@@ -8,18 +9,22 @@ import { useEffect, useState } from "react";
 import { ReadMore } from "./ReadMore/ReadMore";
 
 const slide1 = {
-  sub: "Full Stack Web Developer",
+  sub: "Freelance Web Developer",
   h1: "I am a",
-  desc: "So you are looking for a web developer . I am an experienced web developer for all your development...",
+  desc: `Hello i am Amos 👋. I am a ${calculateAge(
+    new Date("13 december 2001")
+  )} year old highly skilled web developer. I have over 2 years of learning experience ...`,
   linkTo: "about-me",
   img: "/DesktopSetUp.jpg",
+  linkText: "learn more about me",
 };
 
 const slide2 = {
-  h1: "Im also an",
-  sub: "aspiring android developer",
-  desc: "I am actively learning react-native to sharpen my android development skills. Stay tuned...",
-  linkTo: "projects",
+  h1: "I have",
+  sub: "12 +",
+  desc: "completed personal and client projects. Fully developed , deployed and continuously maintained web applications. Visit my portfolio to learn more.",
+  linkTo: "portfolio",
+  linkText: "visit portfolio",
   img: "/ManLookingAtComputer.jpg",
 };
 
@@ -29,9 +34,7 @@ const HomePageSlides = () => {
     let interval: string | number | NodeJS.Timeout | undefined;
     if (window.innerWidth < 650) {
       interval = setInterval(() => {
-        setSlide((prev) =>
-          prev.sub === "Full Stack Web Developer" ? slide2 : slide1
-        );
+        setSlide((prev) => (prev.h1 === "I am a" ? slide2 : slide1));
       }, 10000);
     }
     return () => clearInterval(interval);
@@ -41,9 +44,7 @@ const HomePageSlides = () => {
       <div
         className="cube cursor cube-one absolute"
         onClick={() =>
-          setSlide((prev) =>
-            prev.sub === "Full Stack Web Developer" ? slide2 : slide1
-          )
+          setSlide((prev) => (prev.h1 === "I am a" ? slide2 : slide1))
         }
       >
         <FontAwesomeIcon
@@ -70,7 +71,7 @@ const HomePageSlides = () => {
           {slide.desc}
         </motion.p>
         <ReadMore
-          text={"Read More"}
+          text={slide.linkText}
           link={slide.linkTo}
           className="hover:border-white"
         />
@@ -78,9 +79,7 @@ const HomePageSlides = () => {
       <div
         className="cube cursor-pointer cube-two absolute"
         onClick={() =>
-          setSlide((prev) =>
-            prev.sub === "Full Stack Web Developer" ? slide2 : slide1
-          )
+          setSlide((prev) => (prev.h1 === "I am a" ? slide2 : slide1))
         }
       >
         <FontAwesomeIcon

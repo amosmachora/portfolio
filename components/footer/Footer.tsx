@@ -433,9 +433,9 @@ c49 -25 54 -68 15 -114 -43 -52 -104 -39 -104 22 0 31 37 107 52 107 5 0 22
       </div>
       <div className="flex footer-content space-between">
         <div className="footer-left">
-          <h3>Cooperation</h3>
+          <h3>Values</h3>
           <p className="bluish capitalize">
-            Number of <br /> satisfied <br /> customers
+            Self-Discipline <br /> Reliability <br /> A+ Communication skills
           </p>
         </div>
         <div className="flex footer-content-right">

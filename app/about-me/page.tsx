@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 import { IconRound } from "@/components/IconRound";
+import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { KCSE } from "../../components/KCSE";
-import { ReadMore } from "../../components/ReadMore/ReadMore";
 import "../../css/about-me.css";
 
 const AboutMe = () => {
@@ -11,12 +11,10 @@ const AboutMe = () => {
     <div className="about-me">
       <IconRound />
       <div className="about-me-top flex space-between">
-        <h1>
-          Learn <br /> more about me
-        </h1>
+        <h1>About Me</h1>
         <ReadMore
-          text="Latest projects"
-          link="projects"
+          text="portfolio"
+          link="portfolio"
           className="hover:border-white"
         />
       </div>
@@ -188,6 +186,10 @@ const AboutMe = () => {
               <div className="flex">
                 <p>GIT & GitHub</p>
                 <p>Version Control</p>
+              </div>
+              <div className="flex">
+                <p>Convex</p>
+                <p>Backend as a service</p>
               </div>
             </div>
           </div>
