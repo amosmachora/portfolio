@@ -53,7 +53,7 @@ const Page = () => {
       >
         <FontAwesomeIcon icon={faArrowLeft} className="center-absolutely" />
       </Link>
-      <div className="relative h-[50vh]">
+      <div className="relative h-[25vh] sm:h-[50vh]">
         <DarkOverlay />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -62,7 +62,7 @@ const Page = () => {
           className="w-full h-full object-cover"
         />
       </div>
-      <section className="px-[10%] py-[5%] bg-white text-[#081019]">
+      <section className="px-[5%] sm:px-[10%] py-[5%] bg-white text-[#081019]">
         <p className="category">{project?.category}</p>
         <h1 className="text-[#081019] text-5xl font-medium my-5">
           {project?.title}
@@ -73,11 +73,8 @@ const Page = () => {
         <p className="orange font-semibold border-l-4 border-orange leading-10 pl-5 mt-6">
           Tech Stack
         </p>
-        <ProjectLanguages
-          className="hidden sm:flex mt-5"
-          languages={project?.languages!}
-        />
-        <div className="flex items-center justify-between mt-20">
+        <ProjectLanguages className="mt-5" languages={project?.languages!} />
+        <div className="flex items-center justify-between mt-10 sm:mt-20">
           <p className="text-[#081019] text-xl font-medium my-5">
             Want a preview? Take a look at some of the screenshots
           </p>

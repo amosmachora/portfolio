@@ -2,14 +2,10 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import useScreenSize from "../../hooks/useScreenSize";
 import { Project as ProjectType } from "../../util/PortfolioItems";
 import "./Project.css";
-import { ProjectLanguages } from "./ProjectLanguages";
 
 const Project = ({ project }: { project: ProjectType }) => {
-  const screenSize = useScreenSize();
-
   const [toolTipMessage, setToolTipMessage] = useState<
     null | "Large screens only" | "Fully responsive!"
   >(null);
@@ -61,11 +57,6 @@ const Project = ({ project }: { project: ProjectType }) => {
               </div> */}
           </div>
         </div>
-        <ProjectLanguages
-          className="flex sm:hidden w-full 
-            justify-around my-6"
-          languages={project.languages}
-        />
         <Link
           href={`/portfolio/${project.title}`}
           className={`text-black text-[40px] ${
@@ -76,9 +67,6 @@ const Project = ({ project }: { project: ProjectType }) => {
           {project.title}
         </Link>
         <p className="project-description greyish">{project.description}</p>
-        {project.openSourceLibraries && (
-          <h4 className="h4 mt-5">Open Source libraries</h4>
-        )}
       </div>
     </div>
   );

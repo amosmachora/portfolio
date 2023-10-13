@@ -20,7 +20,7 @@ const NavBar = () => {
     <motion.nav className="flex space-between items-start">
       <Logo />
       <motion.div
-        className="nav-middle flex space-between"
+        className="nav-middle hidden sm:flex space-between"
         variants={navMiddleVariants}
         initial="initial"
         animate="animate"

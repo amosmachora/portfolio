@@ -22,7 +22,11 @@ const Page = ({ children }: { children: React.ReactNode }) => {
             of them to read more.{" "}
           </p>
         </div>
-        <ReadMore link={"contact"} text={"Contact"} />
+        <ReadMore
+          link={"contact"}
+          text={"Contact"}
+          className="hidden sm:block"
+        />
       </div>
       <div className="projects bg-white w-full px-[2%] sm:mt-[100px] grid grid-cols-1 sm:grid-cols-2 gap-10">
         {projects.map((project, i) => (

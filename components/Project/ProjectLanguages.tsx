@@ -6,7 +6,7 @@ export const ProjectLanguages = ({
   className: string;
 }) => {
   return (
-    <div className={`gap-x-6 items-center flex ${className}`}>
+    <div className={`gap-x-6 items-center flex flex-wrap ${className}`}>
       {languages.map((language, i) => {
         const isNext = language.includes("next");
         return (
