@@ -1,4 +1,3 @@
-import React from "react";
 import { Overlay } from "./Overlay";
 
 export const Video = ({
@@ -10,7 +9,7 @@ export const Video = ({
 }) => {
   return (
     <Overlay onClick={onClick}>
-      <div className="w-full h-full">
+      <div className="w-full h-full z-50">
         <iframe
           src={`https://www.youtube.com/embed/${id}`}
           title="YouTube Video Player"

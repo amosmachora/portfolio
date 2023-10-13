@@ -41,7 +41,7 @@ const NavBar = () => {
             <Link href={page === "start-page" ? "/" : `/${page}`} key={i}>
               <li
                 className={`first-letter:uppercase ${
-                  pathname === "/" + page && "active"
+                  pathname.includes(page) && "active"
                 }`}
               >
                 {page.split("-").join(" ")}
@@ -54,7 +54,7 @@ const NavBar = () => {
             <Link href={page === "start-page" ? "/" : `/${page}`} key={i}>
               <li
                 className={`first-letter:uppercase ${
-                  pathname === "/" + page && "active"
+                  pathname.includes(page) && "active"
                 }`}
               >
                 {page.split("-").join(" ")}

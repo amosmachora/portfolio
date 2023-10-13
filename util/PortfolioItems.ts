@@ -11,6 +11,7 @@ export type Project = {
   hasVideo?: boolean;
   youtubeId?: string;
   desktopOnly?: boolean;
+  hasMoreInfo?: boolean;
 };
 
 const booklerScreenshotsLinks = [
@@ -94,7 +95,7 @@ const webtechafricaImages = [
   "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217514&authkey=%21AC9gzp6tV2BCLWo&width=1354&height=646",
 ];
 
-export const webapps: Project[] = [
+export const projects: Project[] = [
   {
     images: webtechafricaImages,
     category: "Fullstack",
@@ -112,6 +113,7 @@ export const webapps: Project[] = [
       "/java.svg",
       "/spring-boot.svg",
     ],
+    hasMoreInfo: true,
   },
   {
     images: [
@@ -134,6 +136,7 @@ export const webapps: Project[] = [
       "/tailwindcss.svg",
       "/next.svg",
     ],
+    hasMoreInfo: true,
   },
   {
     images: booklerScreenshotsLinks,
@@ -154,6 +157,7 @@ export const webapps: Project[] = [
     hasVideo: true,
     youtubeId: "SPdNNw0E5XU",
     desktopOnly: true,
+    hasMoreInfo: true,
   },
   {
     images: portfolioImages,
@@ -205,10 +209,8 @@ export const webapps: Project[] = [
       "/mysql.svg",
       "/icons8-css.svg",
     ],
+    hasMoreInfo: true,
   },
-];
-
-export const frontendMentorProjects: Project[] = [
   {
     images: interiorDesignShopLinks,
     category: "Static Landing Page",
@@ -267,7 +269,7 @@ export const frontendMentorProjects: Project[] = [
   },
 ];
 
-export const extraFrontendMentorProjects: Project[] = [
+export const extraProjects: Project[] = [
   {
     images: [
       "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217528&authkey=%21AGyw-5K9c63S2PQ&width=1348&height=649",
@@ -334,9 +336,6 @@ export const extraFrontendMentorProjects: Project[] = [
     github: "https://github.com/amosmachora/chat-app-css-illustration",
     languages: ["/react.svg", "/javascript-large.svg"],
   },
-];
-
-export const watchalongs: Project[] = [
   {
     images: cafeInspireLinks,
     category: "Landing Page",
@@ -360,5 +359,3 @@ export const watchalongs: Project[] = [
     youtubeId: "XDnTzmG0np8",
   },
 ];
-
-export const websites: Project[] = [];
