@@ -25,7 +25,7 @@ const Page = ({ children }: { children: React.ReactNode }) => {
         <ReadMore
           link={"contact"}
           text={"Contact"}
-          className="hidden sm:block"
+          className="hidden sm:flex"
         />
       </div>
       <div className="projects bg-white w-full px-[2%] sm:mt-[100px] grid grid-cols-1 sm:grid-cols-2 gap-10">

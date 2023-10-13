@@ -1,7 +1,14 @@
 import HomePageSlides from "@/components/HomePageSlides";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
+import { Metadata } from "next";
 import "../css/start-page.css";
+
+export const metadata: Metadata = {
+  title: "Amos Machora | Portfolio",
+  description:
+    "Welcome to my portfolio 🎂. View some of my personal and client projects.",
+};
 
 export default function Home() {
   return (
