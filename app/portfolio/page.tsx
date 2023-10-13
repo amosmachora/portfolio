@@ -3,7 +3,7 @@ import { extraProjects, projects } from "@/util/PortfolioItems";
 import { ReadMore } from "../../components/ReadMore/ReadMore";
 import "../../css/portfolio.css";
 
-const Page = ({ children }: { children: React.ReactNode }) => {
+const Page = () => {
   return (
     <div className="portfolio">
       <div className="dice">
