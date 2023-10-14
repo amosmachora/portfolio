@@ -28,7 +28,7 @@ const Page = () => {
           className="hidden sm:flex"
         />
       </div>
-      <div className="projects bg-white w-full px-[2%] sm:mt-[100px] grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <div className="projects bg-white w-full px-[2%] sm:mt-[100px] grid grid-cols-1 sm:grid-cols-2 sm:gap-10">
         {projects.map((project, i) => (
           <Project project={project} key={i} />
         ))}
@@ -40,7 +40,7 @@ const Page = () => {
           not offer much insight but i saw no reason not to include them here.
         </p>
       </div>
-      <div className="projects bg-white w-full px-[2%] grid grid-cols-1 sm:grid-cols-2 gap-10">
+      <div className="projects bg-white w-full px-[2%] grid grid-cols-1 sm:grid-cols-2 sm:gap-10">
         {extraProjects.map((project, i) => (
           <Project project={project} key={i} />
         ))}

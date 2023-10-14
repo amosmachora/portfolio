@@ -3,15 +3,20 @@
 import { DarkOverlay } from "@/components/DarkOverlay";
 import { Overlay } from "@/components/Overlay";
 import { ProjectLanguages } from "@/components/Project/ProjectLanguages";
-import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { SmallScreenModal } from "@/components/SmallScreenModal";
 import { Video } from "@/components/Video";
 import useScreenSize from "@/hooks/useScreenSize";
 import { projects } from "@/util/PortfolioItems";
 import { faFigma, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
+  faAngleLeft,
+  faAngleRight,
   faArrowLeft,
+  faCaretDown,
+  faDisplay,
+  faMobileScreen,
   faPlay,
+  faTabletScreenButton,
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,6 +34,9 @@ const Page = () => {
   const [currentYoutubeId, setCurrentYoutubeId] = useState<null | string>(null);
   const [smallScreenErrorModalLink, setSmallScreenErrorModalLink] = useState<
     null | string
+  >(null);
+  const [toolTipMessage, setToolTipMessage] = useState<
+    null | "Large screens only" | "Fully responsive!"
   >(null);
 
   const handleRedirect = () => {
@@ -63,19 +71,54 @@ const Page = () => {
         />
       </div>
       <section className="px-[5%] sm:px-[10%] py-[5%] bg-white text-[#081019]">
-        <p className="category">{project?.category}</p>
+        <div className="flex justify-between items-center">
+          <p className="category">{project?.category}</p>
+          <div
+            className="flex relative"
+            onMouseEnter={() => {
+              if (project.desktopOnly) {
+                setToolTipMessage("Large screens only");
+              } else {
+                setToolTipMessage("Fully responsive!");
+              }
+            }}
+            onMouseLeave={() => setToolTipMessage(null)}
+          >
+            {project.desktopOnly ? (
+              <FontAwesomeIcon icon={faDisplay} className="mx-2" />
+            ) : project.category === "Mobile App" ? null : (
+              <>
+                <FontAwesomeIcon icon={faDisplay} className="mx-2" />
+                <FontAwesomeIcon icon={faTabletScreenButton} className="mr-2" />
+                <FontAwesomeIcon icon={faMobileScreen} />
+              </>
+            )}
+            {toolTipMessage && (
+              <p className="absolute -top-5 -translate-y-full text-center text-sm z-50 w-min text-orange font-medium bg-white p-2 rounded border-orange border">
+                {toolTipMessage}
+                <FontAwesomeIcon
+                  icon={faCaretDown}
+                  className="absolute bottom-0 translate-y-full left-1/2 -translate-x-1/2"
+                />
+              </p>
+            )}
+          </div>
+        </div>
         <h1 className="text-[#081019] text-5xl font-medium my-5">
           {project?.title}
         </h1>
         <p className="text-[#536375] text-sm font-light mt-6">
           {project?.description}
         </p>
-        <p className="orange font-semibold border-l-4 border-orange leading-10 pl-5 mt-6">
+        <p className="orange font-semibold border-l-4 border-orange leading-10 pl-5 mt-14 sm:mt-6">
           Tech Stack
         </p>
-        <ProjectLanguages className="mt-5" languages={project?.languages!} />
+        <ProjectLanguages
+          className="mt-8 sm:mt-5"
+          languages={project?.languages!}
+        />
         <div className="flex items-center justify-between mt-10 sm:mt-20">
-          <p className="text-[#081019] text-xl font-medium my-5">
+          <p className="text-[#081019] text-xl font-medium my-10 sm:my-5">
             Want a preview? Take a look at some of the screenshots
           </p>
           {project.hasVideo && (
@@ -101,11 +144,21 @@ const Page = () => {
             />
           </Overlay>
         )}
-        <div>
+        <div className="relative">
           <Carousel
             defaultControlsConfig={{
-              nextButtonText: "N",
-              prevButtonText: "P",
+              nextButtonText: (
+                <FontAwesomeIcon
+                  icon={faAngleRight}
+                  className="w-5 h-5 text-white"
+                />
+              ),
+              prevButtonText: (
+                <FontAwesomeIcon
+                  icon={faAngleLeft}
+                  className="w-5 h-5 text-white"
+                />
+              ),
               pagingDotsStyle: {
                 fill: "#ff5c00",
                 marginRight: 4,
@@ -120,11 +173,12 @@ const Page = () => {
               <img
                 src={image as unknown as string}
                 alt="test"
-                className="max-h-[75vh] w-full object-cover mx-auto"
+                className="aspect-video w-full object-cover mx-auto"
                 key={i}
               />
             ))}
           </Carousel>
+          <div className="h-7 bg-white absolute bottom-0 right-0 left-0" />
         </div>
         <div className="my-14">
           {project.live && (
@@ -160,11 +214,6 @@ const Page = () => {
           <span className="text-orange lowercase">{project.title}.</span> Thanks
           for your time.
         </p>
-        <ReadMore
-          link="contact"
-          text="Hit me up"
-          className="text-[#081019] sm:w-1/4 mx-auto"
-        />
       </section>
     </main>
   );
