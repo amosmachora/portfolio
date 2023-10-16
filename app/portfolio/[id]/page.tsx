@@ -209,7 +209,12 @@ const Page = () => {
             </div>
           )}
         </div>
-        <p className="mt-8">
+        <div className="flex flex-col gap-y-4">
+          {project.textParagraphs?.map((p, i) => (
+            <p key={i}>{p}</p>
+          ))}
+        </div>
+        <p className="mt-4">
           Well, that&apos;s it for me and{" "}
           <span className="text-orange lowercase">{project.title}.</span> Thanks
           for your time.

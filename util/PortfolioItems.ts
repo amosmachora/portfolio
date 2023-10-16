@@ -11,7 +11,7 @@ export type Project = {
   hasVideo?: boolean;
   youtubeId?: string;
   desktopOnly?: boolean;
-  hasMoreInfo?: boolean;
+  textParagraphs?: string[];
 };
 
 const booklerScreenshotsLinks = [
@@ -97,10 +97,42 @@ const webtechafricaImages = [
 
 export const projects: Project[] = [
   {
+    title: "Bidsync",
+    category: "Full Stack",
+    languages: [
+      "/next.svg",
+      "/react.svg",
+      "/typescript.svg",
+      "/tailwindcss.svg",
+      "/clerk.png",
+      "/convex.png",
+    ],
+    github: "https://github.com/amosmachora/bidsync",
+    hasVideo: true,
+    youtubeId: "xowpu0plGBM",
+    description:
+      "Bidsync is a hackathon submission. The hackathon was held by youtuber @WebDevCody. Whils`t i did not win the hackathon i came fourth and won a 100 USD price.",
+    textParagraphs: [
+      "Bidsync is a collaborative highly interactive bidding platform where people should be able to bid on items and have their items bid on.",
+      "Built with convex as the backend as a service platform and clerk for authentication the project was a massive success.",
+      "Has a private chat room, notification systems , item histories and much much more.",
+      "I learnt alot about web sockets, database schemas and clerk. I also won a prize which makes me happy to this day.",
+      "So how about you visit the site for yourself. Be sure to open a bunch of tabs especially from different browsers to get to see the action. Or better yet watch the submission video by clicking the play video button on this page.",
+    ],
+    images: [
+      "/bidsync-screenshot-one.png",
+      "/bidsync-screenshot-two.png",
+      "/bidsync-screenshot-three.png",
+      "/bidsync-screenshot-four.png",
+    ],
+    desktopOnly: true,
+    live: "https://bidsync.vercel.app/",
+  },
+  {
     images: webtechafricaImages,
     category: "Fullstack",
     description:
-      "WebTech Africa is a startup that i built in conjuction with some of my friends from campus. We were aiming on how we can make ourselves useful to the general community and founding a web development company seemed like a rather reasonable approach as we were not only highly skilled developers but we also needed jobs where we would actively sharpen our skills. I was the one in charge of the technical side. I built the website using NextJS for its SEO capabilities that make it a way better option to create-react-app. The site SEO is highly accurate as it ranks first on google on brand name search. The backend is built using java and spring-boot. I also used firebase for user authentication and firestore to store some of the user information. The source code is however proprietary software and cannot be shared to the general public but i am willing to give an overview on a video or some sort of screenshare on request.",
+      "Want to have a little laugh and maybe learn a little about a failed tech startup? Well grab some popcorn for this one.",
     title: "WebTech Africa",
     live: "https://webtechafrica.com",
     languages: [
@@ -113,7 +145,37 @@ export const projects: Project[] = [
       "/java.svg",
       "/spring-boot.svg",
     ],
-    hasMoreInfo: true,
+    textParagraphs: [
+      "Well, let me start off by telling you a story. I grew up always hearing stories of how uneployment is common in Kenya. Wen`t to campus heard the same thing throughout my four years. We'll me being me i wasn`t going to sit around and watch yself go broke. So i hatched a plan 🤧",
+      "I was going to build my own company! Yes! Finally a solution to the impending doom. If i was not going to get work i could make myself work! Brilliant idea. Or so  i thought",
+      "At that time the only thing i knew was frontend web developent so naturally my billion dollar startup idea was going to be centered around that. So i started cooking 👩‍🍳",
+      "Jumped right in. What was i gonna need. One a website, and a way for people to pay me. So i was determined a young soul to make it work. I started writing out the client side with React (CRA react). Took me like a month (i was still in school so i was kind of juggling working on my company with classes and exam preps",
+      "After finishing the website i started thinking of how i could integrate payments, so paypal and stripe! Right? Lets go my man. Off i went into the docs",
+      "Blow one. Stripe is not supported in my country (Kenya). Dang! When i found this out i almost cried. So how was i going to be paid?",
+      "Well not all hope is lost i can still use paypal, right? Oh young naive me was in for a rude shock",
+      "To host paypal you cant just call their apis from the frontend. My app was just a frontend react app, so i had to thing about creating a backend. Just for payments. I didn`t know how to use Node but i had a little learning experience with Java and Spring-boot. So off i wen`t reading through the Paypal docs trying to implement their service in my app",
+      "Blow Two! Paypal hosted fields are not supported in my country? OMG I almost lost my mind. Ths meant that i couldnt have a direct field in my frontend app for people to input their Visa CVCs etc!",
+      "Dang , well i never stay down after being punched in the throat so i woke up brushed the dust of my clothes and continued hacking. Still paypal will work i just can`t use hosted fields",
+      "Anyway off i went. Finished implementing the backend and know i had to think about hosting the backend app. The frontend was hosted on vercel which was relatively free. The backend however i had to use Heroku. Why i chose heroku i can`t remember. So  i integrated CI/CD into my github repo to automatically deploy changes on main branch commit. All looked well",
+      "Bought a domain from Hostinger and soon my website was live. Time to cash in right? WRONG!",
+      "Well i was dumb and naive i had not even analysed my business plan i jsut wanted to code my way to a billion dollars. So after months of only one sign up on my app (who i later found out was just a stalking friend) i decided to think about marketting. Atleast i was learning right?",
+      "Created a LinkedIn Company page for my billion dollar idea. Hired myself 😂 jeezus. But soon i realized something i needed to create engaging posts for me toadvertise my company work (creating websites)",
+      "So that was a bummer! I don`t know sh*t about graphic design but nooo God always comes through. Enter CANVA! This people have a ery generous one month free plan. So iwas like why not. So i logged on entered my paypal account and whoosh, off i went creating designs",
+      "Created a couple of designs , they looked gorgeous i was swimming in dopamine. I started posting them everywhere on my linkedIN. My posts always had two consistent likes. Mine and my company`s 😂 sad sad. Anyways i kept pushing",
+      "Soon i realized Linked In wasn`t doing me that well. I wanted a way for people to find me on gooogle! Right?",
+      "Dang! I know had a new problem. My frontend was a react app bootstrapped using create-react-app which sucks at SEO (Search Engine Optimization). So i had to rethink my website.",
+      "I had heard of this knew meta framework called NextJS. Me being me i always loved learning knew stuff. This would solve all my seo prblems because NEXTJS server side renders your react apps. I would also be learning the brand new toy which developers like me were know transitioning to. NextJS also is a meta framework so i can create a backend coupled with my frontend so i would get rid of my spring backend and thus avoid the HEROKU costs. So everything looked nice. I embarked on the journey of studyng NEXTJS from Vercel",
+      "So off i went. Learning has never been a problem for me, especially programming. So i did youtube kind of grasping the basics and trying out what i had learn`t in small test projects.",
+      "I was not going to jump straight into migrating my company app from CRA(create-react-app) to NextJS. I had to build something first with Next to make sure i had learn`t enough to get me off the ground",
+      "So enter Mixine. Mixine was one of many ideas my naive ass had thought off for a while. It was basically a youtube and spotify merge. Like a way for me to watch my spotify playlists instead of listening to them. I won`t go to much details you can learn more about mixine later. It was perfect. I would create the app and test my NextJS skills in the process so off i went",
+      "Took like two weeks reading the spotify and youtube api documentation. Got a grip off it and created the app. I was so proud of it btw. It looked good it worked well i posted it on my socials and all looked well but turns out i couldnt get people to use my app because what i was doing was prohibited by spotify so that project tanked. It is still live though but i need to add your email as a tester on my dashboard for you to be able to use it",
+      "Anywayz it was a test project . So it did not hurt that much. I had learn`t how to use NextJS which was the aim right?",
+      "So i started migrating my company website from CRA and Spring to NEXTJS. It was no easy task i can tell you that. I had to rewrite most of my backent to next js api routes which was a hell but all in all i figure things out finally. Took me like another week or two but i finally completed everything and my project was live.",
+      "Now what. My app was live, payment was fine, SEO was fine. What now? Why was i not a billionaire? Well i spent some time thinking about this question. Well i think the more i worked on my company part of me always felt like this wasn`t going to cut it. I always felt something non-techinical was not right so i decided to pause on my company for a while.",
+      "Dove into youtube learnt a little about startup success stories from Y-Combinator and Havard Business School youtube chanells. Learn`t a tone. It was now clear i was beating a dead horse.",
+      "Well did i loose anything really? I don`t think so. The whole process was so much fun to code through. I pushed myself to the limit in learning new technologies some of which i had never used before. I got to understand the ins and outs of business markets and while i cannot say i am an expert at any of them i can confidently say i am not where i was.",
+      "My website is live you can go check it out for a laugh maybe. I don`t know if i will ever really go back to it but it seems dead as at now",
+    ],
   },
   {
     images: [
@@ -136,7 +198,6 @@ export const projects: Project[] = [
       "/tailwindcss.svg",
       "/next.svg",
     ],
-    hasMoreInfo: true,
   },
   {
     images: booklerScreenshotsLinks,
@@ -157,7 +218,6 @@ export const projects: Project[] = [
     hasVideo: true,
     youtubeId: "SPdNNw0E5XU",
     desktopOnly: true,
-    hasMoreInfo: true,
   },
   {
     images: portfolioImages,
@@ -209,7 +269,6 @@ export const projects: Project[] = [
       "/mysql.svg",
       "/icons8-css.svg",
     ],
-    hasMoreInfo: true,
   },
   {
     images: interiorDesignShopLinks,
