@@ -1,10 +1,12 @@
 "use client";
 
+import { assets } from "@/assets/assets";
 import { navMiddleVariants } from "@/framer/Framer";
 import { pages } from "@/util/utils";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -17,14 +19,9 @@ const NavBar = () => {
   const [smallScreen, setSmallScreen] = useState(false);
 
   return (
-    <motion.nav className="flex space-between items-start">
+    <nav className="flex space-between items-start">
       <Logo />
-      <motion.div
-        className="nav-middle hidden sm:flex space-between"
-        variants={navMiddleVariants}
-        initial="initial"
-        animate="animate"
-      >
+      <div className="nav-middle hidden sm:flex space-between">
         <ul className="nav-links-1">
           {pages.slice(0, 1).map((page, i) => (
             <Link href={page === "start-page" ? "/" : `/${page}`} key={i}>
@@ -62,12 +59,12 @@ const NavBar = () => {
             </Link>
           ))}
         </ul>
-      </motion.div>
+      </div>
       <Socials className="hidden sm:flex" />
       <FontAwesomeIcon
         icon={faBars}
         onClick={() => setSmallScreen(true)}
-        className="hamburger cursor block md:hidden"
+        className="bars h-4 overflow-visible cursor block md:hidden"
       />
       <AnimatePresence>
         {smallScreen && (
@@ -88,8 +85,7 @@ const NavBar = () => {
               className="bg-white p-3 absolute right-3 top-3"
               onClick={() => setSmallScreen(false)}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={"/close.svg"} alt="Close" className="w-7 h-7" />
+              <Image src={assets.close} alt="Close" className="w-7 h-7" />
             </div>
             <div className="text-center list-none absolute top-1/4 right-1/2 translate-x-1/2 w-3/4">
               {pages.map((page, i) => (
@@ -115,7 +111,7 @@ const NavBar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 };
 

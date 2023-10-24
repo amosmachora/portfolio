@@ -1,18 +1,31 @@
+import Image, { StaticImageData } from "next/image";
+
 export const ProjectLanguages = ({
   languages,
   className,
 }: {
-  languages: string[];
+  languages: string[] | StaticImageData[];
   className: string;
 }) => {
   return (
     <div className={`gap-x-6 items-center flex flex-wrap ${className}`}>
       {languages.map((language, i) => {
-        const isNext = language.includes("next") || language.includes("clerk");
+        const isString = typeof language === "string";
+
+        let isNext;
+
+        if (isString) {
+          isNext = language.includes("nextjs") || language.includes("clerk");
+        } else {
+          isNext =
+            language.src.includes("nextjs") || language.src.includes("clerk");
+          console.log(language);
+        }
+
+        console.log(isString);
 
         return (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img
+          <Image
             src={language}
             alt="language"
             className={`${

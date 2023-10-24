@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { ReadMore } from "../ReadMore/ReadMore";
 import "./Footer.css";
@@ -453,10 +454,12 @@ c49 -25 54 -68 15 -114 -43 -52 -104 -39 -104 22 0 31 37 107 52 107 5 0 22
             />
           </div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Desktop set up"
             className="desktop-setup"
+            width={1260}
+            height={750}
           />
         </div>
       </div>

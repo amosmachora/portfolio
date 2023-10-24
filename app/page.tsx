@@ -2,7 +2,9 @@ import HomePageSlides from "@/components/HomePageSlides";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { Metadata } from "next";
+import Image from "next/image";
 import "../css/start-page.css";
+import arrow from "../public/Arrow.png";
 
 export const metadata: Metadata = {
   title: "Amos Machora | Portfolio",
@@ -38,11 +40,12 @@ export default function Home() {
           <p className="my-portfolio">
             Why hire <br /> me?
           </p>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
+          <Image
             src="https://images.pexels.com/photos/6340796/pexels-photo-6340796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="People Looking at computer"
             className="people-looking-at-computer"
+            width={1260}
+            height={750}
           />
         </div>
         <div className="flex space-between">
@@ -77,10 +80,11 @@ export default function Home() {
         <ReadMore link="contact" text="Contact Me" className="sm:w-1/4 mt-20" />
       </div>
       <div className="i-create-gold flex">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           alt="Pharmacy application"
+          height={750}
+          width={1260}
         />
         <div>
           <h2>I also create full stack applications</h2>
@@ -92,12 +96,7 @@ export default function Home() {
           </h3>
           <div className="flex align-center">
             <div className="img-container relative">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={"/Arrow.png"}
-                alt="Arrow"
-                className="center-absolutely"
-              />
+              <Image src={arrow} alt="Arrow" className="center-absolutely" />
             </div>
             <p>Portfolio</p>
           </div>

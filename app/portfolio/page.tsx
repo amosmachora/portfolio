@@ -1,5 +1,7 @@
+import { assets } from "@/assets/assets";
 import Project from "@/components/Project/Project";
 import { extraProjects, projects } from "@/util/PortfolioItems";
+import Image from "next/image";
 import { ReadMore } from "../../components/ReadMore/ReadMore";
 import "../../css/portfolio.css";
 
@@ -7,8 +9,7 @@ const Page = () => {
   return (
     <div className="portfolio">
       <div className="dice">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src={"/dice.png"} alt="Dice" />
+        <Image src={assets.dice} alt="Dice" />
       </div>
       <div className="latest-portfolio flex space-between items-start">
         <div>
@@ -18,7 +19,7 @@ const Page = () => {
           </h1>
           <p className="my-7">
             Find below a list of my recent projects sorted in chronological
-            order from <span className="orange">most recent .</span> Click any
+            order from <span className="orange">most recent. </span> Click any
             of them to read more.{" "}
           </p>
         </div>

@@ -10,7 +10,10 @@
     "KCSE",
     "Kiswahili",
     "Maglo",
+    "nextjs",
     "nuka",
+    "onedrive",
+    "pexels",
     "Pharmaone",
     "productpagemain",
     "tailwindcss",
@@ -20,8 +23,8 @@
     "Xmark"
   ],
   "todo-tree.tree.scanMode": "workspace",
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  }
+  "editor.formatOnSave": true
+  // "editor.codeActionsOnSave": {
+  //   "source.organizeImports": true
+  // }
 }

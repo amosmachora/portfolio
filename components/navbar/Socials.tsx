@@ -13,11 +13,8 @@ import { motion } from "framer-motion";
 
 export const Socials = ({ className }: { className: string }) => {
   return (
-    <motion.div
+    <div
       className={`socials flex justify-center items-center flex-wrap gap-x-1 ${className}`}
-      variants={socialsVariants}
-      initial="initial"
-      animate="animate"
     >
       <a
         href="https://github.com/amosmachora"
@@ -93,6 +90,6 @@ export const Socials = ({ className }: { className: string }) => {
           />
         </svg>
       </a>
-    </motion.div>
+    </div>
   );
 };

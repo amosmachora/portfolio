@@ -20,6 +20,7 @@ import {
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Carousel from "nuka-carousel";
@@ -63,11 +64,12 @@ const Page = () => {
       </Link>
       <div className="relative h-[25vh] sm:h-[50vh]">
         <DarkOverlay />
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={project?.images.at(0)}
+        <Image
+          src={project?.images.at(0)!}
           alt=""
           className="w-full h-full object-cover"
+          height={768}
+          width={1366}
         />
       </div>
       <section className="px-[5%] sm:px-[10%] py-[5%] bg-white text-[#081019]">
@@ -169,12 +171,13 @@ const Page = () => {
             wrapAround
           >
             {project?.images.map((image, i) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
+              <Image
                 src={image as unknown as string}
                 alt="test"
                 className="aspect-video w-full object-cover mx-auto"
                 key={i}
+                height={768}
+                width={1366}
               />
             ))}
           </Carousel>

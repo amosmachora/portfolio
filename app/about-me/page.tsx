@@ -1,10 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
+import { assets } from "@/assets/assets";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import { KCSE } from "../../components/KCSE";
 import "../../css/about-me.css";
+import "../../css/start-page.css";
+import me from "../../public/me.jpg";
 
 const AboutMe = () => {
   return (
@@ -15,7 +18,7 @@ const AboutMe = () => {
         <ReadMore
           text="portfolio"
           link="portfolio"
-          className="hover:border-white"
+          className="hover:border-white hidden md:flex"
         />
       </div>
       <div className="my-picture flex justify-between gap-x-2">
@@ -55,16 +58,16 @@ const AboutMe = () => {
             </a>
           </p>
         </div>
-        <img
-          src={"/me.jpg"}
+        <Image
+          src={me}
           alt="This is me"
-          className="object-cover w-full sm:w-1/4 mt-[40px]"
+          className="object-cover w-full sm:w-1/4 my-[50px] sm:mb-0 sm:mt-[40px]"
         />
       </div>
       <div className="my-description flex space-between">
         <h3 className="text-orange">More Info</h3>
         <div className="flex space-between">
-          <div className="bs-about-me">
+          <div className="bs-about-me flex flex-col gap-y-7">
             <p>
               I am a self-taught software developer, who has taken several
               online courses on LinkedIn Learning, Coursera, and Udemy to learn
@@ -77,14 +80,6 @@ const AboutMe = () => {
               contribute regularly to various open-source projects. I believe in
               giving back to the community and sharing my knowledge and
               experience with other.
-            </p>
-            <p>
-              In addition to my work as a software engineer, I am also the
-              founder of Webtech Africa, a tech startup aimed at providing
-              innovative solutions to African companies. I am dedicated to
-              helping businesses in Africa grow with technology and am
-              passionate about creating unique solutions that meet their
-              specific needs.
             </p>
             <p>
               I am an individual who is driven by curiosity and continuously
@@ -104,22 +99,19 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="tech-stack flex flex-col items-start relative">
-        {/* <h2>
-          TECHNOLOGY <br /> STACK
-        </h2> */}
         <div className="flex justify-between w-full language-icons px-5 flex-wrap">
-          <img src={"/figma-small.svg"} alt="figma" className="figma" />
+          <Image src={assets.figma} alt="figma" className="figma" />
           <FontAwesomeIcon icon={faReact} className="react" color="#5ed3f3" />
-          <img src={"/firestore.svg"} alt="figma" />
+          <Image src={assets.firestore} alt="figma" />
           <FontAwesomeIcon icon={faGithub} className="github  " />
-          <img src={"/tailwindcss.svg"} alt="figma" />
-          <img src={"/javascript-large.svg"} alt="js" className="js" />
-          <img src={"/spring-boot.svg"} alt="figma" />
-          <img src={"/firebase.svg"} alt="figma" />
-          <img src={"/typescript.svg"} alt="figma" />
-          <img src={"/mysql.svg"} alt="figma" />
-          <img src={"/java.svg"} alt="figma" />
-          <img src={"/next.svg"} alt="next" />
+          <Image src={assets.tailwindcss} alt="figma" />
+          <Image src={assets.javascriptLarge} alt="js" className="js" />
+          <Image src={assets.springBoot} alt="spring boot" />
+          <Image src={assets.firebase} alt="figma" />
+          <Image src={assets.typescript} alt="figma" />
+          <Image src={assets.mysql} alt="figma" />
+          <Image src={assets.java} alt="figma" />
+          <Image src={assets.next} alt="next" />
         </div>
         <div className="tech-stack-right mx-auto">
           <p className="tech-stack-main">
@@ -154,14 +146,18 @@ const AboutMe = () => {
               </div>
               <div className="flex">
                 <p>Spring</p>
-                <p>Application framework</p>
+                <p>Java framework</p>
+              </div>
+              <div className="flex">
+                <p>Clerk</p>
+                <p>Authentication framework</p>
               </div>
             </div>
-            <img src={"/plus.svg"} alt="Plus" className="plus" />
+            <Image src={assets.plus} alt="Plus" className="plus" />
             <div>
               <div className="flex">
                 <p>NextJS</p>
-                <p>Yet another JS framework</p>
+                <p>Yet another React framework</p>
               </div>
               <div className="flex">
                 <p>JavaScript</p>
@@ -198,6 +194,11 @@ const AboutMe = () => {
             any new technologies.
           </p>
         </div>
+        <ReadMore
+          text="portfolio"
+          link="portfolio"
+          className="md:hidden text-black mx-auto"
+        />
       </div>
     </div>
   );

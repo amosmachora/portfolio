@@ -3,16 +3,18 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import { Project as ProjectType } from "../util/PortfolioItems";
 
 export const TinyProject = ({ project }: { project: ProjectType }) => {
   return (
     <div className="w-1/2 sm:w-1/3 md:w-1/5 border-r-2 border-b border-orange">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
+      <Image
         src={project.images[0] as unknown as string}
         alt={project.title + "image"}
         className="w-full object-cover"
+        width={1366}
+        height={768}
       />
       <div className="flex justify-between my-2 items-center px-2 flex-wrap">
         <p className="text-sm">{project.title}</p>

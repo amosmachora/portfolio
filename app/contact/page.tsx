@@ -1,10 +1,12 @@
 "use client";
 
+import { assets } from "@/assets/assets";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import Spinner from "@/components/spinner/Spinner";
 import { useForm } from "@formspree/react";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import { useEffect } from "react";
 import "../../css/contact.css";
 
@@ -125,9 +127,8 @@ const Page = () => {
         >
           <div className="success-state">
             <div className="flex align-center">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={"/tick-green.svg"}
+              <Image
+                src={assets.greenTick}
                 alt="Green Tick"
                 className="green-tick"
               />

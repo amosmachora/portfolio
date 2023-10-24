@@ -127,3 +127,20 @@ body::-webkit-scrollbar-thumb {
     display: block;
   }
 }
+.svg-inline--fa.bars {
+  display: none;
+}
+
+@media screen and (max-width: 640px) {
+  .svg-inline--fa.bars {
+    display: inline-block;
+  }
+}
+.category {
+  background-color: var(--orange);
+  width: max-content;
+  color: var(--white);
+  font-size: 14px;
+  padding: 10px;
+  margin: 20px 0;
+}

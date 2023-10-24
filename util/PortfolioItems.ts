@@ -1,5 +1,8 @@
+import { assets } from "@/assets/assets";
+import { StaticImageData } from "next/image";
+
 export type Project = {
-  images: string[];
+  images: string[] | StaticImageData[];
   category: string;
   description: string;
   title: string;
@@ -95,18 +98,30 @@ const webtechafricaImages = [
   "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217514&authkey=%21AC9gzp6tV2BCLWo&width=1354&height=646",
 ];
 
+const {
+  next,
+  react,
+  typescript,
+  tailwindcss,
+  clerk,
+  convex,
+  firebase,
+  springBoot,
+  firestore,
+  java,
+  javascriptLarge,
+  css,
+  mysql,
+  pharmaOne,
+  pharmaOneTwo,
+  pharmaOneThree,
+} = assets;
+
 export const projects: Project[] = [
   {
     title: "Bidsync",
     category: "Full Stack",
-    languages: [
-      "/next.svg",
-      "/react.svg",
-      "/typescript.svg",
-      "/tailwindcss.svg",
-      "/clerk.png",
-      "/convex.png",
-    ],
+    languages: [next, react, typescript, tailwindcss, clerk, convex],
     github: "https://github.com/amosmachora/bidsync",
     hasVideo: true,
     youtubeId: "xowpu0plGBM",
@@ -136,14 +151,14 @@ export const projects: Project[] = [
     title: "WebTech Africa",
     live: "https://webtechafrica.com",
     languages: [
-      "/next.svg",
-      "/firebase.svg",
-      "/react.svg",
-      "/typescript.svg",
-      "/tailwindcss.svg",
-      "/firestore.svg",
-      "/java.svg",
-      "/spring-boot.svg",
+      next,
+      firebase,
+      react,
+      typescript,
+      tailwindcss,
+      firestore,
+      java,
+      springBoot,
     ],
     textParagraphs: [
       "Well, let me start off by telling you a story. I grew up always hearing stories of how uneployment is common in Kenya. Wen`t to campus heard the same thing throughout my four years. We'll me being me i wasn`t going to sit around and watch yself go broke. So i hatched a plan 🤧",
@@ -207,12 +222,7 @@ export const projects: Project[] = [
     title: "Bookler",
     live: "https://bookler-six.vercel.app/",
     github: "https://github.com/amosmachora/bookler",
-    languages: [
-      "/firebase.svg",
-      "/react.svg",
-      "/typescript.svg",
-      "/tailwindcss.svg",
-    ],
+    languages: [firebase, react, typescript, tailwindcss],
     figma:
       "https://www.figma.com/file/UnC1I2rEMII5sGNZgPHakj/UH3tyvpilexm1LB?node-id=0-1",
     hasVideo: true,
@@ -226,13 +236,7 @@ export const projects: Project[] = [
       "My portfolio website on which you are right now. Built with tailwind, vanilla CSS and React its my personal website where clients , recruiters and visitors can view my project and get in touch with me.",
     title: "Portfolio",
     github: "https://github.com/amosmachora/portfolio",
-    languages: [
-      "/react.svg",
-      "/typescript.svg",
-      "/tailwindcss.svg",
-      "/javascript-large.svg",
-      "/icons8-css.svg",
-    ],
+    languages: [react, typescript, tailwindcss, javascriptLarge, css],
   },
   {
     images: magloScreenshotsLinks,
@@ -248,11 +252,7 @@ export const projects: Project[] = [
     desktopOnly: true,
   },
   {
-    images: [
-      "/Pharmaone-main.png",
-      "/Pharmaone-second.png",
-      "/Pharmaone-third.png",
-    ],
+    images: [pharmaOne, pharmaOneTwo, pharmaOneThree],
     category: "Fullstack",
     description:
       "A pharmacy management application providing capabilities to sort, search , organize medicine into groups, delete medicines and visualize sales in graphs. All the data is pulled from a Java Api on AWS",
@@ -261,14 +261,7 @@ export const projects: Project[] = [
     github: "https://github.com/amosmachora/pharmaone-frontend",
     figma:
       "https://www.figma.com/file/zdvyjDTe9grMoInsFnwzxM/Dashboard---Pharmacy-Management-(Community)?node-id=33%3A549",
-    languages: [
-      "/react.svg",
-      "/java.svg",
-      "/spring-boot.svg",
-      "/javascript-large.svg",
-      "/mysql.svg",
-      "/icons8-css.svg",
-    ],
+    languages: [react, java, springBoot, javascriptLarge, mysql, css],
   },
   {
     images: interiorDesignShopLinks,
@@ -277,7 +270,7 @@ export const projects: Project[] = [
     title: "Interior Design Shop",
     live: "https://amosmachora.github.io/room-homepage/",
     github: "https://github.com/amosmachora/room-homepage",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: tipCalculatorLinks,
@@ -286,7 +279,7 @@ export const projects: Project[] = [
     title: "Tip Calculator",
     live: "https://amosmachora.github.io/tipcalculatorapp/",
     github: "https://github.com/amosmachora/tipcalculatorapp",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: sunnySideLinks,
@@ -295,7 +288,7 @@ export const projects: Project[] = [
     title: "SunnySide landing page",
     github: "https://github.com/amosmachora/sunnyside-agency-landing-page",
     live: "https://amosmachora.github.io/sunnyside-agency-landing-page/",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: spaceTourismLinks,
@@ -306,7 +299,7 @@ export const projects: Project[] = [
     live: "https://amosmachora.github.io/space-tourism/",
     figma:
       "https://www.figma.com/file/ySQbyd9GdUtaQLwD4rWuvq/space-tourism-website?node-id=0%3A1529",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: easyBank,
@@ -315,7 +308,7 @@ export const projects: Project[] = [
     title: "Easy bank",
     github: "https://github.com/amosmachora/easybank-landing-page",
     live: "https://amosmachora.github.io/easybank-landing-page/",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: jobListingsImages,
@@ -324,7 +317,7 @@ export const projects: Project[] = [
     title: "Job Listings",
     github: "https://github.com/amosmachora/job-listings",
     live: "https://amosmachora.github.io/job-listings/",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
 ];
 
@@ -338,7 +331,7 @@ export const extraProjects: Project[] = [
     title: "E-commerce product page",
     live: "https://amosmachora.github.io/ecommerce-product-page/",
     github: "https://github.com/amosmachora/ecommerce-product-page",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: [
@@ -349,7 +342,7 @@ export const extraProjects: Project[] = [
     title: "Expenses Chart Component",
     live: "https://amosmachora.github.io/expenseschartcomponent/",
     github: "https://github.com/amosmachora/expenseschartcomponent",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: [
@@ -360,7 +353,7 @@ export const extraProjects: Project[] = [
     title: "Rating component",
     live: "https://amosmachora.github.io/ratingcomponent/",
     github: "https://github.com/amosmachora/ratingcomponent",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: [
@@ -371,7 +364,7 @@ export const extraProjects: Project[] = [
     title: "Stats preview card",
     live: "https://amosmachora.github.io/statspreviewcardcomponent/",
     github: "https://github.com/amosmachora/statspreviewcardcomponent",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: [
@@ -382,7 +375,7 @@ export const extraProjects: Project[] = [
     title: "Theme switching calculator",
     live: "https://amosmachora.github.io/calculator/",
     github: "https://github.com/amosmachora/calculator",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: [
@@ -393,7 +386,7 @@ export const extraProjects: Project[] = [
     title: "Chat app css illustration",
     live: "https://amosmachora.github.io/chat-app-css-illustration/",
     github: "https://github.com/amosmachora/chat-app-css-illustration",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: cafeInspireLinks,
@@ -404,7 +397,7 @@ export const extraProjects: Project[] = [
     live: "https://amosmachora.github.io/Cafeinspire/",
     figma:
       "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
-    languages: ["/react.svg", "/javascript-large.svg"],
+    languages: [react, javascriptLarge, css],
   },
   {
     images: reactNativeBeginnerLinks,
@@ -413,7 +406,7 @@ export const extraProjects: Project[] = [
       "A job search application where users can search for job postings posted on muliple sites. Built using expo and react native",
     title: "React Native Mobile Application",
     github: "https://github.com/amosmachora/reactnativebeginner",
-    languages: ["/react.svg"],
+    languages: [react],
     hasVideo: true,
     youtubeId: "XDnTzmG0np8",
   },

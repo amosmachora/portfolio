@@ -1,8 +1,14 @@
+import { assets } from "@/assets/assets";
+import Image from "next/image";
+
 export function IconRound() {
   return (
     <div className="projects-icon">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={"/Projects.png"} alt="Projects" className="center-absolutely" />
+      <Image
+        src={assets.projects}
+        alt="Projects"
+        className="center-absolutely"
+      />
     </div>
   );
 }
