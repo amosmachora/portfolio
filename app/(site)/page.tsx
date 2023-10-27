@@ -3,8 +3,8 @@ import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { Metadata } from "next";
 import Image from "next/image";
-import "../css/start-page.css";
-import arrow from "../public/Arrow.png";
+import "../../css/start-page.css";
+import arrow from "../../public/Arrow.png";
 
 export const metadata: Metadata = {
   title: "Amos Machora | Portfolio",
