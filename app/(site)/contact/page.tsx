@@ -8,7 +8,7 @@ import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useEffect } from "react";
-import "../../css/contact.css";
+import "../../../css/contact.css";
 
 const Page = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");

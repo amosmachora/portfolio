@@ -5,7 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata } from "next";
 import { Dancing_Script, Public_Sans } from "next/font/google";
 import Image from "next/image";
-import heart from "../public/heart.png";
+import heart from "../../public/heart.png";
 import "../globals.css";
 
 export const metadata: Metadata = {

@@ -1,9 +1,9 @@
 import { assets } from "@/assets/assets";
 import Project from "@/components/Project/Project";
+import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { extraProjects, projects } from "@/util/PortfolioItems";
 import Image from "next/image";
-import { ReadMore } from "../../components/ReadMore/ReadMore";
-import "../../css/portfolio.css";
+import "../../../css/portfolio.css";
 
 const Page = () => {
   return (
