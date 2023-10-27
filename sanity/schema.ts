@@ -1,6 +1,6 @@
 import { type SchemaTypeDefinition } from "sanity";
 
-const project = {
+const project: SchemaTypeDefinition<"object"> = {
   name: "project",
   title: "Projects",
   type: "document",
@@ -21,6 +21,12 @@ const project = {
           ],
         },
       ],
+    },
+    {
+      name: "mainImage",
+      title: "Main Image",
+      type: "image",
+      options: { hotspot: true },
     },
     {
       name: "category",
@@ -73,6 +79,12 @@ const project = {
       name: "desktopOnly",
       title: "Desktop Only",
       type: "boolean",
+    },
+    {
+      name: "content",
+      title: "Content",
+      type: "array",
+      of: [{ type: "block" }],
     },
   ],
 };
