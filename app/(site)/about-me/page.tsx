@@ -4,7 +4,7 @@ import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { KCSE } from "../../components/KCSE";
+import { KCSE } from "../../../components/KCSE";
 import "../../css/about-me.css";
 import "../../css/start-page.css";
 import me from "../../public/me.jpg";

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { Dancing_Script, Public_Sans } from "next/font/google";
 import Image from "next/image";
 import heart from "../public/heart.png";
-import "./globals.css";
+import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Amos Machora",
@@ -41,6 +41,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // const pathName = usePathname();
+
+  // if (pathName.includes("studio")) {
+  //   <html lang="en">
+  //     <body className={publicSans.className}>{children}</body>
+  //   </html>;
+  // }
+
   return (
     <html lang="en">
       <body className={publicSans.className}>
