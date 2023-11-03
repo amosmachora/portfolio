@@ -6,7 +6,7 @@ import { ProjectLanguages } from "@/components/Project/ProjectLanguages";
 import { SmallScreenModal } from "@/components/SmallScreenModal";
 import { Video } from "@/components/Video";
 import useScreenSize from "@/hooks/useScreenSize";
-import { projects } from "@/util/PortfolioItems";
+import { personalProjects as projects } from "@/util/PortfolioItems";
 import { faFigma, faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faAngleLeft,
