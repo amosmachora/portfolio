@@ -87,7 +87,7 @@ export default function Home() {
           width={1260}
         />
         <div>
-          <h2>I also create full stack applications</h2>
+          <h2>Let me build you an MVP!</h2>
           <h3>
             Harnessing the power of NextJS , and Backend as a Service providers
             like convex and firebase it has never been easier to create full

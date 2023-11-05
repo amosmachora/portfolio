@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * This configuration is used to for the Sanity Studio that’s mounted on the `\app\studio\[[...index]]\page.tsx` route
  */
@@ -23,3 +25,9 @@ export default defineConfig({
     visionTool({ defaultApiVersion: apiVersion }),
   ],
 });
+
+// export const sanityConfig = {
+//   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+//   dataset: dataset,
+//   apiVersion: apiVersion,
+// };

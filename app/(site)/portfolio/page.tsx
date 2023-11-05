@@ -4,8 +4,15 @@ import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { personalProjects } from "@/util/PortfolioItems";
 import Image from "next/image";
 import "../../../css/portfolio.css";
+import { getProjects } from "@/util/utils";
 
-const Page = () => {
+const Page = async () => {
+  const projects = await getProjects();
+
+  console.log(projects);
+
+  console.log(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, "sanity");
+
   return (
     <div className="portfolio">
       <div className="dice">

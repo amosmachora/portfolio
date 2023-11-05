@@ -1,3 +1,6 @@
+import { createClient, groq } from "next-sanity";
+import sanityConfig from "@/sanity.config";
+
 export const pages = ["start-page", "about-me", "portfolio", "contact"];
 
 export function calculateAge(birthDate: Date): number {
@@ -21,4 +24,52 @@ export function calculateAge(birthDate: Date): number {
   }
 
   return age;
+}
+
+export type SanityProjectType = {
+  _id: string;
+  _createdAt: string;
+  images: string[];
+  category: string;
+  description: string;
+  title: string;
+  live?: string;
+  github?: string;
+  languages: string[];
+  openSourceLibraries?: string[];
+  figma?: string;
+  videoURL?: string;
+  desktopOnly?: boolean;
+  textParagraphs?: string[];
+};
+
+import { apiVersion, dataset, projectId } from "../sanity/env";
+
+export async function getProjects(): Promise<SanityProjectType[]> {
+  return createClient({
+    projectId: projectId,
+    dataset: dataset,
+    apiVersion: apiVersion,
+  }).fetch(
+    groq`
+      *[_type == "project"]{
+        _id,
+        _createdAt,
+        title,
+        "slug": slug.current,
+        mainImage,
+        content,
+        category,
+        images,
+        description,
+        live,
+        github,
+        languages,
+        openSourceLibraries,
+        figma,
+        videoURL,
+        desktopOnly,
+      }
+    `
+  );
 }

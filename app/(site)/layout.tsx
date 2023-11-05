@@ -10,7 +10,7 @@ import "../globals.css";
 
 export const metadata: Metadata = {
   title: "Amos Machora",
-  description: "Welcome to my website 🍓",
+  description: "Welcome to my personal website 🍓",
   icons: {
     icon: ["/favicons/favicon.ico"],
     apple: ["/favicons/apple-touch-icon.png"],
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   twitter: {
     title: "My Personal Website",
     creator: "@amos_machora",
-    images: ["/me.jpg"],
+    images: ["https://amosmachora.vercel.app/me.jpg"],
     card: "summary_large_image",
   },
   openGraph: {
     title: "Amos Machora",
     description: "Welcome to my personal website 🍓",
     emails: "amosmachora13@gmail.com",
-    images: ["/me.jpg"],
+    images: ["https://amosmachora.vercel.app/me.jpg"],
     url: "https://amosmachora.vercel.app/",
     type: "website",
   },
