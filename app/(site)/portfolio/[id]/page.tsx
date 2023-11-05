@@ -32,7 +32,7 @@ const Page = () => {
   const project = projects.find((project) => project.title === projectTitle)!;
   const screenSize = useScreenSize();
 
-  const [currentYoutubeId, setCurrentYoutubeId] = useState<null | string>(null);
+  const [videoURL, setVideoURL] = useState<null | string>(null);
   const [smallScreenErrorModalLink, setSmallScreenErrorModalLink] = useState<
     null | string
   >(null);
@@ -119,26 +119,21 @@ const Page = () => {
           className="mt-8 sm:mt-5"
           languages={project?.languages!}
         />
-        <div className="flex items-center justify-between mt-10 sm:mt-20">
+        <div className="flex items-center justify-between mt-10 sm:mt-20 mb-5 sm:mb-10">
           <p className="text-[#081019] text-xl font-medium my-10 sm:my-5">
-            Want a preview? Take a look at some of the screenshots
+            Take a look at some of the site screenshots.
           </p>
-          {project.hasVideo && (
+          {project.videoURL && (
             <div
               className="text-white text-sm bg-orange flex items-center gap-x-4 py-3 px-5 cursor-pointer rounded-full hover:opacity-50 transition-opacity duration-300"
-              onClick={() => setCurrentYoutubeId(project.youtubeId!)}
+              onClick={() => setVideoURL(project.videoURL!)}
             >
               <p>Watch Video</p>
               <FontAwesomeIcon icon={faPlay} />
             </div>
           )}
         </div>
-        {currentYoutubeId && (
-          <Video
-            id={currentYoutubeId}
-            onClick={() => setCurrentYoutubeId(null)}
-          />
-        )}
+        {videoURL && <Video id={videoURL} onClick={() => setVideoURL(null)} />}
         {smallScreenErrorModalLink && (
           <Overlay onClick={() => setSmallScreenErrorModalLink(null)}>
             <SmallScreenModal
@@ -163,8 +158,8 @@ const Page = () => {
               ),
               pagingDotsStyle: {
                 fill: "#ff5c00",
-                marginRight: 4,
-                marginLeft: 4,
+                marginRight: 7,
+                marginLeft: 7,
               },
             }}
             enableKeyboardControls
@@ -181,7 +176,6 @@ const Page = () => {
               />
             ))}
           </Carousel>
-          <div className="h-7 bg-white absolute bottom-0 right-0 left-0" />
         </div>
         <div className="my-14">
           {project.live && (

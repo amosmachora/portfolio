@@ -16,8 +16,7 @@ export type Project = {
   languages: string[];
   openSourceLibraries?: string[];
   figma?: string;
-  hasVideo?: boolean;
-  youtubeId?: string;
+  videoURL?: string;
   desktopOnly?: boolean;
   textParagraphs?: string[];
 };
@@ -97,8 +96,7 @@ export const personalProjects: Project[] = [
     category: "Full Stack",
     languages: [next, react, typescript, tailwindcss, clerk, convex],
     github: "https://github.com/amosmachora/bidsync",
-    hasVideo: true,
-    youtubeId: "xowpu0plGBM",
+    videoURL: "https://www.youtube.com/watch?v=xowpu0plGBM",
     description:
       "Bidsync is a hackathon submission. The hackathon was held by youtuber @WebDevCody. Whils`t i did not win the hackathon i came fourth and won a 100 USD price.",
     textParagraphs: [
@@ -170,8 +168,8 @@ export const personalProjects: Project[] = [
     images: [
       "/mixine(1).jpeg",
       "/mixine(2).jpeg",
-      "/mixine(3).jpeg",
-      "/mixine(4).jpeg",
+      "/mixine(3).png",
+      "/mixine(4).png",
     ],
     category: "Fullstack",
     description:
@@ -185,7 +183,7 @@ export const personalProjects: Project[] = [
       "/typescript.svg",
       "/icons8-css.svg",
       "/tailwindcss.svg",
-      "/next.svg",
+      "/nextjs.svg",
     ],
   },
   {
@@ -199,8 +197,7 @@ export const personalProjects: Project[] = [
     languages: [firebase, react, typescript, tailwindcss],
     figma:
       "https://www.figma.com/file/UnC1I2rEMII5sGNZgPHakj/UH3tyvpilexm1LB?node-id=0-1",
-    hasVideo: true,
-    youtubeId: "SPdNNw0E5XU",
+    videoURL: "https://www.youtube.com/watch?v=SPdNNw0E5XU",
     desktopOnly: true,
   },
   {

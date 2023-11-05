@@ -19,19 +19,16 @@ export const ProjectLanguages = ({
         } else {
           isNext =
             language.src.includes("nextjs") || language.src.includes("clerk");
-          console.log(language);
         }
-
-        console.log(isString);
 
         return (
           <Image
             src={language}
             alt="language"
-            className={`${
-              isNext ? "w-auto max-h-4" : "w-10 h-10"
-            } object-cover`}
+            className={`${isNext ? "" : "w-10 h-10"} object-cover`}
             key={i}
+            width={100}
+            height={100}
           />
         );
       })}
