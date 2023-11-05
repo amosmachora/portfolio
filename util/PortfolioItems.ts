@@ -1,5 +1,10 @@
 import { assets } from "@/assets/assets";
 import { StaticImageData } from "next/image";
+import portfolio1 from "../public/portfolio(1).png";
+import portfolio2 from "../public/portfolio(2).png";
+import webtechafrica1 from "../public/webtechafrica(1).png";
+import webtechafrica2 from "../public/webtechafrica(2).png";
+import webtechafrica3 from "../public/webtechafrica(3).png";
 
 export type Project = {
   images: string[] | StaticImageData[];
@@ -54,48 +59,15 @@ const spaceTourismLinks = [
   "https://bnz05pap001files.storage.live.com/y4mpuxyOoSSqXdtRFrZleo64o0XFmmoQLgmqn86oo5guRkEdcOCupmfao9cV3jhTNG4FnINP_yhgikFTCM1gJv7i9-jrkmGWXoiomBydPRX1QKIDK0SQk8zzgZXizRIuWDhFrgo49yxwstZxjzyL9AY9ZmcpqXXIygX7RCICGjnf81wPBaeb3rYjk1DlUOa1oVD?width=1360&height=657&cropmode=none",
 ];
 
-const cafeInspireLinks = [
-  "https://bnz05pap001files.storage.live.com/y4mFggOW0gqk9cHJkfMGx1JJgN2Z8yGo6QxTzfswnJdnGDNMIuUkpMmzfPk1_wzdO5jawpgLeJryGrs-WgzziLYjnSSbqtZ6fQPGyPrb51QfuHwwoIuu9qbETDtIKQUAu1WBvZezWmRhV-ecYBIQeY4st0Dijzl9Bo4R2et_0PbJBMM_bUOgndfcZCtvdkT4iZR?width=1360&height=657&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4mCSbxk8zfjTVetGwmtaurRQ96jc6o31pNOaMmf6aoz6W0qrWO0IbAHIaYcC4c55TiJsKny0-sC6mgkEtJ-h3WgxCppg4oRVt63kePJi82n7KCNJ2IQhV6WokR1f7Rz9JpvUhMfSRSmGI9pZ9JMaU6PilKtCtu_frykgXhZFg0jroAZZGWpzcDTwRbDsbcwni3?width=1365&height=661&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4mKjR4UOq_rAQaPTDf4GDUpxkXWGrz2KS4HKVP8CFtUxPAY4ApFSMa1ahlvLWjzfMOtq-xDn6rJFVsyubq5hROh3N0kKDQBl6dOP62NjN-aotRabQVwt8p5330kwu1SJfJ8VbK329X6d3t4SfkSxlUr3CRPFVlUeSwt-nPCO6DzUEkibqpMHuL_xtL6ze_cqyu?width=1365&height=658&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4m0WVhX9wkvHoWgAFS9-rhxRpDB2eFpJ58b7OhjlZHO-E3r3yPVdo9NSsBWQHDo-W3_rgo4l97R7D4zdgj690HxfaGSWhYIj3Knuy_qFegoGJJzeS7fSVYIE1S-twhgv0pSdtUfUX4Sfj0MSeUCe18XPLIQvUEHiv5A7PihpAtGWQmXiV20lRJr5FNh-CAils8?width=1365&height=655&cropmode=none",
-];
-
-const reactNativeBeginnerLinks = [
-  "https://bnz05pap001files.storage.live.com/y4mf40whgKy3CaSdU_uLdvemwBpBfmPz2RG-mcaCt1_uOPdbbt9KI-NWAESLLIsSE-Pcv1BVOpTZlRXIrmFZwg6A979Mhz-QP340OUyiKzwJLqmkGh6a9fURmYE8tixG4zQK2ba8fWiTjVBDIDlYQG6EgvBBLfAsnk8g0tfBRnyXiNOvJi19udm6MLc0YyYkS8B?width=720&height=1600&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4mRL_a_U9DNZTSP8J-lPYV3cNg5IHIeMJtc5x5EpmBsb8wSoCa696dFtefjPlWuNHmgMk3ssLOr4EfAcgtO9q-dTDFmSoEIOyhcejZ5mnwpA1HOcOpITjSML5ZunAnyLCaI8aGYz-zaNJmR6Nh07tCkgNnGG11RM4UvVS3wbM88C_EsmuJk2sapKx2bD5CZyj0?width=720&height=1600&cropmode=none",
-  "https://bnz05pap001files.storage.live.com/y4my7xglyaDWgq7_GPufD-8imbszWpKesdhP4JYqonnUoKYAWHQPb_spH9wHleq8KlLnqaXdJsnzMdm7h-9S9H4x9Jph3cr9FbU-2Qrzblwnsc5SxjH5R4NKxHQNKF9kVSE5AkaCJcf2t4pFCx5B54IgvZRf6k7ZC979Y09QAnqxY233dvLOFvrBIMZzCznk7jU?width=720&height=1600&cropmode=none",
-];
-
 const sunnySideLinks = [
   "https://bnz05pap001files.storage.live.com/y4mZ8qB1yYgS1FBac5YLGU9jZc4AS3EYRqu_Vjtr8UEl2KdrOTn4xx5WhnASzRWTvEH27fMaDlgDmKgfPZRg-MeFP0fC979vWneUrHtsyLpqQyHyFQIb3Zkw6kZVld44Ijo1I5FJXekRxhWPkJ8AZON3aIpIxdJ9SL2J6t0WW_mWclr6GcJiIxtVZPaKnbGbDin?width=1440&height=1056&cropmode=none",
   "https://bnz05pap001files.storage.live.com/y4mRC4TJa3F3_FnuGr2YAlKylsrOpBuAIylLV7tkwEvpnU-ZAilYzsXYTvAot4NLKb2T5becYWE6PmlnxlGZxVxOGpFE95qkZXdTuwYbMZZUF69XsnmRo0R66CEckIhKqH9FFyB1OqldwScgdjxuyFx2OWEqLIivMKmkdw4jz0-8tNsGnnmlyCPsi-pZN5x5Rno?width=1363&height=663&cropmode=none",
   "https://bnz05pap001files.storage.live.com/y4mcsqfgSdHwGd832SjifEkfAcUKZBLBlt8iAfEErzBDIX-ToqiK1cPIJWgMLU6Ni67Gg5TRwYxA_j7vTS2CWidlbevFKV2H6ZiW_tnPi3tJO0FyQu8bqWiF1gwryVV_SonWeZe0Y1hOvt6VBtyf5DEtdg3D2z231bp9_TtS7JUQVbGvixl7ft-0HQ7AknOZIcQ?width=1365&height=662&cropmode=none",
 ];
 
-const tipCalculatorLinks = [
-  "https://bnz05pap001files.storage.live.com/y4m4vex939BANBFkFBJlJGVOvCpSvp21hV2MR1k_aqXx6ppD9Q5OkZGtUCy4t3CTKH6OIlE67Ai7iFhioeXEgYPcLbClMEgxRDo5r4nEzLIKI8gha8m1cx5ElO8F_qKz9vQpSzlfsWdlQFvr31PgJn9tmitRcWHr5WvmfPTBVjTCGabQuZSM_UTYr6HW_wOpB70?width=1360&height=654&cropmode=none",
-];
-
 const easyBank = [
   "https://bnz05pap001files.storage.live.com/y4mI9uRFd90NlcmxU2jH3YatDPLqdw9E2guVSJa6tsbTUsDRZwBE9b2luTe7DbswEnG9QwnIl3xCeiHZLRdjS6g9DPxzaYELNLeryWOgU_Fsrv_EBFL6NP3yc6iGwAEWLb1ZyX8ktFUNMD78mF_YCXO3PrZjBofPhR-XttFEjf5pWk7gA1miiKVfKmeef_Kkn9n?width=1366&height=768&cropmode=none",
   "https://bnz05pap001files.storage.live.com/y4m8NLh4-krUgaKJlVJhC1L3haGEYsyKOCPJ9oPlbSP-cji4nYvG7YzObCjKFIrjP5WcPSK2VhhTVk7TKwhMVKyhu860Leiqqn5EcAnNeX2adOErBKqK2u87eKqd754HYTr7gjkK6Ha0G1bO1d8W8wgOWCB1XQKtUtQ0sY5rd6DDWXgnCGitmP69rg2682aevYj?width=1366&height=768&cropmode=none",
-];
-
-const jobListingsImages = [
-  "https://bnz05pap001files.storage.live.com/y4mSzJ74AiSUly-hLILEacfpKjYqitG27IwwIHFR5DBX5gw5SK4jekjM9WlD5mNdxIZpsP7r3rQ_Rsf0AXiLckC0_VVdg1gzlXp8RLc0XwlrAYfR1fJrArkSJZ79qxxDiO67QVFQxrr09XppDdscdMqWSGZWepvpD_JrnaFZnRkIQPXI9OECmqaxK7Tw44RchF0?width=1366&height=768&cropmode=none",
-];
-
-const portfolioImages = [
-  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217510&authkey=%21AHRsGOWH-qI1gYk&width=1359&height=661",
-  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217509&authkey=%21AAdSYAhBlIr6tPg&width=1360&height=661",
-];
-
-const webtechafricaImages = [
-  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217511&authkey=%21APiuxEFWFrJYVJo&width=1341&height=659",
-  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217512&authkey=%21AGLvq8iCNT2DIc4&width=1357&height=653",
-  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217513&authkey=%21AEVHpWXdWk4x2y4&width=1332&height=655",
-  "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217514&authkey=%21AC9gzp6tV2BCLWo&width=1354&height=646",
 ];
 
 const {
@@ -117,7 +89,9 @@ const {
   pharmaOneThree,
 } = assets;
 
-export const projects: Project[] = [
+export const previousClientProject: Project[] = [];
+
+export const personalProjects: Project[] = [
   {
     title: "Bidsync",
     category: "Full Stack",
@@ -144,7 +118,7 @@ export const projects: Project[] = [
     live: "https://bidsync.vercel.app/",
   },
   {
-    images: webtechafricaImages,
+    images: [webtechafrica1, webtechafrica2, webtechafrica3],
     category: "Fullstack",
     description:
       "Want to have a little laugh and maybe learn a little about a failed tech startup? Well grab some popcorn for this one.",
@@ -194,10 +168,10 @@ export const projects: Project[] = [
   },
   {
     images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217546&authkey=%21AIz9R0wSrvGlfO8&width=1366&height=768",
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217551&authkey=%21AGITUf4-jwJ2R8Q&width=1366&height=768",
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217549&authkey=%21AOzu7OOGbOJlF5o&width=1238&height=693",
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217548&authkey=%21AFDaJ9zRvwM40gA&width=1238&height=693",
+      "/mixine(1).jpeg",
+      "/mixine(2).jpeg",
+      "/mixine(3).jpeg",
+      "/mixine(4).jpeg",
     ],
     category: "Fullstack",
     description:
@@ -230,7 +204,7 @@ export const projects: Project[] = [
     desktopOnly: true,
   },
   {
-    images: portfolioImages,
+    images: [portfolio1, portfolio2],
     category: "Frontend",
     description:
       "My portfolio website on which you are right now. Built with tailwind, vanilla CSS and React its my personal website where clients , recruiters and visitors can view my project and get in touch with me.",
@@ -273,15 +247,6 @@ export const projects: Project[] = [
     languages: [react, javascriptLarge, css],
   },
   {
-    images: tipCalculatorLinks,
-    category: "Mini Project",
-    description: "A tip calculator application. Obviously very useful",
-    title: "Tip Calculator",
-    live: "https://amosmachora.github.io/tipcalculatorapp/",
-    github: "https://github.com/amosmachora/tipcalculatorapp",
-    languages: [react, javascriptLarge, css],
-  },
-  {
     images: sunnySideLinks,
     category: "Landing Page",
     description: "A responsive , brightly coloured landing page",
@@ -309,105 +274,5 @@ export const projects: Project[] = [
     github: "https://github.com/amosmachora/easybank-landing-page",
     live: "https://amosmachora.github.io/easybank-landing-page/",
     languages: [react, javascriptLarge, css],
-  },
-  {
-    images: jobListingsImages,
-    category: "Landing page",
-    description: "A react application that filters and sorts jobs",
-    title: "Job Listings",
-    github: "https://github.com/amosmachora/job-listings",
-    live: "https://amosmachora.github.io/job-listings/",
-    languages: [react, javascriptLarge, css],
-  },
-];
-
-export const extraProjects: Project[] = [
-  {
-    images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217528&authkey=%21AGyw-5K9c63S2PQ&width=1348&height=649",
-    ],
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "E-commerce product page",
-    live: "https://amosmachora.github.io/ecommerce-product-page/",
-    github: "https://github.com/amosmachora/ecommerce-product-page",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217529&authkey=%21ANrmfx-bfdiaiHs&width=1342&height=655",
-    ],
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "Expenses Chart Component",
-    live: "https://amosmachora.github.io/expenseschartcomponent/",
-    github: "https://github.com/amosmachora/expenseschartcomponent",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217530&authkey=%21ACkTeZpFcoVvHvk&width=1360&height=659",
-    ],
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "Rating component",
-    live: "https://amosmachora.github.io/ratingcomponent/",
-    github: "https://github.com/amosmachora/ratingcomponent",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217533&authkey=%21AB1FCfGgcodLGVA&width=1338&height=648",
-    ],
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "Stats preview card",
-    live: "https://amosmachora.github.io/statspreviewcardcomponent/",
-    github: "https://github.com/amosmachora/statspreviewcardcomponent",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217532&authkey=%21AH4CZxm0GxMAJ8Q&width=1345&height=648",
-    ],
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "Theme switching calculator",
-    live: "https://amosmachora.github.io/calculator/",
-    github: "https://github.com/amosmachora/calculator",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: [
-      "https://onedrive.live.com/embed?resid=1C403039BA3174B0%217534&authkey=%21ACZlScb7aGF2xqY&width=1365&height=650",
-    ],
-    category: "Static Landing Page",
-    description: "An interior design shop one page landing page",
-    title: "Chat app css illustration",
-    live: "https://amosmachora.github.io/chat-app-css-illustration/",
-    github: "https://github.com/amosmachora/chat-app-css-illustration",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: cafeInspireLinks,
-    category: "Landing Page",
-    description: "A cafe landing page",
-    title: "Modern UI/UX landing page",
-    github: "https://github.com/amosmachora/Cafeinspire",
-    live: "https://amosmachora.github.io/Cafeinspire/",
-    figma:
-      "https://www.figma.com/file/yvClSI9AZBRX8UaaGEByF3/Modern-UI%2FUX%3A-Gericht?node-id=53%3A2",
-    languages: [react, javascriptLarge, css],
-  },
-  {
-    images: reactNativeBeginnerLinks,
-    category: "Mobile App",
-    description:
-      "A job search application where users can search for job postings posted on muliple sites. Built using expo and react native",
-    title: "React Native Mobile Application",
-    github: "https://github.com/amosmachora/reactnativebeginner",
-    languages: [react],
-    hasVideo: true,
-    youtubeId: "XDnTzmG0np8",
   },
 ];
