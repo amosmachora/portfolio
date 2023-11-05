@@ -6,6 +6,28 @@ const project: SchemaTypeDefinition<"object"> = {
   type: "document",
   fields: [
     {
+      name: "title",
+      title: "Title",
+      type: "string",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: { source: "title" },
+    },
+    {
+      name: "category",
+      title: "Category",
+      type: "string",
+    },
+    {
+      name: "mainImage",
+      title: "Main Image",
+      type: "image",
+      options: { hotspot: true },
+    },
+    {
       name: "images",
       title: "Images",
       type: "array",
@@ -23,25 +45,9 @@ const project: SchemaTypeDefinition<"object"> = {
       ],
     },
     {
-      name: "mainImage",
-      title: "Main Image",
-      type: "image",
-      options: { hotspot: true },
-    },
-    {
-      name: "category",
-      title: "Category",
-      type: "string",
-    },
-    {
       name: "description",
       title: "Description",
       type: "text",
-    },
-    {
-      name: "title",
-      title: "Title",
-      type: "string",
     },
     {
       name: "live",
@@ -71,8 +77,8 @@ const project: SchemaTypeDefinition<"object"> = {
       type: "url",
     },
     {
-      name: "youtubeId",
-      title: "YouTube ID",
+      name: "videoURL",
+      title: "video URL",
       type: "string",
     },
     {

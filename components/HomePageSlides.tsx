@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 import { ReadMore } from "./ReadMore/ReadMore";
 
 const slide1 = {
-  sub: "Freelance Web Developer",
+  sub: "Full Stack Web Developer",
   h1: "I am a",
   desc: `Hello i am Amos 👋. I am a ${calculateAge(
     new Date("13 december 2001")
