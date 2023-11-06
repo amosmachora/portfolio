@@ -5,6 +5,7 @@ const nextConfig = {
       "images.pexels.com",
       "onedrive.live.com",
       "bnz05pap001files.storage.live.com",
+      "cdn.sanity.io",
     ],
   },
 };

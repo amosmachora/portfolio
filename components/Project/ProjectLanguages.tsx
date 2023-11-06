@@ -1,30 +1,24 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 export const ProjectLanguages = ({
   languages,
   className,
 }: {
-  languages: string[] | StaticImageData[];
+  languages: string[];
   className: string;
 }) => {
   return (
     <div className={`gap-x-6 items-center flex flex-wrap ${className}`}>
       {languages.map((language, i) => {
-        const isString = typeof language === "string";
-
-        let isNext;
-
-        if (isString) {
-          isNext = language.includes("nextjs") || language.includes("clerk");
-        } else {
-          isNext =
-            language.src.includes("nextjs") || language.src.includes("clerk");
-        }
+        let isNext =
+          language.includes("nextjs") ||
+          language.includes("clerk") ||
+          language.includes("next");
 
         return (
           <Image
-            src={language}
-            alt="language"
+            src={`/${language}.svg`}
+            alt={language}
             className={`${isNext ? "" : "w-10 h-10"} object-cover`}
             key={i}
             width={100}

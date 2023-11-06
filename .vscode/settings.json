@@ -21,6 +21,7 @@
     "Pharmaone",
     "portabletext",
     "productpagemain",
+    "springboot",
     "tailwindcss",
     "watchalongs",
     "webapps",
@@ -29,8 +30,8 @@
     "Xmark"
   ],
   "todo-tree.tree.scanMode": "workspace",
-  "editor.formatOnSave": true
-  // "editor.codeActionsOnSave": {
-  //   "source.organizeImports": true
-  // }
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  }
 }

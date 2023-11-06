@@ -9,10 +9,6 @@ import { getProjects } from "@/util/utils";
 const Page = async () => {
   const projects = await getProjects();
 
-  console.log(projects);
-
-  console.log(process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, "sanity");
-
   return (
     <div className="portfolio">
       <div className="dice">
@@ -37,8 +33,8 @@ const Page = async () => {
         />
       </div>
       <div className="projects bg-white w-full px-[2%] sm:mt-[100px] grid grid-cols-1 sm:grid-cols-2 sm:gap-10 pb-10">
-        {personalProjects.map((project, i) => (
-          <Project project={project} key={i} />
+        {projects.map((project, i) => (
+          <Project project={project} key={project._id} />
         ))}
       </div>
     </div>

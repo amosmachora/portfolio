@@ -1,5 +1,7 @@
+import { SanityImageObject } from "@sanity/image-url/lib/types/types";
 import { createClient, groq } from "next-sanity";
-import sanityConfig from "@/sanity.config";
+import { PortableTextBlock } from "sanity";
+import { apiVersion, dataset, projectId } from "../sanity/env";
 
 export const pages = ["start-page", "about-me", "portfolio", "contact"];
 
@@ -29,28 +31,31 @@ export function calculateAge(birthDate: Date): number {
 export type SanityProjectType = {
   _id: string;
   _createdAt: string;
-  images: string[];
+  images: SanityImageObject[];
   category: string;
   description: string;
   title: string;
+  languages: string[];
+  mainImage: SanityImageObject;
+  slug: string;
   live?: string;
   github?: string;
-  languages: string[];
   openSourceLibraries?: string[];
   figma?: string;
   videoURL?: string;
   desktopOnly?: boolean;
   textParagraphs?: string[];
+  content?: PortableTextBlock[];
 };
 
-import { apiVersion, dataset, projectId } from "../sanity/env";
+export const sanityClient = createClient({
+  projectId: projectId,
+  dataset: dataset,
+  apiVersion: apiVersion,
+});
 
 export async function getProjects(): Promise<SanityProjectType[]> {
-  return createClient({
-    projectId: projectId,
-    dataset: dataset,
-    apiVersion: apiVersion,
-  }).fetch(
+  return sanityClient.fetch(
     groq`
       *[_type == "project"]{
         _id,
@@ -71,5 +76,29 @@ export async function getProjects(): Promise<SanityProjectType[]> {
         desktopOnly,
       }
     `
+  );
+}
+
+export async function getProject(slug: string): Promise<SanityProjectType> {
+  return sanityClient.fetch(
+    groq`*[_type == "project" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      title,
+      "slug": slug.current,
+      mainImage,
+      content,
+      category,
+      images,
+      description,
+      live,
+      github,
+      languages,
+      openSourceLibraries,
+      figma,
+      videoURL,
+      desktopOnly,
+    }`,
+    { slug }
   );
 }

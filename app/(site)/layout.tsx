@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   title: "Amos Machora",
   description: "Welcome to my personal website 🍓",
   icons: {
-    icon: ["/favicons/favicon.ico"],
-    apple: ["/favicons/apple-touch-icon.png"],
-    shortcut: ["/favicons/apple-touch-icon.png"],
+    icon: ["https://amosmachora.vercel.app/favicons/favicon.ico"],
+    apple: ["https://amosmachora.vercel.app/favicons/apple-touch-icon.png"],
+    shortcut: ["https://amosmachora.vercel.app/favicons/apple-touch-icon.png"],
   },
   manifest: "/favicons/site.webmanifest",
   twitter: {
