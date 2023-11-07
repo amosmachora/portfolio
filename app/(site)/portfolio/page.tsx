@@ -12,7 +12,7 @@ const Page = async () => {
 
   return (
     <div className="portfolio">
-      <div className="dice">
+      <div className="dice ml-2">
         <Image src={assets.dice} alt="Dice" />
       </div>
       <div className="latest-portfolio flex space-between items-start">

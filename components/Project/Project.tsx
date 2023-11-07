@@ -1,14 +1,17 @@
+import { SanityProjectType, sanityClient } from "@/util/utils";
+import { useNextSanityImage } from "next-sanity-image";
 import Image from "next/image";
 import Link from "next/link";
 import "./Project.css";
-import { SanityProjectType, sanityClient } from "@/util/utils";
-import { useNextSanityImage } from "next-sanity-image";
 
 const Project = ({ project }: { project: SanityProjectType }) => {
   const imageProps = useNextSanityImage(sanityClient, project.mainImage);
 
   return (
-    <div className="project text-black border-b-2 border-orange pb-10">
+    <Link
+      className="project text-black border-b-2 border-orange pb-10 hover:bg-gray-100 transition-all duration-300"
+      href={`/portfolio/${project.slug}`}
+    >
       <Image
         src={imageProps.src}
         width={imageProps.width}
@@ -29,7 +32,7 @@ const Project = ({ project }: { project: SanityProjectType }) => {
         </Link>
         <p className="project-description greyish">{project.description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 

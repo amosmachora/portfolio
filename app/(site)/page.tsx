@@ -77,7 +77,6 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <ReadMore link="contact" text="Contact Me" className="sm:w-1/4 mt-20" />
       </div>
       <div className="i-create-gold flex">
         <Image

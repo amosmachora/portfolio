@@ -1,7 +1,6 @@
 "use client";
 
 import { assets } from "@/assets/assets";
-import { textVariants } from "@/framer/Framer";
 import { calculateAge } from "@/util/utils";
 import { faCaretLeft, faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,23 +56,15 @@ const HomePageSlides = () => {
         />
       </div>
       <section className="content">
-        <motion.p key={slide.h1} className="slide-sub" variants={textVariants}>
+        <p key={slide.h1} className="slide-sub">
           {slide.h1}
-        </motion.p>
-        <motion.h1
-          className="slide-title"
-          key={slide.sub}
-          variants={textVariants}
-        >
+        </p>
+        <h1 className="slide-title" key={slide.sub}>
           {slide.sub}
-        </motion.h1>
-        <motion.p
-          className="slide-description bluish"
-          key={slide.desc}
-          variants={textVariants}
-        >
+        </h1>
+        <p className="slide-description bluish" key={slide.desc}>
           {slide.desc}
-        </motion.p>
+        </p>
         <ReadMore
           text={slide.linkText}
           link={slide.linkTo}

@@ -37,6 +37,7 @@ const AboutMe = () => {
             have been able to seamlessly transition to the JavaScript stack, in
             which I am currently proficient.
           </p>
+          <h3 className="text-orange my-5 text-2xl">Education Background</h3>
           <p className="mt-10">
             I have a bachelor`s degree in Computer Science from Chuka University
             awaiting graduation late this year (2023). I also graduated from
