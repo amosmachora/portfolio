@@ -1,13 +1,14 @@
 import { assets } from "@/assets/assets";
 import Project from "@/components/Project/Project";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
-import { personalProjects } from "@/util/PortfolioItems";
+import { getProjects } from "@/util/utils";
 import Image from "next/image";
 import "../../../css/portfolio.css";
-import { getProjects } from "@/util/utils";
 
 const Page = async () => {
   const projects = await getProjects();
+
+  console.log(projects);
 
   return (
     <div className="portfolio">

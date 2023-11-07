@@ -52,14 +52,16 @@ export const sanityClient = createClient({
   projectId: projectId,
   dataset: dataset,
   apiVersion: apiVersion,
+  useCdn: false,
 });
 
 export async function getProjects(): Promise<SanityProjectType[]> {
   return sanityClient.fetch(
     groq`
-      *[_type == "project"]{
+      *[_type == "project"] | order(_updatedAt desc){
         _id,
         _createdAt,
+        _updatedAt,
         title,
         "slug": slug.current,
         mainImage,
