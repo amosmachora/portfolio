@@ -4,11 +4,34 @@ import { ProjectOutBoundLinks } from "@/components/ProjectOutBoundLinks";
 import { ProjectPageHero } from "@/components/ProjectPageHero";
 import { ProjectPlayButton } from "@/components/ProjectPlayButton";
 import { ProjectResponsivenessIndicator } from "@/components/ProjectResponsivenessIndicator";
-import { getProject } from "@/util/utils";
+import { getFirstImageUrl, getProject } from "@/util/utils";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PortableText } from "@portabletext/react";
+import { Metadata, ResolvingMetadata } from "next";
 import Link from "next/link";
+
+export async function generateMetadata(
+  { params }: { params: { slug: string } },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.slug;
+
+  // fetch data
+  const project = await getProject(slug);
+
+  // optionally access and extend (rather than replace) parent metadata
+  const previousImages = (await parent).openGraph?.images || [];
+
+  const imageURL = await getFirstImageUrl(slug);
+
+  return {
+    title: project.title,
+    openGraph: {
+      images: [imageURL, ...previousImages],
+    },
+  };
+}
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const project = await getProject(params.slug);
