@@ -113,7 +113,11 @@ a {
 .single-project h4 {
   font-size: 20px;
   font-weight: 600;
-  margin: 20px 0 5px 0;
+  margin: 40px 0 10px 0;
+  color: #ff5c00;
+}
+.single-project p {
+  margin-bottom: 20px;
 }
 
 @keyframes spin {

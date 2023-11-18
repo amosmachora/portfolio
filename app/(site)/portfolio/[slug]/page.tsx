@@ -4,7 +4,7 @@ import { ProjectOutBoundLinks } from "@/components/ProjectOutBoundLinks";
 import { ProjectPageHero } from "@/components/ProjectPageHero";
 import { ProjectPlayButton } from "@/components/ProjectPlayButton";
 import { ProjectResponsivenessIndicator } from "@/components/ProjectResponsivenessIndicator";
-import { getFirstImageUrl, getProject } from "@/util/utils";
+import { getProject, getProjectMetadata } from "@/util/utils";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PortableText } from "@portabletext/react";
@@ -24,18 +24,21 @@ export async function generateMetadata(
   const previousOGImages = (await parent).openGraph?.images || [];
   const previousTwitterImages = (await parent).twitter?.images || [];
 
-  const { image } = await getFirstImageUrl(slug);
+  const { image, description } = await getProjectMetadata(slug);
 
   return {
     title: project.title,
+    description,
     twitter: {
       title: project.title,
       creator: "@amos_machora",
       images: [image, ...previousTwitterImages],
       card: "summary_large_image",
+      description,
     },
     openGraph: {
       images: [image, ...previousOGImages],
+      description,
     },
   };
 }
