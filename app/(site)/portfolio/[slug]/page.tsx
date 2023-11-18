@@ -45,7 +45,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
         <FontAwesomeIcon icon={faArrowLeft} className="center-absolutely" />
       </Link>
       <ProjectPageHero alt={project.title} image={project.mainImage} />
-      <section className="px-[5%] sm:px-[10%] py-[5%] bg-white text-[#081019]">
+      <section className="px-[5%] sm:px-[10%] py-[5%] bg-white text-[#081019] single-project">
         <div className="flex justify-between items-center">
           <p className="category">{project?.category}</p>
           <ProjectResponsivenessIndicator project={project} />
