@@ -20,11 +20,23 @@ export async function generateMetadata(
   // fetch data
   const project = await getProject(slug);
 
-  // optionally access and extend (rather than replace) parent metadata
-  const previousOGImages = (await parent).openGraph?.images || [];
-  const previousTwitterImages = (await parent).twitter?.images || [];
-
   const { image, description } = await getProjectMetadata(slug);
+
+  console.log({
+    title: project.title,
+    description,
+    twitter: {
+      title: project.title,
+      creator: "@amos_machora",
+      images: [image],
+      card: "summary_large_image",
+      description,
+    },
+    openGraph: {
+      images: [image],
+      description,
+    },
+  });
 
   return {
     title: project.title,
@@ -32,12 +44,12 @@ export async function generateMetadata(
     twitter: {
       title: project.title,
       creator: "@amos_machora",
-      images: [image, ...previousTwitterImages],
+      images: [image],
       card: "summary_large_image",
       description,
     },
     openGraph: {
-      images: [image, ...previousOGImages],
+      images: [image],
       description,
     },
   };
