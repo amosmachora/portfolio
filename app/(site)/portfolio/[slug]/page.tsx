@@ -27,6 +27,12 @@ export async function generateMetadata(
 
   return {
     title: project.title,
+    twitter: {
+      title: project.title,
+      creator: "@amos_machora",
+      images: [imageURL],
+      card: "summary_large_image",
+    },
     openGraph: {
       images: [imageURL, ...previousImages],
     },

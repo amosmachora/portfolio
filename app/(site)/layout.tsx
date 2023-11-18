@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   },
   manifest: "/favicons/site.webmanifest",
   twitter: {
-    title: "My Personal Website",
+    title: "Welcome to my personal website 🍓",
     creator: "@amos_machora",
     images: ["/me.jpg"],
     card: "summary_large_image",
