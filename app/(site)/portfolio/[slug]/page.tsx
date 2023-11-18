@@ -21,27 +21,27 @@ export async function generateMetadata(
   const project = await getProject(slug);
 
   // optionally access and extend (rather than replace) parent metadata
-  const previousImages = (await parent).openGraph?.images || [];
+  const previousOGImages = (await parent).openGraph?.images || [];
+  const previousTwitterImages = (await parent).twitter?.images || [];
 
-  const imageURL = await getFirstImageUrl(slug);
+  const { image } = await getFirstImageUrl(slug);
 
   return {
     title: project.title,
     twitter: {
       title: project.title,
       creator: "@amos_machora",
-      images: [imageURL],
+      images: [image, ...previousTwitterImages],
       card: "summary_large_image",
     },
     openGraph: {
-      images: [imageURL, ...previousImages],
+      images: [image, ...previousOGImages],
     },
   };
 }
 
 const Page = async ({ params }: { params: { slug: string } }) => {
   const project = await getProject(params.slug);
-
   return (
     <main className="mx-[2%] relative">
       <Link

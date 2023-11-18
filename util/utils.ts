@@ -110,10 +110,12 @@ export async function getProject(slug: string): Promise<SanityProjectType> {
   );
 }
 
-export const getFirstImageUrl = async (slug: string) => {
+export const getFirstImageUrl = async (
+  slug: string
+): Promise<{ image: string }> => {
   return sanityClient.fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
-      "mainImage": mainImage.asset->url
+      "image": mainImage.asset->url
     }`,
     { slug }
   );
