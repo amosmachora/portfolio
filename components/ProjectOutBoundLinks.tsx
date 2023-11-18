@@ -37,7 +37,7 @@ export const ProjectOutBoundLinks = ({
     <>
       <div className="my-14">
         {project.live && (
-          <div className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-max px-5 py-3 rounded-full mx-auto text-white">
+          <div className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white">
             <p>Live</p>
             <FontAwesomeIcon
               icon={faUpRightFromSquare}
@@ -48,7 +48,7 @@ export const ProjectOutBoundLinks = ({
         {project?.github && (
           <div
             onClick={() => window.open(project.github)}
-            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-max px-5 py-3 rounded-full mx-auto text-white my-5"
+            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white my-5"
           >
             <p>Source Code</p>
             <FontAwesomeIcon icon={faGithub} />
@@ -57,7 +57,7 @@ export const ProjectOutBoundLinks = ({
         {project?.figma && (
           <div
             onClick={() => window.open(project.figma)}
-            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-max px-5 py-3 rounded-full mx-auto text-white my-5"
+            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white my-5"
           >
             <p>Design File</p>
             <FontAwesomeIcon icon={faFigma} />

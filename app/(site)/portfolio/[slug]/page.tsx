@@ -40,7 +40,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
           className="mt-8 sm:mt-5"
           languages={project.languages}
         />
-        <div className="flex items-center justify-between mt-10 sm:mt-20 mb-5 sm:mb-10">
+        <div className="flex flex-col sm:flex-row items-center justify-between mt-10 sm:mt-20 mb-5 sm:mb-10">
           <p className="text-[#081019] text-xl font-medium my-10 sm:my-2">
             Take a look at some of the site screenshots.
           </p>

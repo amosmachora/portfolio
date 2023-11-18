@@ -81,6 +81,11 @@ export async function getProjects(): Promise<SanityProjectType[]> {
   );
 }
 
+export async function getNumberOfProjects(): Promise<number> {
+  const projects = await getProjects();
+  return projects.length;
+}
+
 export async function getProject(slug: string): Promise<SanityProjectType> {
   return sanityClient.fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{

@@ -21,7 +21,6 @@
 .slides {
   margin: 0 2%;
   position: relative;
-  height: 85vh;
   overflow: hidden;
 }
 .img-slide {
@@ -43,7 +42,7 @@
   right: 2%;
 }
 .content {
-  width: 50%;
+  width: 75%;
   padding: 3% 10%;
   height: 100%;
   background-color: rgba(5, 20, 34, 0.9);
@@ -161,7 +160,7 @@
 }
 .i-create-gold > img {
   object-fit: cover;
-  width: 50%;
+  width: 40%;
 }
 .i-create-gold > div {
   padding: 1% 7%;

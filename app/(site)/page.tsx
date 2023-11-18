@@ -1,6 +1,7 @@
 import HomePageSlides from "@/components/HomePageSlides";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
+import { getNumberOfProjects } from "@/util/utils";
 import { Metadata } from "next";
 import Image from "next/image";
 import "../../css/start-page.css";
@@ -12,7 +13,8 @@ export const metadata: Metadata = {
     "Welcome to my portfolio 🎂. View some of my personal and client projects.",
 };
 
-export default function Home() {
+export default async function Home() {
+  const numberOfProjects = await getNumberOfProjects();
   return (
     <main className="start-page-div">
       <HomePageSlides />
@@ -22,13 +24,18 @@ export default function Home() {
         </p>
         <p className="my-projects">My projects</p>
         <div className="banner-center">
-          <p className="number">12+</p>
+          <p className="number">{numberOfProjects}+</p>
           <p className="describe">
-            I already have a number of satisfied clients with which i have had
-            multiple successful projects. This —number is continuously growing,
-            talk to me and take advantage of my unique services.
+            The number of personal and freelance projects i have successfully
+            completed in my freelance development career. This number is
+            continuously growing, talk to me and take advantage of my unique
+            services.
           </p>
           <p className="capitalize cooperation">
+            <span className="text-xl text-black font-semibold">
+              Core Values
+            </span>{" "}
+            <br />
             Cooperation, communication and satisfaction with multiple companies
             around the globe
           </p>
@@ -86,12 +93,15 @@ export default function Home() {
           width={1260}
         />
         <div>
-          <h2>Let me build you an MVP!</h2>
+          <h2>So what have i done before?</h2>
+          <h3>
+            I have worked with clients to build fast scalable responsive and
+            highly dynamic sites.
+          </h3>
           <h3>
             Harnessing the power of NextJS , and Backend as a Service providers
             like convex and firebase it has never been easier to create full
-            stack apps. Check out some fo my previous full stack apps in my
-            portfolio.
+            stack apps. Check out some of my previous projects in my portfolio.
           </h3>
           <div className="flex align-center">
             <div className="img-container relative">
