@@ -17,26 +17,9 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const slug = params.slug;
 
-  // fetch data
   const project = await getProject(slug);
 
   const { image, description } = await getProjectMetadata(slug);
-
-  console.log({
-    title: project.title,
-    description,
-    twitter: {
-      title: project.title,
-      creator: "@amos_machora",
-      images: [image],
-      card: "summary_large_image",
-      description,
-    },
-    openGraph: {
-      images: [image],
-      description,
-    },
-  });
 
   return {
     title: project.title,
@@ -44,7 +27,14 @@ export async function generateMetadata(
     twitter: {
       title: project.title,
       creator: "@amos_machora",
-      images: [image],
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: description,
+        },
+      ],
       card: "summary_large_image",
       description,
     },
