@@ -37,8 +37,8 @@ export const ProjectOutBoundLinks = ({
     <>
       <div className="my-14">
         {project.live && (
-          <div className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white">
-            <p>Live</p>
+          <div className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange hover:bg-opacity-70 transition-all w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white">
+            <span>Live</span>
             <FontAwesomeIcon
               icon={faUpRightFromSquare}
               onClick={handleRedirect}
@@ -48,18 +48,18 @@ export const ProjectOutBoundLinks = ({
         {project?.github && (
           <div
             onClick={() => window.open(project.github)}
-            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white my-5"
+            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange hover:bg-opacity-70 transition-all w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white my-5"
           >
-            <p>Source Code</p>
+            <span>Source Code</span>
             <FontAwesomeIcon icon={faGithub} />
           </div>
         )}
         {project?.figma && (
           <div
             onClick={() => window.open(project.figma)}
-            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white my-5"
+            className="flex items-center gap-x-5 justify-center cursor-pointer font-semibold text-sm bg-orange hover:bg-opacity-70 transition-all w-3/4 sm:w-1/4 px-5 py-3 rounded-full mx-auto text-white my-5"
           >
-            <p>Design File</p>
+            <span>Design File</span>
             <FontAwesomeIcon icon={faFigma} />
           </div>
         )}

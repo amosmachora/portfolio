@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     url: "https://amosmachora.vercel.app/",
     type: "website",
   },
+  metadataBase: new URL("https://amosmachora.vercel.app"),
 };
 
 const publicSans = Public_Sans({ subsets: ["latin"] });
