@@ -32,7 +32,11 @@ export async function generateMetadata(
       images: [image],
     },
     openGraph: {
-      description,
+      title: project.title,
+      description: description,
+      emails: "amosmachora13@gmail.com",
+      url: `https://amosmachora.vercel.app/portfolio/${slug}`,
+      type: "website",
       images: [image],
     },
   };
