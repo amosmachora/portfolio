@@ -123,7 +123,6 @@ export const getProjectMetadata = async (
       "image": mainImage.asset->url,
       description,
       title,
-      "images": images[].asset->url
     }`,
     { slug }
   );

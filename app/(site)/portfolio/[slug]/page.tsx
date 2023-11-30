@@ -29,9 +29,11 @@ export async function generateMetadata(
       creator: "@amos_machora",
       card: "summary_large_image",
       description,
+      images: [image],
     },
     openGraph: {
       description,
+      images: [image],
     },
   };
 }
