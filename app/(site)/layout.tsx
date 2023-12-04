@@ -12,11 +12,11 @@ export const metadata: Metadata = {
   title: "Amos Machora",
   description: "Welcome to my personal website 🍓",
   icons: {
-    icon: ["/favicons/favicon.ico"],
-    apple: ["/favicons/apple-touch-icon.png"],
-    shortcut: ["/favicons/apple-touch-icon.png"],
+    icon: ["/favicon.ico"],
+    apple: ["/apple-touch-icon.png"],
+    shortcut: ["/apple-touch-icon.png"],
   },
-  manifest: "/favicons/site.webmanifest",
+  manifest: "/site.webmanifest",
   twitter: {
     title: "Welcome to my personal website 🍓",
     creator: "@amos_machora",
