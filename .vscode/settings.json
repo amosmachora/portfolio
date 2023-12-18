@@ -32,6 +32,6 @@
   "todo-tree.tree.scanMode": "workspace",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
-    "source.organizeImports": true
+    "source.organizeImports": "explicit"
   }
 }
