@@ -7,4 +7,5 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
   console.log(body);
 
   revalidatePath("/portfolio");
+  revalidatePath("/portfolio/[slug]");
 };
