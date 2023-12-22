@@ -2,16 +2,9 @@ import HomePageSlides from "@/components/HomePageSlides";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { getNumberOfProjects } from "@/util/utils";
-import { Metadata } from "next";
 import Image from "next/image";
 import "../../css/start-page.css";
 import arrow from "../../public/Arrow.png";
-
-export const metadata: Metadata = {
-  title: "Amos Machora | Portfolio",
-  description:
-    "Welcome to my portfolio 🎂. View some of my personal and client projects.",
-};
 
 export default async function Home() {
   const numberOfProjects = await getNumberOfProjects();
@@ -71,16 +64,23 @@ export default async function Home() {
             <h2 className="service-title">Quality Assurance</h2>
             <p className="bluish">
               Search Engine Optimization, Multiple device support, legacy
-              browser support , Fast Loading Speeds, Data caching, you name it.
+              browser support , Fast Loading Speeds, Data caching, Payment
+              integrations, you name it.
             </p>
           </div>
           <div className="flex-v">
             <p className="service-number">03</p>
-            <h2 className="service-title">Integrate payments</h2>
+            <h2 className="service-title">Creative Problem-Solving</h2>
             <p className="bluish">
-              You want to create a page where people can buy goods from your
-              page using different payment methods like Paypal , Stripe and
-              M-Pesa?
+              In addition to my extensive experience and commitment to quality
+              assurance, I bring a passion for creative problem-solving to every
+              project. Web development often presents unique challenges, and my
+              ability to think innovatively and find effective solutions sets me
+              apart. Whether it&apos;s optimizing user experiences, overcoming
+              technical hurdles, or implementing cutting-edge design elements, I
+              thrive on turning challenges into opportunities. By hiring me,
+              you&apos;re not just getting a developer; you&apos;re gaining a
+              problem solver dedicated to making your project a success.
             </p>
           </div>
         </div>

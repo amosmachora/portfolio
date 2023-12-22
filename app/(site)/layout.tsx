@@ -9,7 +9,10 @@ import heart from "../../public/heart.png";
 import "../globals.css";
 
 export const metadata: Metadata = {
-  title: "Amos Machora",
+  title: {
+    template: "%s | Amos Machora",
+    default: "Amos Machora",
+  },
   description: "Welcome to my personal website 🍓",
   icons: {
     icon: ["/favicon.ico"],

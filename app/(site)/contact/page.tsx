@@ -6,9 +6,14 @@ import Spinner from "@/components/spinner/Spinner";
 import { useForm } from "@formspree/react";
 import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Metadata } from "next";
 import Image from "next/image";
 import { useEffect } from "react";
 import "../../../css/contact.css";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 const Page = () => {
   const [state, handleSubmit, ResetFunction] = useForm("portfolio-form");

@@ -2,8 +2,13 @@ import { assets } from "@/assets/assets";
 import Project from "@/components/Project/Project";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { getProjects } from "@/util/utils";
+import { Metadata } from "next";
 import Image from "next/image";
 import "../../../css/portfolio.css";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+};
 
 const Page = async () => {
   const projects = await getProjects();

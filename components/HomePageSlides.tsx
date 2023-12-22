@@ -25,7 +25,7 @@ const HomePageSlides = () => {
           and turn your web presence into a money-making powerhouse.
         </p>
         <ReadMore
-          text="learn more"
+          text="about me page"
           link="about-me"
           className="hover:border-white sm:w-1/2"
         />

@@ -1,13 +1,30 @@
 import { assets } from "@/assets/assets";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
+import { ResultsTable } from "@/components/ResultsTable";
+import {
+  KCSE,
+  y1S1,
+  y1S2,
+  y2S1,
+  y2S2,
+  y3S1,
+  y3S2,
+  y4S1,
+  y4S2,
+} from "@/util/Academics";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Metadata } from "next";
 import Image from "next/image";
-import { KCSE } from "../../../components/KCSE";
 import "../../../css/about-me.css";
 import "../../../css/start-page.css";
+import meGraduated from "../../../public/graduated.jpg";
 import me from "../../../public/me.jpg";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 const AboutMe = () => {
   return (
@@ -39,12 +56,11 @@ const AboutMe = () => {
           </p>
           <h3 className="text-orange my-5 text-2xl">Education Background</h3>
           <p className="mt-10">
-            I have a bachelor`s degree in Computer Science from Chuka University
-            awaiting graduation late this year (2023). I also graduated from
-            highschool in 2018 with an overall score of{" "}
-            <span className="text-orange">B+ (GPA 3.3)</span> here is the
-            breakdown.
-            <KCSE />
+            I have a bachelor`s degree in Computer Science from Chuka
+            University. I also graduated from highschool in 2018 with an overall
+            score of <span className="text-orange">B+ (GPA 3.3)</span> here is
+            the breakdown.
+            <ResultsTable data={KCSE} />
             You can download the result slip{" "}
             <a
               className="text-orange cursor-pointer hover:font-semibold transition-all"
@@ -65,6 +81,43 @@ const AboutMe = () => {
           className="object-cover w-full sm:w-1/4 my-[50px] sm:mb-0 sm:mt-[40px]"
         />
       </div>
+      <section className="flex my-12 gap-x-10 flex-col sm:flex-row">
+        <Image
+          src={meGraduated}
+          alt="This is me"
+          className="object-cover w-full sm:w-1/4 max-h-[100vh]"
+        />
+        <div className="w-full sm:w-3/4">
+          <h4 className="text-orange my-5 text-2xl">Campus education</h4>
+          <p className="mb-4">
+            In 2023, I completed my undergraduate studies at Chuka University,
+            earning a{" "}
+            <span className="text-orange">
+              second-class upper division (GPA 3.7)
+            </span>{" "}
+            in Computer Science. Reflecting on four years filled with learning,
+            enjoyment, and captivating experiences, I couldn&apos;t have asked
+            for a more enriching journey during my time at the university. Below
+            is the detailed breakdown of my academic achievements.
+          </p>
+          <p className="mt-10 mb-0">Year 1 Semester 1</p>
+          <ResultsTable data={y1S1} />
+          <p className="mt-10 mb-0">Year 1 Semester 2</p>
+          <ResultsTable data={y1S2} />
+          <p className="mt-10 mb-0">Year 2 Semester 1</p>
+          <ResultsTable data={y2S1} />
+          <p className="mt-10 mb-0">Year 2 Semester 2</p>
+          <ResultsTable data={y2S2} />
+          <p className="mt-10 mb-0">Year 3 Semester 1</p>
+          <ResultsTable data={y3S1} />
+          <p className="mt-10 mb-0">Year 3 Semester 2</p>
+          <ResultsTable data={y3S2} />
+          <p className="mt-10 mb-0">Year 4 Semester 1</p>
+          <ResultsTable data={y4S1} />
+          <p className="mt-10 mb-0">Year 4 Semester 2</p>
+          <ResultsTable data={y4S2} />
+        </div>
+      </section>
       <div className="my-description flex space-between">
         <h3 className="text-orange">More Info</h3>
         <div className="flex space-between">
