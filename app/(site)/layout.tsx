@@ -5,6 +5,7 @@ import "@fortawesome/fontawesome-svg-core/styles.css";
 import type { Metadata } from "next";
 import { Dancing_Script, Public_Sans } from "next/font/google";
 import Image from "next/image";
+import Script from "next/script";
 import heart from "../../public/heart.png";
 import "../globals.css";
 
@@ -45,17 +46,19 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const pathName = usePathname();
-
-  // if (pathName.includes("studio")) {
-  //   <html lang="en">
-  //     <body className={publicSans.className}>{children}</body>
-  //   </html>;
-  // }
-
   return (
     <html lang="en">
       <body className={publicSans.className}>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-S4BGGLNFJK" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-S4BGGLNFJK');
+        `}
+        </Script>
         <GlobalDataProvider>
           <NavBar />
           {children}

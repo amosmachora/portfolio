@@ -8,4 +8,8 @@ export const POST = async (req: NextRequest, res: NextResponse) => {
 
   revalidatePath("/portfolio");
   revalidatePath("/portfolio/[slug]");
+
+  //rerender the pages somehow
+
+  return NextResponse.json({ message: "success" });
 };
