@@ -71,29 +71,31 @@ const AboutMe = () => {
           className="object-cover w-full sm:w-1/4 my-[50px] sm:mb-0 sm:mt-[40px]"
         />
       </div>
-      <section className="flex my-12 gap-x-10 flex-col sm:flex-row">
+      <section className="flex my-12 gap-x-10 flex-col items-center sm:flex-row">
         <Image
           src={meGraduated}
           alt="This is me"
-          className="object-cover w-full sm:w-1/4 max-h-[100vh]"
+          className="object-cover w-full sm:w-1/4 h-[75vh] md:h-[100vh]"
         />
         <div className="w-full sm:w-3/4">
           <h4 className="text-orange my-5 text-2xl">Campus Education</h4>
           <p className="mb-4">
             In 2023, I graduated from Chuka University with a second-class upper
-            division in Computer Science, boasting a GPA of 3.7. Throughout my
-            academic journey, I excelled in subjects crucial for a career in
-            software engineering, showcasing both theoretical understanding and
-            practical application.
+            division in Computer Science, boasting a GPA of{" "}
+            <span className="text-orange">3.7</span>. Throughout my academic
+            journey, I excelled in subjects crucial for a career in software
+            engineering, showcasing both theoretical understanding and practical
+            application.
           </p>
           <p className="mb-4">
             Mastering courses such as Introduction to Programming Methodologies
-            <span className="text-orange">(3.0)</span>, Object-Oriented
+            <span className="text-orange"> (3.0)</span>, Object-Oriented
             Programming <span className="text-orange">(3.7)</span>, and Database
             Systems
-            <span className="text-orange">(4.0)</span>, I honed my coding skills
-            and learned to design efficient and scalable software solutions.
-            Notably, achieving a GPA of <span className="text-orange">4.0</span>
+            <span className="text-orange"> (4.0)</span>, I honed my coding
+            skills and learned to design efficient and scalable software
+            solutions. Notably, achieving a GPA of{" "}
+            <span className="text-orange">4.0 </span>
             in key subjects like Introduction to Database Systems, Theory of
             Computation, and Industrial Attachment demonstrated my ability to
             excel in both theoretical and hands-on aspects of software
