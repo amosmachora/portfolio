@@ -2,17 +2,7 @@ import { assets } from "@/assets/assets";
 import { IconRound } from "@/components/IconRound";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
 import { ResultsTable } from "@/components/ResultsTable";
-import {
-  KCSE,
-  y1S1,
-  y1S2,
-  y2S1,
-  y2S2,
-  y3S1,
-  y3S2,
-  y4S1,
-  y4S2,
-} from "@/util/Academics";
+import { KCSE } from "@/util/Academics";
 import { faGithub, faReact } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Metadata } from "next";
@@ -88,38 +78,44 @@ const AboutMe = () => {
           className="object-cover w-full sm:w-1/4 max-h-[100vh]"
         />
         <div className="w-full sm:w-3/4">
-          <h4 className="text-orange my-5 text-2xl">Campus education</h4>
+          <h4 className="text-orange my-5 text-2xl">Campus Education</h4>
           <p className="mb-4">
-            In 2023, I completed my undergraduate studies at Chuka University,
-            earning a{" "}
-            <span className="text-orange">
-              second-class upper division (GPA 3.7)
-            </span>{" "}
-            in Computer Science. Reflecting on four years filled with learning,
-            enjoyment, and captivating experiences, I couldn&apos;t have asked
-            for a more enriching journey during my time at the university. Below
-            is the detailed breakdown of my academic achievements.
+            In 2023, I graduated from Chuka University with a second-class upper
+            division in Computer Science, boasting a GPA of 3.7. Throughout my
+            academic journey, I excelled in subjects crucial for a career in
+            software engineering, showcasing both theoretical understanding and
+            practical application.
           </p>
-          <p className="mt-10 mb-0">Year 1 Semester 1</p>
-          <ResultsTable data={y1S1} />
-          <p className="mt-10 mb-0">Year 1 Semester 2</p>
-          <ResultsTable data={y1S2} />
-          <p className="mt-10 mb-0">Year 2 Semester 1</p>
-          <ResultsTable data={y2S1} />
-          <p className="mt-10 mb-0">Year 2 Semester 2</p>
-          <ResultsTable data={y2S2} />
-          <p className="mt-10 mb-0">Year 3 Semester 1</p>
-          <ResultsTable data={y3S1} />
-          <p className="mt-10 mb-0">Year 3 Semester 2</p>
-          <ResultsTable data={y3S2} />
-          <p className="mt-10 mb-0">Year 4 Semester 1</p>
-          <ResultsTable data={y4S1} />
-          <p className="mt-10 mb-0">Year 4 Semester 2</p>
-          <ResultsTable data={y4S2} />
+          <p className="mb-4">
+            Mastering courses such as Introduction to Programming Methodologies
+            <span className="text-orange">(3.0)</span>, Object-Oriented
+            Programming <span className="text-orange">(3.7)</span>, and Database
+            Systems
+            <span className="text-orange">(4.0)</span>, I honed my coding skills
+            and learned to design efficient and scalable software solutions.
+            Notably, achieving a GPA of <span className="text-orange">4.0</span>
+            in key subjects like Introduction to Database Systems, Theory of
+            Computation, and Industrial Attachment demonstrated my ability to
+            excel in both theoretical and hands-on aspects of software
+            development.
+          </p>
+          <p className="mb-4">
+            My dedication to software projects, including Computer System
+            Projects I and II, showcased my proficiency in applying theoretical
+            knowledge to real-world scenarios. Specialized subjects like
+            Software Project Management{" "}
+            <span className="text-orange">(3.0)</span>, Distributed Systems
+            <span className="text-orange"> (4.0)</span>, and Decision Support
+            Systems <span className="text-orange">(3.7)</span> further equipped
+            me with the skills needed for complex software development projects.
+            These achievements underscore my commitment to excellence in
+            software engineering and my readiness to contribute to innovative
+            and impactful projects.
+          </p>
         </div>
       </section>
       <div className="my-description flex space-between">
-        <h3 className="text-orange">More Info</h3>
+        <h3 className="text-orange">SWE career so far</h3>
         <div className="flex space-between">
           <div className="bs-about-me flex flex-col gap-y-7">
             <p>
