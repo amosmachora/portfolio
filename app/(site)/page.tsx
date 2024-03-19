@@ -1,13 +1,16 @@
 import HomePageSlides from "@/components/HomePageSlides";
 import { IconRound } from "@/components/IconRound";
+import Project from "@/components/Project/Project";
 import { ReadMore } from "@/components/ReadMore/ReadMore";
-import { getNumberOfProjects } from "@/util/utils";
+import { getNumberOfProjects, getProjects } from "@/util/utils";
 import Image from "next/image";
 import "../../css/start-page.css";
 import arrow from "../../public/Arrow.png";
 
 export default async function Home() {
   const numberOfProjects = await getNumberOfProjects();
+
+  const projects = await getProjects();
   return (
     <main className="start-page-div">
       <HomePageSlides />
@@ -85,13 +88,7 @@ export default async function Home() {
           </div>
         </div>
       </div>
-      <div className="i-create-gold flex">
-        <Image
-          src="https://images.pexels.com/photos/1591060/pexels-photo-1591060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt="Pharmacy application"
-          height={750}
-          width={1260}
-        />
+      <div className="i-create-gold p-[3%]">
         <div>
           <h2>So what have i done before?</h2>
           <h3>
@@ -103,20 +100,29 @@ export default async function Home() {
             like convex and firebase it has never been easier to create full
             stack apps. Check out some of my previous projects in my portfolio.
           </h3>
-          <div className="flex align-center">
-            <div className="img-container relative">
-              <Image src={arrow} alt="Arrow" className="center-absolutely" />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+          {projects.slice(0, 4).map((project, i) => (
+            <Project project={project} key={i} />
+          ))}
+        </div>
+        <div className="mt-20 flex flex-col md:flex-row justify-between gap-5">
+          <div>
+            <div className="flex align-center mb-3">
+              <div className="img-container relative">
+                <Image src={arrow} alt="Arrow" className="center-absolutely" />
+              </div>
+              <p>Portfolio Page</p>
             </div>
-            <p>Portfolio</p>
+            <p className="greyish">
+              Visit my portfolio page to view more projects, view original
+              design files and check out the source code.
+            </p>
           </div>
-          <p className="greyish">
-            Visit my portfolio section to preview sites, view original design
-            files and inspect the source code.
-          </p>
           <ReadMore
-            text="Check out my portfolio"
+            text="View More Projects"
             link="portfolio"
-            className="text-black hover:border-orange"
+            className="text-black hover:border-orange sm:w-[20%]"
           />
         </div>
       </div>

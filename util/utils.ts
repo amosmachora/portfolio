@@ -1,5 +1,6 @@
 import { SanityImageObject } from "@sanity/image-url/lib/types/types";
 import { createClient, groq } from "next-sanity";
+import { unstable_noStore as noStore } from "next/cache";
 import { PortableTextBlock } from "sanity";
 import { apiVersion, dataset, projectId } from "../sanity/env";
 
@@ -56,6 +57,8 @@ export const sanityClient = createClient({
 });
 
 export async function getProjects(): Promise<SanityProjectType[]> {
+  noStore();
+
   return sanityClient.fetch(
     groq`
       *[_type == "project"] | order(_updatedAt desc){

@@ -1,5 +1,4 @@
 import { assets } from "@/assets/assets";
-import { calculateAge } from "@/util/utils";
 import Image from "next/image";
 import { ReadMore } from "./ReadMore/ReadMore";
 
@@ -10,11 +9,9 @@ const HomePageSlides = () => {
         <p className="slide-sub">I am a</p>
         <h1 className="slide-title">Full Stack Web Developer</h1>
         <p className="slide-description bluish">
-          Hey friend! 👋 I&apos;m Amos, your laid-back web developer with a
-          serious passion for results. Clocking in at{" "}
-          {calculateAge(new Date("13 December 2001"))} years old, I&apos;ve been
-          on this coding journey for over 2 years – learning, freelancing, and
-          turning ideas into digital reality.
+          Hey friend! 👋 I&apos;m Amos, a web developer with a serious passion
+          for results. I&apos;ve been on this coding journey for over 2 years –
+          learning, freelancing, and turning ideas into digital reality.
         </p>
         <p className="slide-description bluish">
           Picture this: I&apos;m all about full-stack web development using the

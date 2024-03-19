@@ -153,28 +153,14 @@
   border-bottom: 2px solid var(--orange);
 }
 .i-create-gold {
-  margin: 0 2%;
   background-color: var(--white);
   color: var(--black);
-  padding: 3% 2%;
 }
-.i-create-gold > img {
-  object-fit: cover;
-  width: 40%;
-}
-.i-create-gold > div {
-  padding: 1% 7%;
-}
+
 .i-create-gold h2 {
   font-size: 4rem;
   font-weight: 500;
   letter-spacing: -0.05em;
-}
-.i-create-gold h3 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin: 20px 0;
-  width: 90%;
 }
 .img-container {
   background-color: var(--orange);
@@ -190,13 +176,6 @@
 .i-create-gold .greyish {
   font-size: 15px;
   font-weight: 300;
-}
-.img-container ~ p {
-  font-size: 28px;
-  font-weight: 500;
-}
-.i-create-gold .flex {
-  margin-bottom: 20px;
 }
 .content a {
   color: var(--white);
@@ -258,9 +237,6 @@
   }
   .i-create-gold > div {
     padding: 2%;
-  }
-  .i-create-gold h3 {
-    margin: 30px 0;
   }
   .i-create-gold .greyish {
     width: 50%;
