@@ -29,7 +29,7 @@ export const ProjectImageCarousel = ({
       enableKeyboardControls
       wrapAround
     >
-      {images.map((image, i) => (
+      {images?.map((image, i) => (
         <CarouselImage image={image} key={i} />
       ))}
     </Carousel>
