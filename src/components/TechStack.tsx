@@ -10,15 +10,9 @@ export const TechStack = () => {
       className: "h-10 w-14",
     },
     {
-      title: "Figma",
-      src: "/images/logos/figma.png",
-
-      className: "h-10 w-8",
-    },
-    {
-      title: "Node",
-      src: "/images/logos/node.png",
-      className: "h-10 w-12",
+      title: "Java",
+      src: "/images/logos/java.svg",
+      className: "h-10 w-10",
     },
     {
       title: "Tailwind",
@@ -26,11 +20,73 @@ export const TechStack = () => {
       className: "h-10 w-24",
     },
     {
+      title: "Javascript",
+      src: "/images/logos/javascript.svg",
+      className: "h-10 w-10",
+    },
+
+    {
+      title: "Firebase",
+      src: "/images/logos/firebase.svg",
+      className: "h-10 w-10",
+    },
+    {
+      title: "Figma",
+      src: "/images/logos/figma.png",
+      className: "h-10 w-8",
+    },
+    {
+      title: "Firestore",
+      src: "/images/logos/firestore.svg",
+      className: "h-10 w-10",
+    },
+    {
+      title: "Mysql",
+      src: "/images/logos/mysql.svg",
+      className: "h-10 w-10",
+    },
+    {
+      title: "React",
+      src: "/images/logos/react.svg",
+      className: "h-10 w-10",
+    },
+    {
+      title: "Spring",
+      src: "/images/logos/springboot.svg",
+      className: "h-10 w-12",
+    },
+    {
+      title: "Typescript",
+      src: "/images/logos/typescript.svg",
+      className: "h-10 w-10",
+    },
+    {
+      title: "Node",
+      src: "/images/logos/node.png",
+      className: "h-10 w-12",
+    },
+    {
+      title: "Convex",
+      src: "/images/logos/convex.svg",
+      className: "h-10 w-20",
+    },
+    {
+      title: "Clerk",
+      src: "/images/logos/clerk.svg",
+      className: "h-10 w-20",
+    },
+    {
+      title: "Turso",
+      src: "/images/logos/turso.svg",
+      className: "h-10 w-8",
+    },
+    {
       title: "Vercel",
       src: "/images/logos/vercel.png",
       className: "h-10 w-24",
     },
   ];
+
   return (
     <div>
       <Heading
