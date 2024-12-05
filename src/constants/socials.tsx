@@ -1,4 +1,8 @@
-import { IconBrandLinkedin, IconBrandTwitter } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandTwitter,
+} from "@tabler/icons-react";
 
 export const socials = [
   {
@@ -10,5 +14,10 @@ export const socials = [
     href: "https://www.linkedin.com/in/amos-machora/",
     label: "LinkedIn",
     icon: IconBrandLinkedin,
+  },
+  {
+    href: "https://github.com/amosmachora",
+    label: "Github",
+    icon: IconBrandGithub,
   },
 ];
