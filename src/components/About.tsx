@@ -290,17 +290,37 @@ export default function About() {
           <OutboundLink href="https://www.youtube.com/watch?v=kUpqM0w1jKY">
             here
           </OutboundLink>
-          . My favourite movie ever is{" "}
+          .
+        </Paragraph>
+        <Paragraph className="mt-4">
+          My favourite movie ever is{" "}
           <OutboundLink href="https://www.google.com/search?q=friends">
             Friends
           </OutboundLink>{" "}
-          and my favourite character is Chandler Bing. Actually scratch that,
+          and my favourite character is Chandler Bing, actually scratch that,
           that is one movie where it is actually impossible to have a favourite
           as they are all so good. I have also rewatched{" "}
           <OutboundLink href="https://www.google.com/search?q=the+big+bang+theory+sitcom">
             The big bang theory
           </OutboundLink>{" "}
-          probably three times from Season 1 to 12 - crazy i know.
+          probably three times from Season 1 to 12 - crazy i know. I also enjoy{" "}
+          <OutboundLink href="https://www.google.com/search?q=brooklyn+nine+nine">
+            Brooklyn nine nine
+          </OutboundLink>
+          ,{" "}
+          <OutboundLink href="https://www.google.com/search?q=modern+family">
+            Modern family
+          </OutboundLink>
+          ,{" "}
+          <OutboundLink href="https://www.google.com/search?q=the+office">
+            The office
+          </OutboundLink>{" "}
+          and{" "}
+          <OutboundLink href="https://www.google.com/search?q=how+i+met+your+mother">
+            How I met your mother
+          </OutboundLink>
+          . As you might have noticed I am more of a sitcom fan I can&apos;t
+          manage 2 hours in front of a screen its a bit much.
         </Paragraph>
         <Paragraph className="mt-4">
           Join me on this journey of bytes and narratives, logic, fun and

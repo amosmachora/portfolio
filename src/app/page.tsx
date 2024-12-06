@@ -25,9 +25,10 @@ export default function Home() {
         and coding that is hard to find. From requirement gathering , design
         through development and finally a real product that{" "}
         <Highlight>actually works</Highlight>, I can help build MVPs turn ideas
-        into real apps. If you are interested in that kind of thing just{" "}
-        <Link href={"/contact"} className="underline">
-          hit me up.
+        into real apps. If you are interested in that kind of thing just email
+        me at{" "}
+        <Link href="mailto:amosmachora13@gmail.com" className="underline">
+          amosmachora13@gmail.com
         </Link>
       </Paragraph>
       <Heading
