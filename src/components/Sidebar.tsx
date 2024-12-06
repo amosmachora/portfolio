@@ -51,7 +51,8 @@ export const Navigation = ({
 }) => {
   const pathname = usePathname();
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) =>
+    href === "/" ? pathname === href : pathname.includes(href);
 
   return (
     <div className="flex flex-col space-y-1 my-10 relative z-[100]">
