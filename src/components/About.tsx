@@ -108,8 +108,8 @@ export default function About() {
           each time I played the game I restarted it. So much fun.
         </Paragraph>
         <Paragraph className=" mt-4">
-          I am a christian, a member of the Sevent Day Adventist church and have
-          been all my life. I was born literally in the church, (
+          I am a christian, a member of the Seventh Day Adventist church and
+          have been all my life. I was born literally in the church, (
           <i>my mum&apos;s labour pains began in the church, nothing crazy</i>)
           . I am a beleiver in God or atleast act as if he exists as{" "}
           <OutboundLink href="https://www.google.com/search?q=jordan+b+peterson">
