@@ -1,11 +1,110 @@
 import { default as bidsyncone } from "public/images/bidsyncone.png";
 import { default as bidsynctwo } from "public/images/bidsynctwo.png";
 import { default as darajaKit } from "public/images/daraja-kit.png";
+import { default as kenyaemrone } from "public/images/kenyaemr-one.png";
+import { default as kenyaemrtwo } from "public/images/kenyaemr-two.png";
 import { default as oots } from "public/images/oots.png";
+import { default as openmrsone } from "public/images/openmrs-one.png";
+import { default as openmrstwo } from "public/images/openmrs-two.png";
 import { default as ukuzione } from "public/images/ukuzistudioone.png";
 import { default as ukuzitwo } from "public/images/ukuzistudiotwo.png";
 
 export const products = [
+  {
+    href: "https://dev.kenyahmis.org",
+    title: "KenyaEMR",
+    description:
+      "KenyaEMR is a open source EMR system used in Kenya. It is based on Openmrs 3 and is majorly maintained by Palladium Kenya.",
+    thumbnail: kenyaemrone,
+    images: [kenyaemrone, kenyaemrtwo],
+    stack: ["Typescript", "React", "pnpm", "OpenMRS"],
+    slug: "openmrs",
+    content: (
+      <div>
+        <p>
+          As of September 2024, KenyaEMR has been deployed in over 2,300 health
+          facilities across Kenya The system is now implemented in 44 out of 47
+          counties, supported by 33 service delivery partners, and manages data
+          for over 80% of ART patients in the country
+        </p>
+        <p>
+          I have spent a lot of time contributing to this project, I made the
+          EMRs Mpesa integration for example alongside fixing other issues
+          across majorly the billing module. You can view my contributions by
+          clicking{" "}
+          <a
+            href="https://github.com/palladiumkenya/kenyaemr-esm-3.x/pulls?q=is%3Apr+is%3Aclosed+author%3Aamosmachora"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            here.
+          </a>
+        </p>
+        <p>
+          You can use the below link to visit the development test instance and
+          learn more. You can use the credentials Admin / Admin123 to
+          authenticate yourself.
+        </p>
+      </div>
+    ),
+  },
+  {
+    href: "https://dev3.openmrs.org/",
+    title: "Openmrs",
+    description:
+      "I am a seasoned contributor to the open source OpenMRS project. I have contributed to the project by fixing tons bugs and adding new features.",
+    thumbnail: openmrsone,
+    images: [openmrsone, openmrstwo],
+    stack: ["Typescript", "React", "pnpm", "OpenMRS"],
+    slug: "openmrs",
+    content: (
+      <div>
+        <p>
+          I have contributed to Openmrs 3 for a long time. You can view my
+          contributions across the{" "}
+          <a
+            href="https://github.com/openmrs/openmrs-esm-patient-chart/pulls?q=is%3Apr+author%3Aamosmachora+is%3Aclosed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            patient chart
+          </a>
+          ,{" "}
+          <a
+            href="https://github.com/openmrs/openmrs-esm-patient-management/pulls?q=is%3Apr+author%3Aamosmachora+is%3Aclosed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            patient management
+          </a>
+          ,{" "}
+          <a
+            href="https://github.com/openmrs/openmrs-esm-laboratory-app/pulls?q=is%3Apr+author%3Aamosmachora+is%3Aclosed"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            laboratory esm
+          </a>{" "}
+          and other repos.
+        </p>
+        <p>
+          I am a member of the openmrs community and work together with others
+          world wide daily to discuss issues, fix bugs, open and close tickets
+          etc etc.
+        </p>
+        <p>
+          I also won best upcoming contributor of the year 2024 at the annual
+          implementors conference by my contributions to KenyaEMR (a openmrs
+          distro) and OpenMRS 3.
+        </p>
+        <p>
+          You can use the below link to visit the openmrs reference application
+          and learn more. You can use the credentials Admin / Admin123 to
+          authenticate yourself.
+        </p>
+      </div>
+    ),
+  },
   {
     href: "https://github.com/amosmachora/daraja-kit",
     title: "Daraja Kit",
