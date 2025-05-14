@@ -3,6 +3,7 @@ import {
   IconBrandLinkedin,
   IconBrandTwitter,
   IconMail,
+  IconPhone,
 } from "@tabler/icons-react";
 
 export const socials = [
@@ -25,5 +26,10 @@ export const socials = [
     href: "mailto:amosmachora13@gmail.com",
     label: "Mail",
     icon: IconMail,
+  },
+  {
+    href: "tel:+254719428019",
+    label: "Phone",
+    icon: IconPhone,
   },
 ];
